@@ -11,7 +11,7 @@ public class FastMoveObjects : MonoBehaviour
 
     private Vector3 _direction;
     private Rigidbody _rb;
-    private bool _isStart = true;
+    private bool _isStart = false;
 
     private void Start()
     {
@@ -22,21 +22,25 @@ public class FastMoveObjects : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-            if (_isStart)
-            {
-                _rb.AddForce(_direction * _force);
-                _isStart = false;
-            }
+            _isStart = true;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (IsNegative(_endPosition - transform.position))
+        if (_isStart)
+        {
+            _rb.AddForce(_direction * _force);
+        }
+
+        if (IsStop(_endPosition - transform.position))
+        {
+            _isStart = false;
             _rb.velocity = Vector3.zero;
+        }
     }
 
-    private bool IsNegative(Vector3 vector)
+    private bool IsStop(Vector3 vector)
     {
-        return vector.x <= 0 && vector.y <= 0 && vector.z <= 0;
+        return Mathf.Min(vector.x, vector.y, vector.z) >= -1 && Mathf.Max(vector.x, vector.y, vector.z) <= 1;
     }
 }

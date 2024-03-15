@@ -23,7 +23,6 @@ public class RestartGame : MonoBehaviour
             _restartMenu.SetActive(true);
             Time.timeScale = 0;
         }
-        print(_checkPoint);
     }
 
     private void OnCollisionExit(Collision collision)

@@ -5,8 +5,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private GameObject _finishMenu;
     
-    [SerializeField] private float _speed = 10f;
-    [SerializeField] private float _maxSpeed = 10f;
+    [SerializeField] private float _speed = 12f;
+    [SerializeField] private float _maxSpeed = 15f;
 
     private Rigidbody _rigidbody;
 

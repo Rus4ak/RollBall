@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-    public static Vector3 checkPoint = new Vector3(0, 1f, 0);
+    public static Vector3 checkPoint = new Vector3(36.5f, 48f, 258);
 
     private void OnCollisionEnter(Collision collision)
     {
