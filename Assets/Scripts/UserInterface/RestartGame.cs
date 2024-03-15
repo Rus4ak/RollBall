@@ -11,6 +11,11 @@ public class RestartGame : MonoBehaviour
     
     public static Vector3 resetPosition = CheckPoint.checkPoint;
 
+    private void Start()
+    {
+        _checkPoint = CheckPoint.checkPoint;
+    }
+
     private void Update()
     {
         if (transform.position.y < -10f)
@@ -18,6 +23,7 @@ public class RestartGame : MonoBehaviour
             _restartMenu.SetActive(true);
             Time.timeScale = 0;
         }
+        print(_checkPoint);
     }
 
     private void OnCollisionExit(Collision collision)
@@ -31,17 +37,20 @@ public class RestartGame : MonoBehaviour
 
     public void RestartToSpawnpoint()
     {
-        _checkPoint = CheckPoint.checkPoint;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        resetPosition = _checkPoint;
-        CheckPoint.checkPoint = _checkPoint;
+        Restart(_checkPoint);
 
     }
 
     public void RestartToLastPosition()
     {
+        Restart(_lastPosition);
+    }
+
+    private void Restart(Vector3 playerPosition)
+    {
+        _checkPoint = CheckPoint.checkPoint;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        resetPosition = _lastPosition;
+        resetPosition = playerPosition;
         CheckPoint.checkPoint = _checkPoint;
     }
 
