@@ -27,7 +27,7 @@ public class JumpingFloor : MonoBehaviour
                 else
                     direction.z = (360f - objectRotation.x) / 90f;
             }
-            
+
             _playerRigidbody.velocity = direction * _force;
         }
     }

@@ -36,20 +36,18 @@ public class RestartGame : MonoBehaviour
 
     public void RestartToSpawnpoint()
     {
-        Restart(_checkPoint);
+        _checkPoint = CheckPoint.checkPoint;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        resetPosition = _checkPoint;
+        CheckPoint.checkPoint = _checkPoint;
 
     }
 
     public void RestartToLastPosition()
     {
-        Restart(_lastPosition);
-    }
-
-    private void Restart(Vector3 playerPosition)
-    {
         _checkPoint = CheckPoint.checkPoint;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        resetPosition = playerPosition;
+        resetPosition = _lastPosition;
         CheckPoint.checkPoint = _checkPoint;
     }
 

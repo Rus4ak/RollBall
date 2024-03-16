@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -44,8 +45,18 @@ public class PlayerMovement : MonoBehaviour
             
             _rigidbody.AddForce(movement * _speed * Time.fixedDeltaTime);
 
-            if (_rigidbody.velocity.magnitude > _maxSpeed)
-                _rigidbody.velocity = _rigidbody.velocity.normalized * _maxSpeed;
+            Vector3 velocity = _rigidbody.velocity;
+            float velocityY = velocity.y;
+
+            velocity.y = 0;
+
+            if (velocity.magnitude > _maxSpeed)
+            {
+                velocity = _rigidbody.velocity.normalized * _maxSpeed;
+                velocity.y = velocityY;
+
+                _rigidbody.velocity = velocity;
+            }
         }
     }
 }

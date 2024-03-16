@@ -4796,8 +4796,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _finishMenu: {fileID: 482223704}
-  _speed: 10
-  _maxSpeed: 10
+  _speed: 12
+  _maxSpeed: 15
 --- !u!54 &2093031713
 Rigidbody:
   m_ObjectHideFlags: 0
