@@ -3,36 +3,41 @@ using UnityEngine;
 public class LookAtPlayer : MonoBehaviour
 {
     [SerializeField] private Transform _sphere;
+    [SerializeField] private float smoothTime = 0.5f;
 
     private Rigidbody _sphereRigidbody;
+
+    private Vector3 _velocity = Vector3.zero;
 
     private void Start()
     {
         _sphereRigidbody = _sphere.GetComponent<Rigidbody>();
     }
     
-    private void Update()
+    private void FixedUpdate()
     {
-        Move();
+        Vector3 targetPosition = CalculateTargetPosition();
+
+        Vector3 newPosition = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, smoothTime);
+
+        transform.position = newPosition;
+        transform.LookAt(_sphere);
     }
 
-    private void Move()
+    private Vector3 CalculateTargetPosition()
     {
-        transform.LookAt(_sphere);
+        Vector3 cameraOffset = _sphereRigidbody.velocity.normalized * 1.5f;
 
-        Vector3 cameraOffset = _sphereRigidbody.velocity.normalized * 1.3f;
-
-        if (cameraOffset.z <= 1f)
-            cameraOffset.z = 1f;
+        if (cameraOffset.z <= 1.5f)
+            cameraOffset.z = 1.5f;
 
         Vector3 pos = _sphere.position - cameraOffset;
 
-        pos.y += 3f;
-        pos.z -= 3f;
+        pos.y += 2.5f;
+        pos.z -= 2.5f;
 
-        Vector3 newPos = Vector3.Lerp(transform.position, pos, Time.deltaTime);
-        newPos.y = Mathf.Max(newPos.y, _sphere.position.y - 5f);
+        pos.y = Mathf.Max(pos.y, _sphere.position.y - 5f);
 
-        transform.position = newPos;
+        return pos;
     }
 }

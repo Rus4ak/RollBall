@@ -2,14 +2,10 @@ using UnityEngine;
 
 public class GripFloor : MonoBehaviour
 {
-    private Transform _player;
+    [SerializeField] private Transform _player;
+
     private Vector3 _lastPos;
     private bool _isStart = false;
-
-    private void Start()
-    {
-        _player = GameObject.FindGameObjectWithTag("Player").transform;
-    }
 
     private void LateUpdate()
     {
