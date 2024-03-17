@@ -27,18 +27,18 @@ public class RestartGame : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.isStatic)
-        {
-            _lastPosition = collision.gameObject.transform.position;
-            _lastPosition.y += 1f;
-        }
+        if (collision.gameObject.layer == 10)
+            return;
+        
+        _lastPosition = collision.gameObject.transform.position;
+        _lastPosition.y += 1f;
     }
 
     public void RestartToSpawnpoint()
-    {
+    { 
         _checkPoint = CheckPoint.checkPoint;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         resetPosition = _checkPoint;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         CheckPoint.checkPoint = _checkPoint;
 
     }
@@ -46,8 +46,8 @@ public class RestartGame : MonoBehaviour
     public void RestartToLastPosition()
     {
         _checkPoint = CheckPoint.checkPoint;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         resetPosition = _lastPosition;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         CheckPoint.checkPoint = _checkPoint;
     }
 

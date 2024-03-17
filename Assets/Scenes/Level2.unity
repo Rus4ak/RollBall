@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 32282582}
   - component: {fileID: 32282581}
   - component: {fileID: 32282585}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1238,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1854,7 +1854,7 @@ GameObject:
   - component: {fileID: 773768792}
   - component: {fileID: 773768791}
   - component: {fileID: 773768795}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2512,7 +2512,7 @@ GameObject:
   - component: {fileID: 831955172}
   - component: {fileID: 831955171}
   - component: {fileID: 831955175}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
