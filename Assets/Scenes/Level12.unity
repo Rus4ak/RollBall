@@ -11557,6 +11557,7 @@ GameObject:
   - component: {fileID: 1736000684}
   - component: {fileID: 1736000683}
   - component: {fileID: 1736000682}
+  - component: {fileID: 1736000685}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11639,7 +11640,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -11651,6 +11652,20 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1736000685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736000680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a236412907f873c4a949c122f3b795ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sphere: {fileID: 1153469331}
+  _transparentMaterial: {fileID: 2100000, guid: 5b953e4e296577c49a2321c563299127, type: 2}
 --- !u!1 &1805248761
 GameObject:
   m_ObjectHideFlags: 0
@@ -14161,7 +14176,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 273040200}
-  - {fileID: 1215768858}
-  - {fileID: 1671696007}
   - {fileID: 19749154}
+  - {fileID: 1671696007}
+  - {fileID: 1215768858}
   - {fileID: 508140971}
