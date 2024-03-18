@@ -28,13 +28,13 @@ public class LookAtPlayer : MonoBehaviour
     {
         Vector3 cameraOffset = _sphereRigidbody.velocity.normalized * 1.5f;
 
-        if (cameraOffset.z <= 1.5f)
-            cameraOffset.z = 1.5f;
+        if (cameraOffset.z <= 2f)
+            cameraOffset.z = 2f;
 
         Vector3 pos = _sphere.position - cameraOffset;
 
         pos.y += 2.5f;
-        pos.z -= 2.5f;
+        pos.z -= 3f;
 
         pos.y = Mathf.Max(pos.y, _sphere.position.y - 5f);
 

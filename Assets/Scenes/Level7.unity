@@ -1096,7 +1096,6 @@ GameObject:
   - component: {fileID: 513342510}
   - component: {fileID: 513342509}
   - component: {fileID: 513342508}
-  - component: {fileID: 513342514}
   m_Layer: 10
   m_Name: Cylinder (2)
   m_TagString: Untagged
@@ -1248,19 +1247,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513342506}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &513342514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513342506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ba1b608091c4d64f9c1531708605c2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 1424212630}
 --- !u!1 &662154144
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,11 +3047,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe9190564960b0642b5f3a937f8372ab, type: 3}
---- !u!4 &1424212630 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5829430725332640011, guid: fe9190564960b0642b5f3a937f8372ab, type: 3}
-  m_PrefabInstance: {fileID: 1424212629}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1424212631 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6306091632373213767, guid: fe9190564960b0642b5f3a937f8372ab, type: 3}
@@ -4321,7 +4302,6 @@ GameObject:
   - component: {fileID: 1999644719}
   - component: {fileID: 1999644718}
   - component: {fileID: 1999644717}
-  - component: {fileID: 1999644724}
   m_Layer: 10
   m_Name: Cylinder (3)
   m_TagString: Untagged
@@ -4486,19 +4466,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999644715}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1999644724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1999644715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ba1b608091c4d64f9c1531708605c2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 1424212630}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

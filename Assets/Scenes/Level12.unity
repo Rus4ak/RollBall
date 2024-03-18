@@ -4157,7 +4157,7 @@ MonoBehaviour:
   - position: {x: 20, y: 40, z: 220}
     moveTime: 8
   - position: {x: 20, y: 50, z: 250}
-    moveTime: 4
+    moveTime: 6
   _waitPlayer: 1
 --- !u!65 &816651398
 BoxCollider:
@@ -6909,7 +6909,7 @@ MonoBehaviour:
   _directionY: -1
   _directionZ: 0
   _force: 15
-  _endPosition: {x: 36.5, y: 30, z: 290}
+  _endPosition: {x: 36.5, y: -15, z: 290}
 --- !u!65 &1494528151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7009,8 +7009,8 @@ Transform:
   m_GameObject: {fileID: 1494632080}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 47, y: 30.1, z: 326.2}
-  m_LocalScale: {x: 50, y: 0.5, z: 60}
+  m_LocalPosition: {x: 47, y: 43.9, z: 326.2}
+  m_LocalScale: {x: 80, y: 0.5, z: 60}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1671696007}
@@ -9756,7 +9756,7 @@ MonoBehaviour:
   _directionY: 1
   _directionZ: 0
   _force: 50
-  _endPosition: {x: 36.5, y: 65, z: 262.54}
+  _endPosition: {x: 36.5, y: 60, z: 262.54}
 --- !u!1 &1986064126
 GameObject:
   m_ObjectHideFlags: 0
