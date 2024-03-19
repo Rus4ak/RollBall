@@ -4,8 +4,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private GameObject _finishMenu;
-    
     [SerializeField] private float _speed = 11f;
     [SerializeField] private float _maxSpeed = 14f;
 
@@ -14,16 +12,6 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Finish"))
-        {
-            Time.timeScale = 0;
-
-            _finishMenu.SetActive(true);
-        }
     }
 
     private void FixedUpdate()

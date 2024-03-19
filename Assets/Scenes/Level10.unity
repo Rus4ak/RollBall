@@ -3831,6 +3831,14 @@ PrefabInstance:
       propertyPath: _finishMenu
       value: 
       objectReference: {fileID: 347940987}
+    - target: {fileID: 5286430285563918215, guid: fe9190564960b0642b5f3a937f8372ab, type: 3}
+      propertyPath: _level
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286430285563918215, guid: fe9190564960b0642b5f3a937f8372ab, type: 3}
+      propertyPath: _finishMenu
+      value: 
+      objectReference: {fileID: 347940987}
     - target: {fileID: 5829430725332640011, guid: fe9190564960b0642b5f3a937f8372ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
