@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4016727771706060198}
   - component: {fileID: 1870746333836078792}
   - component: {fileID: 8484497661339022670}
-  - component: {fileID: 5005835780020479049}
-  - component: {fileID: 5599215907692431656}
+  - component: {fileID: 4903392803681782859}
+  - component: {fileID: 6665673036116152525}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -94,7 +94,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891740052616768526}
   m_Enabled: 1
---- !u!114 &5005835780020479049
+--- !u!114 &4903392803681782859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,12 +103,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 891740052616768526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d5034501714da24d852d1400ff6bbc6, type: 3}
+  m_Script: {fileID: 11500000, guid: 603d4e2cd7a6e61479c9a2bae2d8caff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sphere: {fileID: 925443807192338920}
   smoothTime: 0.5
---- !u!114 &5599215907692431656
+--- !u!114 &6665673036116152525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,11 +117,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 891740052616768526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a236412907f873c4a949c122f3b795ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c1b0b87118093047a18ae9749da22e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sphere: {fileID: 925443807192338920}
-  _transparentMaterial: {fileID: 2100000, guid: 5b953e4e296577c49a2321c563299127, type: 2}
+  _transparentMaterial: {fileID: 2100000, guid: f1cd9bda68bc44f479ffecce423d045f, type: 2}
 --- !u!1 &7559249250026395464
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,10 +135,10 @@ GameObject:
   - component: {fileID: 7983534049132128915}
   - component: {fileID: 1329879592987369178}
   - component: {fileID: 8611129241323628773}
-  - component: {fileID: 2697178659028097157}
-  - component: {fileID: 6306091632373213767}
-  - component: {fileID: 3476023453547179401}
-  - component: {fileID: 5286430285563918215}
+  - component: {fileID: 4971682828822753649}
+  - component: {fileID: 5108667477337411113}
+  - component: {fileID: 4989329430885949761}
+  - component: {fileID: 2361486578716984703}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Player
@@ -258,8 +258,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!114 &2697178659028097157
+  m_CollisionDetection: 2
+--- !u!114 &4971682828822753649
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,12 +268,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7559249250026395464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1b6b7c124de4864fa971fca163a558f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1305e5bbe4d11144e80d621ca7eb0cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 11
   _maxSpeed: 14
---- !u!114 &6306091632373213767
+--- !u!114 &5108667477337411113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,12 +282,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7559249250026395464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3311dbf7e16bcb3468717bd2ece14c7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 164caf214c8be8144ab0213b3c0fc5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _restartMenu: {fileID: 0}
   _camera: {fileID: 4016727771706060198}
---- !u!114 &3476023453547179401
+--- !u!114 &4989329430885949761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,10 +296,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7559249250026395464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b233ba72e912b5141a615eaaa3508bb3, type: 3}
+  m_Script: {fileID: 11500000, guid: b7f512fdee0ad894e8c0c02f6631b697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5286430285563918215
+--- !u!114 &2361486578716984703
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7559249250026395464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05d7c5d07c2e534468e2fa7545ae7bd8, type: 3}
+  m_Script: {fileID: 11500000, guid: 80d19d6ffccb8e64cbe8ffbeb57a1461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _finishMenu: {fileID: 0}
