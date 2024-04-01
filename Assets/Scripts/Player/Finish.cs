@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Finish : MonoBehaviour
@@ -15,6 +13,7 @@ public class Finish : MonoBehaviour
                 LevelsController.lastCompletedLevel = _level;
 
             Time.timeScale = 0;
+            AudioListener.pause = true;
 
             _finishMenu.SetActive(true);
         }

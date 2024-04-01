@@ -1,21 +1,45 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
 public class ChoiceLevel : MonoBehaviour
 {
-    private int quality;
+    [SerializeField] private AudioSource _buttonClickSource;
+    [SerializeField] private AudioClip _buttonClickClip;
+
+    private int _quality;
+    private float _soundVolume;
+    private float _musicVolume;
 
     public void SceneLoad(string sceneName)
     {
-        quality = Quality.quality;
+        StartCoroutine(PlaySoundAndLoadScene(sceneName));
+    }
+
+    IEnumerator PlaySoundAndLoadScene(string sceneName)
+    {
+        _buttonClickSource.Play();
+
+        if (Time.timeScale == 0)
+            Time.timeScale = 1;
+
+        yield return new WaitForSeconds(_buttonClickClip.length);
+
+        _quality = Quality.quality;
+        _soundVolume = SoundVolume.volume;
+        _musicVolume = MusicVolume.volume;
+
         SceneManager.LoadScene(sceneName);
-        
+
         CheckPoint.checkPoint = new Vector3(0, 1f, 0);
         RestartGame.resetPosition = new Vector3(0, 1f, 0);
-        Quality.quality = quality;
+        Quality.quality = _quality;
+        SoundVolume.volume = _soundVolume;
+        MusicVolume.volume = _musicVolume;
 
-        QualitySettings.SetQualityLevel(quality, true);
+        QualitySettings.SetQualityLevel(_quality, true);
         Time.timeScale = 1.0f;
+        AudioListener.pause = false;
     }
 }
