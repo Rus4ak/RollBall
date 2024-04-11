@@ -10,8 +10,6 @@ public class CheckPoint : MonoBehaviour
         {
             checkPoint = collision.gameObject.transform.position;
             checkPoint.y += 1f;
-
-            RestartGame.resetPosition = checkPoint;
         }
     }
 }

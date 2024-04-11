@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -6,8 +7,11 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _speed = 11f;
     [SerializeField] private float _maxSpeed = 14f;
+    [SerializeField] private GameObject _restartMenu;
 
     private Rigidbody _rigidbody;
+
+    public static Vector3 lastPosition;
 
     private void Awake()
     {
@@ -17,6 +21,45 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+
+        if (transform.position.y < -10f)
+        {
+            _restartMenu.SetActive(true);
+            
+            Time.timeScale = 0;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.layer == 10)
+            return;
+
+        lastPosition = collision.gameObject.transform.position;
+        lastPosition.y += 1f;
+    }
+
+    private void OnEnable()
+    {
+        RestartGame.PlayerDied += Respawn;
+    }
+
+    public void Respawn(Vector3 position)
+    {
+        Time.timeScale = 1;
+
+        _rigidbody.Sleep();
+        transform.position = position;
+        
+        Transform camera = Camera.main.transform;
+        Vector3 cameraPosition = transform.position;
+
+        cameraPosition.y += 5f;
+        cameraPosition.z -= 7f;
+
+        camera.position = cameraPosition;
+
+        _restartMenu.SetActive(false);
     }
 
     private void Move()
