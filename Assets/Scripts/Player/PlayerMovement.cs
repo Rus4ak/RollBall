@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-
+        print(Bank.instance.coins);
         if (transform.position.y < -10f)
         {
             _restartMenu.SetActive(true);
