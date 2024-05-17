@@ -21,7 +21,7 @@ public class TakeRewardAnimation : MonoBehaviour
 
         transform.position = Vector3.Lerp(_startCoinPosition, _moveToPos, _elapsedTime);
 
-        if (transform.position == _moveToPos)
+        if (Vector3.Distance(transform.position, _moveToPos) < 1f)
             Destroy(gameObject);
     }
 }
