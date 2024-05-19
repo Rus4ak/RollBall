@@ -29,7 +29,7 @@ public class ChoiceLevel : MonoBehaviour
         _quality = Quality.quality;
         _soundVolume = SoundVolume.volume;
         _musicVolume = MusicVolume.volume;
-
+        
         SceneManager.LoadScene(sceneName);
 
         CheckPoint.checkPoint = new Vector3(0, 1f, 0);

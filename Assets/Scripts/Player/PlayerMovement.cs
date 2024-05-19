@@ -21,11 +21,11 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-        print(Bank.instance.coins);
+        
         if (transform.position.y < -10f)
         {
             _restartMenu.SetActive(true);
-            
+
             Time.timeScale = 0;
         }
     }
@@ -44,11 +44,17 @@ public class PlayerMovement : MonoBehaviour
         RestartGame.PlayerDied += Respawn;
     }
 
+    private void OnDestroy()
+    {
+        RestartGame.PlayerDied -= Respawn;
+    }
+
     public void Respawn(Vector3 position)
     {
         Time.timeScale = 1;
-
+        
         _rigidbody.Sleep();
+    
         transform.position = position;
         
         Transform camera = Camera.main.transform;
