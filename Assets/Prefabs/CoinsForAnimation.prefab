@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1850920996239453046}
   - component: {fileID: 6702722788767565862}
   m_Layer: 5
-  m_Name: "Coin\u0430ForAnimation"
+  m_Name: CoinsForAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,6 +7,8 @@ public class ChoiceCategory : MonoBehaviour
     [SerializeField] private List<GameObject> _buttons;
     [SerializeField] private List<GameObject> _categoriesMenu;
 
+    public static string currentCategory = "BallsCategoryMenu";
+
     public void ActivateCategoryMenu(GameObject choicedCategoryMenu)
     {
         foreach (GameObject categoryMenu in _categoriesMenu)
@@ -14,6 +16,7 @@ public class ChoiceCategory : MonoBehaviour
             if (categoryMenu == choicedCategoryMenu)
             {
                 categoryMenu.SetActive(true);
+                currentCategory = categoryMenu.name;
             }
             else
             {

@@ -18,6 +18,10 @@ public class SoundVolume : MonoBehaviour
     public void OnValueChanged()
     {
         volume = _slider.value;
+
         isChanged = true;
+        
+        Options.instance.optionsData.soundVolume = volume;
+        Options.instance.Save();
     }
 }

@@ -12,6 +12,8 @@ public class TakeReward : MonoBehaviour
     {
         _text.text = Finish.countCoins.ToString();
         Bank.instance.coins += Finish.countCoins;
+        Progress.instance.progressData.bank = Bank.instance.coins;
+        Progress.instance.Save();
     }
 
     private void Update()

@@ -20,5 +20,8 @@ public class MusicVolume : MonoBehaviour
         volume = _slider.value;
 
         isChanged = true;
+
+        Options.instance.optionsData.musicVolume = volume;
+        Options.instance.Save();
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 
@@ -6,7 +5,7 @@ public class Quality : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown _dropdown;
 
-    public static int quality = 3;
+    public static int quality = 2;
 
     private void Start()
     {
@@ -16,11 +15,11 @@ public class Quality : MonoBehaviour
                 _dropdown.value = 2;
                 break;
 
-            case 3:
+            case 2:
                 _dropdown.value = 1;
                 break;
 
-            case 5:
+            case 3:
                 _dropdown.value = 0;
                 break;
         }
@@ -30,7 +29,7 @@ public class Quality : MonoBehaviour
     {
         int index = _dropdown.value;
         quality = index;
-
+        
         switch (index)
         {
             case 0:
@@ -45,6 +44,9 @@ public class Quality : MonoBehaviour
                 LowQuality();
                 break;
         }
+
+        Options.instance.optionsData.quality = quality;
+        Options.instance.Save();
     }
 
     private void LowQuality()
@@ -56,12 +58,12 @@ public class Quality : MonoBehaviour
     private void MediumQuality()
     {
         QualitySettings.SetQualityLevel(3, true);
-        quality = 3;
+        quality = 2;
     }
 
     private void HighQuality()
     {
         QualitySettings.SetQualityLevel(5, true);
-        quality = 5;
+        quality = 3;
     }
 }

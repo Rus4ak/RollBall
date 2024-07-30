@@ -10,12 +10,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject _restartMenu;
 
     private Rigidbody _rigidbody;
+    private Renderer _skin;
 
     public static Vector3 lastPosition;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _skin = gameObject.GetComponent<Renderer>();
+        _skin.material = EquippedSkins.ballSkin;
+        _skin.material.shader = Shader.Find("Standard");
     }
 
     private void FixedUpdate()
