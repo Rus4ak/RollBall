@@ -23,13 +23,14 @@ public class ShopInitialization : MonoBehaviour
         }
 
         string equippedSkinName = Skins.instance.skinsData.equippedSkin;
-
-        if (equippedSkinName == "")
+        
+        if (equippedSkinName == ""  || equippedSkinName == null)
             equippedSkinName = "Default";
 
         GameObject equippedSkin = GameObject.Find(equippedSkinName);
+        
         Material equippedSkinMaterial = equippedSkin.GetComponent<Skin>().skin;
-
+        
         EquippedSkins.ChangeSelectedBallSkin(equippedSkin, equippedSkinMaterial);
     }
 }

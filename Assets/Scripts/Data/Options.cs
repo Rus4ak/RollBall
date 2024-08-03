@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Options
 {
-    private string path = Application.streamingAssetsPath + "/OptionsData.json";
+    private string path = Application.persistentDataPath + "/OptionsData.json";
 
     public OptionsData optionsData = new OptionsData();
     public static Options instance
@@ -30,8 +30,8 @@ public class Options
 
     public void Save()
     {
-        if (!Directory.Exists(Application.streamingAssetsPath))
-            Directory.CreateDirectory(Application.streamingAssetsPath);
+        if (!Directory.Exists(Application.persistentDataPath))
+            Directory.CreateDirectory(Application.persistentDataPath);
 
         File.WriteAllText(path, JsonUtility.ToJson(optionsData));
     }

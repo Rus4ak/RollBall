@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Progress
 {
-    private string path = Application.streamingAssetsPath + "/ProgressData.json";
+    private string path = Application.persistentDataPath + "/ProgressData.json";
 
     public ProgressData progressData = new ProgressData();
     public static Progress instance
@@ -29,8 +29,8 @@ public class Progress
 
     public void Save()
     {
-        if (!Directory.Exists(Application.streamingAssetsPath))
-            Directory.CreateDirectory(Application.streamingAssetsPath);
+        if (!Directory.Exists(Application.persistentDataPath))
+            Directory.CreateDirectory(Application.persistentDataPath);
 
         File.WriteAllText(path, JsonUtility.ToJson(progressData));
     }

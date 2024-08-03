@@ -5,7 +5,7 @@ using System.IO;
 
 public class Skins
 {
-    private string path = Application.streamingAssetsPath + "/SkinsData.json";
+    private string path = Application.persistentDataPath + "/SkinsData.json";
 
     public SkinsData skinsData = new SkinsData();
 
@@ -31,8 +31,8 @@ public class Skins
 
     public void Save()
     {
-        if (!Directory.Exists(Application.streamingAssetsPath))
-            Directory.CreateDirectory(Application.streamingAssetsPath);
+        if (!Directory.Exists(Application.persistentDataPath))
+            Directory.CreateDirectory(Application.persistentDataPath);
 
         File.WriteAllText(path, JsonUtility.ToJson(skinsData));
     }
