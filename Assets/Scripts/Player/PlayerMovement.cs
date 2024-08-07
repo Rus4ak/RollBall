@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _skin = gameObject.GetComponent<Renderer>();
-        _skin.material = EquippedSkins.ballSkin;
+        _skin.material = EquippedSkins.skinMaterials["ball"];
         _skin.material.shader = Shader.Find("Standard");
     }
 

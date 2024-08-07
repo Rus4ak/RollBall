@@ -19,10 +19,6 @@ public class Skin : MonoBehaviour
         _coin = gameObject.transform.Find("Coin");
         _priceText = gameObject.transform.Find("Price");
         _priceText.GetComponent<TextMeshProUGUI>().text = _price.ToString();
-
-        //if (EquippedSkins.shopSlot == null)
-        //    if (_shopSlot.name == "Default")
-        //        EquippedSkins.shopSlot = _shopSlot;
     }
 
     public void CheckIsBought()
@@ -56,17 +52,17 @@ public class Skin : MonoBehaviour
             switch (ChoiceCategory.currentCategory)
             {
                 case "BallsCategoryMenu":
-                    EquippedSkins.ChangeSelectedBallSkin(_shopSlot, _skin);
+                    EquippedSkins.ChangeSelectedSkin("ball", _shopSlot, _skin);
                     CheckIsBought();
                     break;
 
-                //case "BlocksCategoryMenu":
-                //    EquippedSkins.ChangeSelectedBlockSkin(_shopSlot, _skin);
-                //    break;
+                case "BlocksCategoryMenu":
+                    EquippedSkins.ChangeSelectedSkin("block", _shopSlot, _skin);
+                    break;
 
-                //case "BackgroundsCategoryMenu":
-                //    EquippedSkins.ChangeSelectedBackgroundSkin(_shopSlot, _skin);
-                //    break;
+                case "BackgroundsCategoryMenu":
+                    EquippedSkins.ChangeSelectedSkin("background", _shopSlot, _skin);
+                    break;
             }
         }
         Skins.instance.Save();

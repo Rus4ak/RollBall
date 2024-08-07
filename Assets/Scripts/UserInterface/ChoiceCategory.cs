@@ -9,6 +9,11 @@ public class ChoiceCategory : MonoBehaviour
 
     public static string currentCategory = "BallsCategoryMenu";
 
+    private void Start()
+    {
+        ActivateCategoryMenu(GameObject.Find(currentCategory));
+    }
+
     public void ActivateCategoryMenu(GameObject choicedCategoryMenu)
     {
         foreach (GameObject categoryMenu in _categoriesMenu)

@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
+using Newtonsoft.Json;
+using Unity.VisualScripting.FullSerializer;
 
 public class Skins
 {
@@ -25,7 +27,7 @@ public class Skins
     [Serializable]
     public class SkinsData
     {
-        public string equippedSkin;
+        public Dictionary<string, string> equippedSkins = new Dictionary<string, string>();
         public List<string> boughtSkins = new List<string>();
     }
 
@@ -34,7 +36,7 @@ public class Skins
         if (!Directory.Exists(Application.persistentDataPath))
             Directory.CreateDirectory(Application.persistentDataPath);
 
-        File.WriteAllText(path, JsonUtility.ToJson(skinsData));
+        File.WriteAllText(path, JsonConvert.SerializeObject(skinsData));
     }
 
     public void Load()
@@ -42,6 +44,6 @@ public class Skins
         if (!File.Exists(path))
             return;
         
-        skinsData = JsonUtility.FromJson<SkinsData>(File.ReadAllText(path));
+        skinsData = JsonConvert.DeserializeObject<SkinsData>(File.ReadAllText(path));
     }
 }
