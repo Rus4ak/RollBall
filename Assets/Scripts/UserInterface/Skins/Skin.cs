@@ -44,6 +44,10 @@ public class Skin : MonoBehaviour
                 Skins.instance.skinsData.boughtSkins.Add(gameObject.name);
                 gameObject.tag = "BoughtSkin";
                 Bank.instance.coins -= _price;
+
+                Progress.instance.progressData.bank = Bank.instance.coins;
+                Progress.instance.Save();
+                
                 CheckIsBought();
             }
         }

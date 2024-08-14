@@ -7,10 +7,11 @@ public class ChoiceCategory : MonoBehaviour
     [SerializeField] private List<GameObject> _buttons;
     [SerializeField] private List<GameObject> _categoriesMenu;
 
-    public static string currentCategory = "BallsCategoryMenu";
+    public static string currentCategory;
 
     private void Start()
     {
+        currentCategory = "BallsCategoryMenu";
         ActivateCategoryMenu(GameObject.Find(currentCategory));
     }
 

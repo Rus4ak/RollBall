@@ -1,6 +1,8 @@
 using System;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using static Skins;
 
 public class Progress
 {
@@ -32,7 +34,9 @@ public class Progress
         if (!Directory.Exists(Application.persistentDataPath))
             Directory.CreateDirectory(Application.persistentDataPath);
 
-        File.WriteAllText(path, JsonUtility.ToJson(progressData));
+        byte[] data = SerializeToBytes(progressData);
+
+        File.WriteAllBytes(path, data);
     }
 
     public void Load()
@@ -40,9 +44,29 @@ public class Progress
         if (!File.Exists(path))
             return;
 
-        progressData = JsonUtility.FromJson<ProgressData>(File.ReadAllText(path));
+        byte[] bytes = File.ReadAllBytes(path);
+        progressData = DeserializeFromBytes(bytes);
 
         Bank.instance.coins = progressData.bank;
         LevelsController.lastCompletedLevel = progressData.completedLevels;
+    }
+
+    private byte[] SerializeToBytes(ProgressData data)
+    {
+        using (MemoryStream memoryStream = new MemoryStream())
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(memoryStream, data);
+            return memoryStream.ToArray();
+        }
+    }
+
+    private ProgressData DeserializeFromBytes(byte[] bytes)
+    {
+        using (MemoryStream memoryStream = new MemoryStream(bytes))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            return (ProgressData)formatter.Deserialize(memoryStream);
+        }
     }
 }

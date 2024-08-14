@@ -6,7 +6,7 @@ public class ShopInitialization : MonoBehaviour
 {
     private void Awake()
     {
-        EquippedSkins.ShopSlotInitialization();
+        //EquippedSkins.ShopSlotInitialization();
 
         Dictionary<string, GameObject> shopSlotsTemp = EquippedSkins.shopSlots.ToDictionary(entry => entry.Key, entry => entry.Value);
 
@@ -58,6 +58,7 @@ public class ShopInitialization : MonoBehaviour
 
     public static void LoadData()
     {
+        EquippedSkins.ShopSlotInitialization();
         Skins.instance.Load();
 
         foreach (string skin in Skins.instance.skinsData.boughtSkins)
@@ -71,11 +72,18 @@ public class ShopInitialization : MonoBehaviour
 
         foreach (KeyValuePair<string, string> kvp in equippedSkinName)
         {
-            if (kvp.Value == ""  || kvp.Value == null)
-                Skins.instance.skinsData.equippedSkins[kvp.Key] = "Default";
+            GameObject equippedSkin;
 
-            GameObject equippedSkin = GameObject.Find(kvp.Value);
-        
+            if (kvp.Value == ""  || kvp.Value == null)
+            {
+                string nameDefaultSkin = $"Default{char.ToUpper(kvp.Key[0])}{kvp.Key.Substring(1)}";
+                Skins.instance.skinsData.equippedSkins[kvp.Key] = nameDefaultSkin;
+                equippedSkin = GameObject.Find(nameDefaultSkin);
+            }
+             
+            else
+                equippedSkin = GameObject.Find(kvp.Value);
+
             Material equippedSkinMaterial = equippedSkin.GetComponent<Skin>().skin;
         
             if (kvp.Key == "ball")
