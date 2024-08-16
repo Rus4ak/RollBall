@@ -4,42 +4,6 @@ using UnityEngine;
 
 public class ShopInitialization : MonoBehaviour
 {
-    private void Awake()
-    {
-        //EquippedSkins.ShopSlotInitialization();
-
-        Dictionary<string, GameObject> shopSlotsTemp = EquippedSkins.shopSlots.ToDictionary(entry => entry.Key, entry => entry.Value);
-
-        foreach (KeyValuePair<string, GameObject> kvp in EquippedSkins.shopSlots)
-        {
-            if (kvp.Value == null)
-            {
-                if (kvp.Key == "ball")
-                {
-                    Transform categoryMenu = GameObject.Find("BallsCategoryMenu").transform;
-                    shopSlotsTemp[kvp.Key] = FindDeepChild(categoryMenu, "Default").gameObject;
-                    shopSlotsTemp[kvp.Key].transform.Find("EquippedSkinText").gameObject.SetActive(true);
-                }
-                
-                else if (kvp.Key == "block")
-                {
-                    Transform categoryMenu = GameObject.Find("BlocksCategoryMenu").transform;
-                    shopSlotsTemp[kvp.Key] = FindDeepChild(categoryMenu, "Default").gameObject;
-                    shopSlotsTemp[kvp.Key].transform.Find("EquippedSkinText").gameObject.SetActive(true);
-                }
-                
-                else if (kvp.Key == "background")
-                {
-                    Transform categoryMenu = GameObject.Find("BackgroundsCategoryMenu").transform;
-                    shopSlotsTemp[kvp.Key] = FindDeepChild(categoryMenu, "Default").gameObject;
-                    shopSlotsTemp[kvp.Key].transform.Find("EquippedSkinText").gameObject.SetActive(true);
-                }
-            }
-        }
-
-        EquippedSkins.shopSlots = shopSlotsTemp;
-    }
-
     private Transform FindDeepChild(Transform parent, string name)
     {
         foreach (Transform child in parent)
@@ -54,6 +18,40 @@ public class ShopInitialization : MonoBehaviour
         }
         
         return null;
+    }
+    
+    public void InitializationEquippedText()
+    {
+        Dictionary<string, GameObject> shopSlotsTemp = EquippedSkins.shopSlots.ToDictionary(entry => entry.Key, entry => entry.Value);
+
+        foreach (KeyValuePair<string, GameObject> kvp in EquippedSkins.shopSlots)
+        {
+            if (kvp.Value == null)
+            {
+                if (kvp.Key == "ball")
+                {
+                    Transform categoryMenu = GameObject.Find("BallsCategoryMenu").transform;
+                    shopSlotsTemp[kvp.Key] = FindDeepChild(categoryMenu, "Default").gameObject;
+                    shopSlotsTemp[kvp.Key].transform.Find("EquippedSkinText").gameObject.SetActive(true);
+                }
+
+                else if (kvp.Key == "block")
+                {
+                    Transform categoryMenu = GameObject.Find("BlocksCategoryMenu").transform;
+                    shopSlotsTemp[kvp.Key] = FindDeepChild(categoryMenu, "Default").gameObject;
+                    shopSlotsTemp[kvp.Key].transform.Find("EquippedSkinText").gameObject.SetActive(true);
+                }
+
+                else if (kvp.Key == "background")
+                {
+                    Transform categoryMenu = GameObject.Find("BackgroundsCategoryMenu").transform;
+                    shopSlotsTemp[kvp.Key] = FindDeepChild(categoryMenu, "Default").gameObject;
+                    shopSlotsTemp[kvp.Key].transform.Find("EquippedSkinText").gameObject.SetActive(true);
+                }
+            }
+        }
+
+        EquippedSkins.shopSlots = shopSlotsTemp;
     }
 
     public static void LoadData()
