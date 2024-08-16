@@ -4,6 +4,8 @@ using UnityEngine;
 public class GameInitialization : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _menus;
+    [SerializeField] private Material _ballMaterial;
+    [SerializeField] private Material _floorMaterial;
 
     private void Awake()
     {
@@ -17,5 +19,10 @@ public class GameInitialization : MonoBehaviour
 
         foreach (GameObject menu in _menus)
             menu.SetActive(false);
+    }
+
+    public void UpdateSkins()
+    {
+        EquipSkins.EquipMaterials(_ballMaterial, _floorMaterial);
     }
 }

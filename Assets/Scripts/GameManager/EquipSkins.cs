@@ -1,23 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EquipSkins : MonoBehaviour
+public static class EquipSkins
 {
-    private GameObject[] blocks;
-
-    void Start()
+    public static void EquipMaterials(Material ballMaterial, Material floorMaterial)
     {
-        blocks = GameObject.FindGameObjectsWithTag("ForSkin");
-
-        foreach (GameObject block in blocks)
-        {
-            Renderer blockRenderer = block.GetComponent<Renderer>();
-            blockRenderer.material = EquippedSkins.skinMaterials["block"];
-            blockRenderer.material.shader = Shader.Find("Standard");
-            blockRenderer.material.color = new Color(blockRenderer.material.color.r - .15f, blockRenderer.material.color.g - .15f, blockRenderer.material.color.b - .15f);
-        }
-
-        RenderSettings.skybox = EquippedSkins.skinMaterials["background"];
+        ballMaterial.color = EquippedSkins.skinMaterials["ball"].color;
+        floorMaterial.color = EquippedSkins.skinMaterials["block"].color;
     }
 }

@@ -20,11 +20,10 @@ public class Finish : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             if (LevelsController.lastCompletedLevel < _level)
-            {
                 LevelsController.lastCompletedLevel = _level;
-                Progress.instance.progressData.completedLevels = _level;
-                Progress.instance.Save();
-            }
+            
+            Progress.instance.progressData.completedLevels = LevelsController.lastCompletedLevel;
+            Progress.instance.Save();
 
             _finishMenu.SetActive(true);
 

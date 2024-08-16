@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientSkyColor: {r: 0.3529412, g: 0.3529412, b: 0.3529412, a: 1}
+  m_AmbientEquatorColor: {r: 0, g: 0, b: 0, a: 1}
+  m_AmbientGroundColor: {r: 0.4117647, g: 0.4117647, b: 0.4117647, a: 1}
+  m_AmbientIntensity: 0.8
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.3
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.24717158, g: 0.27692902, b: 0.324806, a: 0.3}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -293,7 +293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -432,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -527,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -622,7 +622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -700,7 +700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 875356567}
   m_Layer: 10
   m_Name: GameObject
-  m_TagString: ForSkin
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4
@@ -886,7 +886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -968,7 +968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3276543019773870910, guid: af0b96badcc7eca4897831e65b11c34b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4824320243411245343, guid: af0b96badcc7eca4897831e65b11c34b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1117,7 +1117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3276543019773870910, guid: af0b96badcc7eca4897831e65b11c34b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4824320243411245343, guid: af0b96badcc7eca4897831e65b11c34b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1301,7 +1301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1396,7 +1396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1506,7 +1506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1601,7 +1601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1764,7 +1764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1830,7 +1830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1958,6 +1958,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7983534049132128915, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c00e1808632388f47b889bac7e7241cc, type: 2}
     - target: {fileID: 9159688818500594673, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1981,7 +1985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2195,7 +2199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2438,7 +2442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2533,7 +2537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2611,7 +2615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2689,7 +2693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2767,7 +2771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2948,7 +2952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -3043,7 +3047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -3121,7 +3125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8436434550538699513, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_LocalScale.x
@@ -3281,7 +3285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3276543019773870910, guid: af0b96badcc7eca4897831e65b11c34b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4824320243411245343, guid: af0b96badcc7eca4897831e65b11c34b, type: 3}
       propertyPath: m_LocalScale.x
@@ -3446,7 +3450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3276543019773870910, guid: af0b96badcc7eca4897831e65b11c34b, type: 3}
       propertyPath: m_TagString
-      value: ForSkin
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4824320243411245343, guid: af0b96badcc7eca4897831e65b11c34b, type: 3}
       propertyPath: m_LocalPosition.x

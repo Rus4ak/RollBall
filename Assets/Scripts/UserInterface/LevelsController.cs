@@ -7,10 +7,13 @@ public class LevelsController : MonoBehaviour
 {
     [SerializeField] private List<Level> _levels;
 
-    public static int lastCompletedLevel = 0;
+    public static int lastCompletedLevel;
 
     private void Start()
     {
+        if (lastCompletedLevel >= _levels.Count)
+            lastCompletedLevel--;
+
         for (int i = 0; i < lastCompletedLevel + 1; i++)
         {
             if (i >= _levels.Count)

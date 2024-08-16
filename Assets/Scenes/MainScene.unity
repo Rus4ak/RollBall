@@ -5356,6 +5356,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 777671902}
+        m_TargetAssemblyTypeName: GameInitialization, Assembly-CSharp
+        m_MethodName: UpdateSkins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &572592014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7658,6 +7670,8 @@ MonoBehaviour:
   - {fileID: 1183199879}
   - {fileID: 1123388959}
   - {fileID: 1675643528}
+  _ballMaterial: {fileID: 2100000, guid: c00e1808632388f47b889bac7e7241cc, type: 2}
+  _floorMaterial: {fileID: 2100000, guid: 69c121d675e696743b47d30280117fe4, type: 2}
 --- !u!1 &778521974
 GameObject:
   m_ObjectHideFlags: 0

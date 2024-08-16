@@ -1,6 +1,7 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -14,26 +15,27 @@ public class PlayerMovement : MonoBehaviour
     private Renderer _skin;
 
     public static Vector3 lastPosition;
-    public static bool isSpawningOnLastPosition = false;
+    public static Vector3 spawnPosition;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _skin = gameObject.GetComponent<Renderer>();
-        _skin.material = EquippedSkins.skinMaterials["ball"];
-        _skin.material.shader = Shader.Find("Standard");
+        RenderSettings.skybox = EquippedSkins.skinMaterials["background"];
     }
 
     private void Start()
     {
-        if (isSpawningOnLastPosition)
-            transform.position = lastPosition;
+        if (spawnPosition == null)
+            spawnPosition = CheckPoint.checkPoint;
+
+        transform.position = spawnPosition;
     }
 
     private void FixedUpdate()
     {
         Move();
-        
+
         if (transform.position.y < -10f)
         {
             _restartMenu.SetActive(true);
@@ -69,9 +71,9 @@ public class PlayerMovement : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         
         SceneManager.LoadScene(currentScene.name);
-        
+
         lastPosition = lastPositionTemp;
-        isSpawningOnLastPosition = true;
+        spawnPosition = position;
         
         _restartMenu.SetActive(false);
     }

@@ -7,7 +7,6 @@ TagManager:
   - CheckPoint
   - BoughtSkin
   - EquippedSkin
-  - ForSkin
   layers:
   - Default
   - TransparentFX

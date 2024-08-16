@@ -33,6 +33,7 @@ public class ChoiceLevel : MonoBehaviour
         SceneManager.LoadScene(sceneName);
 
         CheckPoint.checkPoint = new Vector3(0, 1f, 0);
+        PlayerMovement.spawnPosition = new Vector3(0, 1f, 0);
         Quality.quality = _quality;
         SoundVolume.volume = _soundVolume;
         MusicVolume.volume = _musicVolume;

@@ -3,19 +3,18 @@ using UnityEngine;
 
 public class EquippedSkins
 {
-    // shopSlot and ballSkin must be dictinary
     public static Dictionary<string, GameObject> shopSlots = new Dictionary<string, GameObject>();
     public static Dictionary<string, Material> skinMaterials = new Dictionary<string, Material>();
 
 
-    static public void ShopSlotInitialization()
+    public static void ShopSlotInitialization()
     {
         shopSlots["ball"] = null;
         shopSlots["block"] = null;
         shopSlots["background"] = null;
     }
 
-    static public void ChangeSelectedSkin(string skinType, GameObject skin, Material skinMaterial)
+    public static void ChangeSelectedSkin(string skinType, GameObject skin, Material skinMaterial)
     {
         if (shopSlots[skinType] == skin)
             return;
