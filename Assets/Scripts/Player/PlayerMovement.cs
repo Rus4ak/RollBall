@@ -1,7 +1,4 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -12,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject _restartMenu;
 
     private Rigidbody _rigidbody;
-    private Renderer _skin;
 
     public static Vector3 lastPosition;
     public static Vector3 spawnPosition;
@@ -20,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _skin = gameObject.GetComponent<Renderer>();
         RenderSettings.skybox = EquippedSkins.skinMaterials["background"];
     }
 
