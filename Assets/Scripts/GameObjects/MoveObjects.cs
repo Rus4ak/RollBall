@@ -19,7 +19,7 @@ public class MoveObjects : MonoBehaviour
         _startMove = !_waitPlayer;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (_startMove) 
             MoveObject();

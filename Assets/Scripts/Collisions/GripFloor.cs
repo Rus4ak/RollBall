@@ -7,7 +7,7 @@ public class GripFloor : MonoBehaviour
     private Vector3 _lastPos;
     private bool _isStart = false;
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         if (_isStart)
         {

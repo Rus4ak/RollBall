@@ -4,7 +4,7 @@ public class RestrictRotation : MonoBehaviour
 {
     [SerializeField][Range(-1, 1)] private float _maxRotation;
 
-    private void Update()
+    private void FixedUpdate()
     {
         Quaternion currentRotation = transform.rotation;
 

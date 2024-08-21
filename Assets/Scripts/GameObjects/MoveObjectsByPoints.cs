@@ -50,7 +50,7 @@ public class MoveObjectsByPoints : MonoBehaviour
                 _startMove = true;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (_startMove)
             Move();

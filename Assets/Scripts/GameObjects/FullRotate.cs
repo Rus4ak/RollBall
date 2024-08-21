@@ -16,7 +16,7 @@ public class FullRotate : MonoBehaviour
         _rotateSpeed = 360f / _timeRotate;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.Rotate(_direction * _rotateSpeed * Time.deltaTime);
     }
