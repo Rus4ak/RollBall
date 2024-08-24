@@ -1,10 +1,13 @@
 using UnityEngine;
 
-public static class EquipSkins
+public class EquipSkins : MonoBehaviour
 {
-    public static void EquipMaterials(Material ballMaterial, Material floorMaterial)
+    [SerializeField] private Material ballMaterial;
+    [SerializeField] private Material blockMaterial;
+
+    private void Awake()
     {
-        ballMaterial.color = EquippedSkins.skinMaterials["ball"].color;
-        floorMaterial.color = EquippedSkins.skinMaterials["block"].color - new Color(.15f, .15f, .15f);
+        ballMaterial.CopyPropertiesFromMaterial(EquippedSkins.skinMaterials["ball"]);
+        blockMaterial.CopyPropertiesFromMaterial(EquippedSkins.skinMaterials["block"]);
     }
 }

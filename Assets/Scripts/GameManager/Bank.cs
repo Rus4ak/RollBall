@@ -13,5 +13,5 @@ public class Bank
 
     private static Bank _instance;
 
-    public int coins { get; set; }
+    public int coins { get; set; } = 100000;
 }

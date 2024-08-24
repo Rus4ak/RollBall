@@ -20,9 +20,4 @@ public class GameInitialization : MonoBehaviour
         foreach (GameObject menu in _menus)
             menu.SetActive(false);
     }
-
-    public void UpdateSkins()
-    {
-        EquipSkins.EquipMaterials(_ballMaterial, _floorMaterial);
-    }
 }
