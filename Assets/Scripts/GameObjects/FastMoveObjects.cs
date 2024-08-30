@@ -36,6 +36,7 @@ public class FastMoveObjects : MonoBehaviour
         {
             _isStart = false;
             _rb.velocity = Vector3.zero;
+            _rb.constraints = RigidbodyConstraints.FreezePosition;
         }
     }
 
