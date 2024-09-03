@@ -25,8 +25,11 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
             }
             else
             {
-                _color.a = 1f;
-                _renderer.material.color = _color;
+                if (_renderer != null)
+                {
+                    _color.a = 1f;
+                    _renderer.material.color = _color;
+                }
             }
         }
     }

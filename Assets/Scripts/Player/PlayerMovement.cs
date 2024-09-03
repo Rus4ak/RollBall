@@ -13,6 +13,14 @@ public class PlayerMovement : MonoBehaviour
     public static Vector3 lastPosition;
     public static Vector3 spawnPosition;
 
+    public float Speed => _speed;
+    public float MaxSpeed
+    {
+        get => _maxSpeed;
+
+        set => _maxSpeed = value;
+    }
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -85,16 +93,16 @@ public class PlayerMovement : MonoBehaviour
             Vector3 movement = touchDeltaPosition.x * cameraRight + touchDeltaPosition.y * cameraForward;
             movement.y = 0;
             
-            _rigidbody.AddForce(movement * _speed * Time.fixedDeltaTime);
+            _rigidbody.AddForce(movement * Speed * Time.fixedDeltaTime);
 
             Vector3 velocity = _rigidbody.velocity;
             float velocityY = velocity.y;
 
             velocity.y = 0;
 
-            if (velocity.magnitude > _maxSpeed)
+            if (velocity.magnitude > MaxSpeed)
             {
-                velocity = _rigidbody.velocity.normalized * _maxSpeed;
+                velocity = _rigidbody.velocity.normalized * MaxSpeed;
                 velocity.y = velocityY;
 
                 _rigidbody.velocity = velocity;
