@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Finish : MonoBehaviour
 {
@@ -8,11 +9,16 @@ public class Finish : MonoBehaviour
     [SerializeField] private int _minCoutCoins;
     [SerializeField] private int _maxCoutCoins;
 
+    private GameObject _joystickUI;
+    private UniversalAdditionalCameraData _mainCamera;
+    private Camera _boxCamera;
+
     public static int countCoins;
 
     private void Start()
     {
         countCoins = Random.Range(_minCoutCoins, _maxCoutCoins);
+        _joystickUI = GameObject.FindGameObjectWithTag("Joystick");
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -27,7 +33,10 @@ public class Finish : MonoBehaviour
 
             _finishMenu.SetActive(true);
 
-            Instantiate(_box);
+            if (_joystickUI)
+                _joystickUI.SetActive(false);
+            
+            _box.SetActive(true);
 
             collision.gameObject.SetActive(false);
         }

@@ -1,29 +1,32 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float _speed = 11f;
-    [SerializeField] private float _maxSpeed = 14f;
+    [SerializeField] private float _speed = 12f;
     [SerializeField] private GameObject _restartMenu;
-
+    [SerializeField] private FloatingJoystick _joystick;
+  
     private Rigidbody _rigidbody;
+    private GameObject _joystickUI;
 
     public static Vector3 lastPosition;
     public static Vector3 spawnPosition;
 
-    public float Speed => _speed;
-    public float MaxSpeed
+    public float Speed
     {
-        get => _maxSpeed;
+        get => _speed;
 
-        set => _maxSpeed = value;
+        set => _speed = value;
     }
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _joystickUI = GameObject.FindGameObjectWithTag("Joystick");
+  
         RenderSettings.skybox = EquippedSkins.skinMaterials["background"];
     }
 
@@ -42,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         if (transform.position.y < -10f)
         {
             _restartMenu.SetActive(true);
+            _joystickUI.SetActive(false);
 
             Time.timeScale = 0;
         }
@@ -79,34 +83,27 @@ public class PlayerMovement : MonoBehaviour
         spawnPosition = position;
         
         _restartMenu.SetActive(false);
+        _joystickUI.SetActive(true);
     }
 
     private void Move()
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        if (Input.touchCount > 0)
         {
-            Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-
             Vector3 cameraForward = Camera.main.transform.forward;
             Vector3 cameraRight = Camera.main.transform.right;
 
-            Vector3 movement = touchDeltaPosition.x * cameraRight + touchDeltaPosition.y * cameraForward;
-            movement.y = 0;
-            
-            _rigidbody.AddForce(movement * Speed * Time.fixedDeltaTime);
+            Vector3 movementJoystick = new Vector3(_joystick.Horizontal, 0, _joystick.Vertical);
+            Vector3 movement = movementJoystick.x * cameraRight + movementJoystick.z * cameraForward;
 
-            Vector3 velocity = _rigidbody.velocity;
-            float velocityY = velocity.y;
+            Vector3 rigidbodyVelocity = _rigidbody.velocity;
 
-            velocity.y = 0;
+            rigidbodyVelocity.x = movement.x * Speed;
+            rigidbodyVelocity.z = movement.z * Speed;
 
-            if (velocity.magnitude > MaxSpeed)
-            {
-                velocity = _rigidbody.velocity.normalized * MaxSpeed;
-                velocity.y = velocityY;
+            Vector3 rigidbodyLerpVelocity = Vector3.Lerp(_rigidbody.velocity, rigidbodyVelocity, Time.fixedDeltaTime * 2f);
 
-                _rigidbody.velocity = velocity;
-            }
+            _rigidbody.velocity = rigidbodyLerpVelocity;
         }
     }
 }

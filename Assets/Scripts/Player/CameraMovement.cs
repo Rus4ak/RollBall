@@ -28,13 +28,13 @@ public class CameraMovement : MonoBehaviour
     {
         Vector3 cameraOffset = _sphereRigidbody.velocity.normalized * 1.5f;
 
-        if (cameraOffset.z <= 3.5f)
-            cameraOffset.z = 3.5f;
+        if (cameraOffset.z <= 4.5f)
+            cameraOffset.z = 5.5f;
 
         Vector3 pos = _sphere.position - cameraOffset;
 
-        pos.y += 3.5f;
-        pos.z -= 5f;
+        pos.y += 6.5f;
+        pos.z -= 6f;
 
         pos.y = Mathf.Max(pos.y, _sphere.position.y - 5f);
 

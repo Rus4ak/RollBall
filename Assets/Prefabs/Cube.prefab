@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7094818384878868276}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: ForSkin
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7205172224861113126}
   m_Layer: 10
   m_Name: Cube (7)
-  m_TagString: ForSkin
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 6875952314877103434}
   m_Layer: 10
   m_Name: Cylinder
-  m_TagString: ForSkin
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

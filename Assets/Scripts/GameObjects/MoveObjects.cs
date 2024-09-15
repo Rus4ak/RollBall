@@ -29,7 +29,7 @@ public class MoveObjects : MonoBehaviour
     {
         if (_waitPlayer)
             if (collision.gameObject.CompareTag("Player"))
-                _startMove = true;
+                StartCoroutine(WaitSecondForMove());
     }
 
     private void MoveObject()
@@ -56,6 +56,15 @@ public class MoveObjects : MonoBehaviour
         _endPosition = _startPosition;
         _startPosition = transform.position;
         _elapsedTime = 0f;
+
+        StopAllCoroutines();
+    }
+
+    private IEnumerator WaitSecondForMove()
+    {
+        yield return new WaitForSeconds(.5f);
+
+        _startMove = true;
 
         StopAllCoroutines();
     }

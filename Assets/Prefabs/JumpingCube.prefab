@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8480144164292063821}
   - component: {fileID: 3159943019254294727}
   - component: {fileID: 7592374852143822515}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: JumpingCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

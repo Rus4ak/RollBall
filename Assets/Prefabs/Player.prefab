@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8484497661339022670}
   - component: {fileID: 6665673036116152525}
   - component: {fileID: 6885301704916981731}
+  - component: {fileID: 2347696829989379355}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -107,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sphere: {fileID: 925443807192338920}
-  _transparentMaterial: {fileID: 2100000, guid: f1cd9bda68bc44f479ffecce423d045f, type: 2}
+  _transparentMaterial: {fileID: 2100000, guid: c788e49a99ea7254687873acaf4dc2cd, type: 2}
 --- !u!114 &6885301704916981731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +123,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sphere: {fileID: 925443807192338920}
   smoothTime: 0.5
+--- !u!114 &2347696829989379355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891740052616768526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &2019020728504560234
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,8 +700,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 11
-  _maxSpeed: 14
   _restartMenu: {fileID: 0}
+  _joystick: {fileID: 0}
 --- !u!114 &4989329430885949761
 MonoBehaviour:
   m_ObjectHideFlags: 0

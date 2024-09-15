@@ -120,6 +120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _finishMenu: {fileID: 0}
   _level: 0
-  _box: {fileID: 7745490200839690203, guid: 38ac035fcdc79b341b0f79989f872d69, type: 3}
+  _box: {fileID: 0}
   _minCoutCoins: 0
   _maxCoutCoins: 0
