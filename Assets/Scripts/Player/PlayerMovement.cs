@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     public static Vector3 lastPosition;
     public static Vector3 spawnPosition;
+    
+    public static bool isDead = false;
 
     public float Speed
     {
@@ -42,12 +44,17 @@ public class PlayerMovement : MonoBehaviour
     {
         Move();
 
-        if (transform.position.y < -10f)
+        if (isDead)
         {
             _restartMenu.SetActive(true);
             _joystickUI.SetActive(false);
 
             Time.timeScale = 0;
+        }
+
+        if (transform.position.y < -10f)
+        {
+            isDead = true;
         }
     }
 
@@ -84,6 +91,8 @@ public class PlayerMovement : MonoBehaviour
         
         _restartMenu.SetActive(false);
         _joystickUI.SetActive(true);
+
+        isDead = false;
     }
 
     private void Move()
