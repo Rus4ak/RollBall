@@ -8,9 +8,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _speed = 12f;
     [SerializeField] private GameObject _restartMenu;
     [SerializeField] private FloatingJoystick _joystick;
-  
+    [SerializeField] private GameObject _trailParticlePrefab;
+
     private Rigidbody _rigidbody;
     private GameObject _joystickUI;
+    private float _lastSpawnTrailParticle;
 
     public static Vector3 lastPosition;
     public static Vector3 spawnPosition;
@@ -56,6 +58,31 @@ public class PlayerMovement : MonoBehaviour
         {
             isDead = true;
         }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (_rigidbody.velocity.magnitude < .5f)
+            return;
+
+        _lastSpawnTrailParticle -= Time.deltaTime;
+
+        if (_lastSpawnTrailParticle > 0)
+            return;
+
+        Vector3 position = transform.position;
+        position.y -= .5f;
+
+        GameObject trailParticle = Instantiate(_trailParticlePrefab);
+        trailParticle.transform.position = position;
+
+        if (collision.gameObject.TryGetComponent<Renderer>(out Renderer renderer))
+            trailParticle.GetComponent<ParticleSystemRenderer>().material = renderer.material;
+
+        else 
+            trailParticle.GetComponent<ParticleSystemRenderer>().material = collision.transform.Find("Cube").gameObject.GetComponent<Renderer>().material;
+        
+        _lastSpawnTrailParticle = .2f;
     }
 
     private void OnCollisionExit(Collision collision)

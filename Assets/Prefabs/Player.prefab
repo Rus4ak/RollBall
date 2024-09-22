@@ -337,9 +337,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3c709b4a41f822140bef7b4e58816bce, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b6446132c76679e4288c580f181b7bb3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.05
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -702,6 +702,7 @@ MonoBehaviour:
   _speed: 11
   _restartMenu: {fileID: 0}
   _joystick: {fileID: 0}
+  _trailParticlePrefab: {fileID: 1354007003867627850, guid: 40b8c42593cf94c4cb40d9ad13e89451, type: 3}
 --- !u!114 &4989329430885949761
 MonoBehaviour:
   m_ObjectHideFlags: 0

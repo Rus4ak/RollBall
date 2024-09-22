@@ -50,7 +50,7 @@ public class Sounds : MonoBehaviour
 
         if (MusicVolume.isChanged)
         {
-            _music.volume = Mathf.Lerp(0, .05f, MusicVolume.volume);
+            _music.volume = Mathf.Lerp(0, .5f, MusicVolume.volume);
         }
     }
 }

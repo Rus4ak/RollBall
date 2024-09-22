@@ -1663,7 +1663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8c251bee405624043a7aed90d1d66486, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6bc4d52df4aef6744aca2ad1fe99a459, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11517,7 +11517,7 @@ GameObject:
   - component: {fileID: 725961338}
   - component: {fileID: 725961337}
   m_Layer: 5
-  m_Name: Sky
+  m_Name: Neon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11558,8 +11558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9e6657246f0c849ad60e353a49b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _price: 200
-  _skin: {fileID: 2100000, guid: 059692a836efc5c4a9eb824b139b4c5e, type: 2}
+  _price: 600
+  _skin: {fileID: 2100000, guid: 63d7d0fdc55375b41a7919354a43e9ef, type: 2}
 --- !u!114 &725961338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11994,12 +11994,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1225183538}
-  - {fileID: 725961336}
   - {fileID: 124346671}
   - {fileID: 1294750864}
   - {fileID: 404608006}
   - {fileID: 638554365}
   - {fileID: 713650492}
+  - {fileID: 725961336}
   - {fileID: 1462375039}
   m_Father: {fileID: 274156082}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19875,7 +19875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 0
-  _skin: {fileID: 2100000, guid: 63d7d0fdc55375b41a7919354a43e9ef, type: 2}
+  _skin: {fileID: 2100000, guid: 059692a836efc5c4a9eb824b139b4c5e, type: 2}
 --- !u!114 &1225183540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20735,7 +20735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 200
+  m_text: 600
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
@@ -21332,7 +21332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7c45c753997f5c246aa64bf90ae94ffe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c251bee405624043a7aed90d1d66486, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
