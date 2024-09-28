@@ -15,6 +15,7 @@ public class TakeRewardAnimation : MonoBehaviour
         _speed = Random.Range(1f, 3f);
     }
 
+    // Movement of coins to the specified position, after which they are destroyed
     private void Update()
     {
         _elapsedTime += Time.deltaTime * _speed;

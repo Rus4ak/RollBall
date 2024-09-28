@@ -10,8 +10,6 @@ public class Finish : MonoBehaviour
     [SerializeField] private int _maxCoutCoins;
 
     private GameObject _joystickUI;
-    private UniversalAdditionalCameraData _mainCamera;
-    private Camera _boxCamera;
 
     public static int countCoins;
 

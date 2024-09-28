@@ -2,13 +2,16 @@ using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
-using static Skins;
 
 public class Progress
 {
     private string path = Application.persistentDataPath + "/ProgressData.json";
 
     public ProgressData progressData = new ProgressData();
+    
+    private static Progress _instance;
+
+    // Implementation of the Singleton pattern
     public static Progress instance
     {
         get
@@ -20,8 +23,7 @@ public class Progress
         }
     }
 
-    private static Progress _instance;
-
+    // Class with fields for storage
     [Serializable]
     public class ProgressData
     {
@@ -34,6 +36,7 @@ public class Progress
         if (!Directory.Exists(Application.persistentDataPath))
             Directory.CreateDirectory(Application.persistentDataPath);
 
+        // Serialize data to bytes
         byte[] data = SerializeToBytes(progressData);
 
         File.WriteAllBytes(path, data);
@@ -44,6 +47,7 @@ public class Progress
         if (!File.Exists(path))
             return;
 
+        // Deserialize data from bytes
         byte[] bytes = File.ReadAllBytes(path);
         progressData = DeserializeFromBytes(bytes);
 

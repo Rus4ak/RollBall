@@ -26,6 +26,7 @@ public class TakeReward : MonoBehaviour
         }
     }
 
+    // Creating coins in a certain range, the number of which depends on the reward
     private void InstantiateCoins()
     {
         Vector3 posSpawnCoin = _spawnCoin.transform.position;

@@ -18,6 +18,7 @@ public class SpeedBlock : MonoBehaviour
     {
         if (collision.gameObject == _player)
         {
+            // Saving the player's movement speed and changing it to the specified speed
             _defaultSpeed = _playerMovement.Speed;
             _playerMovement.Speed = _speed;
         }
@@ -26,6 +27,7 @@ public class SpeedBlock : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject == _player)
+            // Changing the player's movement speed to the default speed
             _playerMovement.Speed = _defaultSpeed;
     }
 }

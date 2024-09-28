@@ -13,6 +13,7 @@ public class GameInitialization : MonoBehaviour
         Progress.instance.Load();
     }
 
+    // Loading data from the database, after which unnecessary windows are disabled
     private void Start()
     {
         ShopInitialization.LoadData();

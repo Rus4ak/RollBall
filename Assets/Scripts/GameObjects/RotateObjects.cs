@@ -25,6 +25,7 @@ public class RotateObjects : MonoBehaviour
 
     private void RotateObject()
     {
+        // Rotate of an object from point to point in a specified amount of time
         _elapsedTime += Time.deltaTime;
 
         float t = Mathf.Clamp01(_elapsedTime / _moveTime);
@@ -33,6 +34,7 @@ public class RotateObjects : MonoBehaviour
 
         if (t >= 1.0f)
         {
+            // Swap the start and end points
             _endPositionQuaternion = _startPositionQuaternion;
             _startPositionQuaternion = transform.rotation;
             _elapsedTime = 0f;

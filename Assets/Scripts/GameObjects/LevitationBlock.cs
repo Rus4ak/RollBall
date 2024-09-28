@@ -10,6 +10,9 @@ public class LevitationBlock : MonoBehaviour
     
     private bool _isStart = false;
 
+    // When a player collides with the object,
+    // the player's velocity in Y direction increases by a specified force
+    // and the player's gravity is turned off
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -25,6 +28,7 @@ public class LevitationBlock : MonoBehaviour
         }
     }
 
+    // After a certain time has elapsed, the player's gravity turns on
     private void Update()
     {
         if (_isStart)

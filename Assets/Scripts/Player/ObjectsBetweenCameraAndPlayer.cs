@@ -13,6 +13,7 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
     {
         Vector3 direction = _sphere.position - transform.position;
 
+        // Raycast from the camera to the player
         RaycastHit hit;
         if (Physics.Raycast(transform.position, direction, out hit, direction.magnitude))
         {
@@ -23,6 +24,7 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
                 if (_renderer == null)
                     return;
 
+                // Copying the material of the object that falls under the raycast
                 _transparentMaterial.CopyPropertiesFromMaterial(_renderer.material);
                 _transparentMaterial.SetFloat("_Surface", 1);
 
@@ -33,6 +35,7 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
                 
                 _transparentMaterial.color = _color;
 
+                // Saving the default material
                 _defaultMaterial = _renderer.material;
                 _renderer.material = _transparentMaterial;
             }
@@ -49,6 +52,7 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
         }
     }
 
+    // Changing the material type to transparent
     private void UpdateMaterialRenderQueue(Material material)
     {
         material.SetOverrideTag("RenderType", "Transparent");

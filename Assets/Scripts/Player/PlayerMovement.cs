@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -62,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        // Creating particles under the player at a specified time interval if the player is moving
         if (_rigidbody.velocity.magnitude < .5f)
             return;
 
@@ -76,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
         GameObject trailParticle = Instantiate(_trailParticlePrefab);
         trailParticle.transform.position = position;
 
+        // Applying the material of the block the player is standing on to the particles
         if (collision.gameObject.TryGetComponent<Renderer>(out Renderer renderer))
             trailParticle.GetComponent<ParticleSystemRenderer>().material = renderer.material;
 
@@ -90,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == 10)
             return;
 
+        // Saving the position of the last block the player was on
         lastPosition = collision.gameObject.transform.position;
         lastPosition.y += 1f;
     }
@@ -104,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
         RestartGame.PlayerDied -= Respawn;
     }
 
+    // Restarting the game and moving the player to a given position
     public void Respawn(Vector3 position)
     {
         Time.timeScale = 1;

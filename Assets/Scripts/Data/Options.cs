@@ -7,6 +7,10 @@ public class Options
     private string path = Application.persistentDataPath + "/OptionsData.json";
 
     public OptionsData optionsData = new OptionsData();
+
+    private static Options _instance;
+
+    // Implementation of the Singleton pattern
     public static Options instance
     {
         get
@@ -18,8 +22,7 @@ public class Options
         }
     }
 
-    private static Options _instance;
-
+    // Class with fields for storage
     [Serializable]
     public class OptionsData
     {

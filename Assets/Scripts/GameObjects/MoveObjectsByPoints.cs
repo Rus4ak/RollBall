@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+// A class with position and time properties for the object to reach this position
 [System.Serializable]
 public class PointData : ICloneable
 {
@@ -35,6 +36,7 @@ public class MoveObjectsByPoints : MonoBehaviour
 
     private void Start()
     {
+        // Copying properties from _points to _tempPoints
         _tempPoints = new List<PointData>(_points.Select(p => (PointData)p.Clone()));
         _tempPoints[0].moveTime = 0f;
 
@@ -58,6 +60,7 @@ public class MoveObjectsByPoints : MonoBehaviour
 
     private void Move()
     {
+        // Movement of an object from point to point in a specified amount of time
         PointData point = _tempPoints[0];
 
         _elapsedTime += Time.deltaTime;
@@ -67,8 +70,10 @@ public class MoveObjectsByPoints : MonoBehaviour
 
         if (t >= 1f)
         {
+            // Deletion of the point to which the object has moved
             _tempPoints.RemoveAt(0);
 
+            // If the object reaches the end point, all points are added to _tempPoints in reverse order
             if (_tempPoints.Count == 0)
             {
                 _tempPoints.AddRange(_points);

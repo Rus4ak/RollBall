@@ -29,11 +29,12 @@ public class MoveObjects : MonoBehaviour
     {
         if (_waitPlayer)
             if (collision.gameObject.CompareTag("Player"))
-                StartCoroutine(WaitSecondForMove());
+                StartCoroutine(WaitTimeForMove());
     }
 
     private void MoveObject()
     {
+        // Movement of an object from point to point in a specified amount of time
         _elapsedTime += Time.deltaTime;
 
         float t = Mathf.Clamp01(_elapsedTime / _moveTime);
@@ -49,6 +50,7 @@ public class MoveObjects : MonoBehaviour
         }
     }
 
+    // Delay before starting to move and swap the start and end points
     private IEnumerator WaitForMove()
     {
         yield return new WaitForSeconds(_pauseTime);
@@ -60,7 +62,8 @@ public class MoveObjects : MonoBehaviour
         StopAllCoroutines();
     }
 
-    private IEnumerator WaitSecondForMove()
+    // Delay before starting to move
+    private IEnumerator WaitTimeForMove()
     {
         yield return new WaitForSeconds(.5f);
 

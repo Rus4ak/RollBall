@@ -2,9 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
-using Newtonsoft.Json;
-using System.ComponentModel;
-using System.Text;
 using System.Runtime.Serialization.Formatters.Binary;
 
 public class Skins
@@ -13,6 +10,9 @@ public class Skins
 
     public SkinsData skinsData = new SkinsData();
 
+    private static Skins _instance;
+
+    // Implementation of the Singleton pattern
     public static Skins instance
     {
         get
@@ -23,9 +23,8 @@ public class Skins
             return _instance;
         }
     }
-    
-    private static Skins _instance;
 
+    // Class with fields for storage
     [Serializable]
     public class SkinsData
     {
@@ -43,6 +42,7 @@ public class Skins
         if (!Directory.Exists(Application.persistentDataPath))
             Directory.CreateDirectory(Application.persistentDataPath);
 
+        // Serialize data to bytes
         byte[] data = SerializeToBytes(skinsData);
 
         File.WriteAllBytes(path, data);
@@ -54,6 +54,7 @@ public class Skins
         if (!File.Exists(path))
             return;
 
+        // Deserialize data from bytes
         byte[] bytes = File.ReadAllBytes(path);
         skinsData = DeserializeFromBytes(bytes);
     }

@@ -11,6 +11,7 @@ public class GripRotatedFloor : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
+            // If the player's parent is equal to this GameObject, the player's parent is set to null
             if (collision.gameObject.transform.parent.parent.gameObject == this.gameObject)
                 collision.gameObject.transform.parent.SetParent(null);
     }

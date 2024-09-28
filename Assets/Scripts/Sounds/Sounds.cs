@@ -18,6 +18,7 @@ public class Sounds : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        // Playback of the hit sound depending on the force of the hit
         if (collision.contacts[0].impulse.magnitude > 2f)
         {
             float hitVolume = Mathf.Lerp(0, .7f, collision.contacts[0].impulse.magnitude / 25);
@@ -30,6 +31,7 @@ public class Sounds : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        // Playback of the movement sound
         if (_rolling.isPlaying)
             return;
 
@@ -43,6 +45,7 @@ public class Sounds : MonoBehaviour
 
     private void Update()
     {
+        // Changing the volume of the movement sound depending on the speed of movement
         float rollingVolume = Mathf.Lerp(0, 1, _rb.velocity.magnitude / 10);
 
         _rolling.volume = Mathf.Lerp(0, rollingVolume, SoundVolume.volume);

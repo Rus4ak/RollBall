@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShopInitialization : MonoBehaviour
 {
+    // Search all children GameObjects with the specified name in the specified GameObject
     private Transform FindDeepChild(Transform parent, string name)
     {
         foreach (Transform child in parent)
@@ -19,9 +20,11 @@ public class ShopInitialization : MonoBehaviour
         
         return null;
     }
-    
+
+    // Initialization of the equipped skins. If no skin is equipped, the default skin is equipping.
     public void InitializationEquippedText()
     {
+        // Creating a temporary dictionary that copies the data of the dictionary with the equipped skins
         Dictionary<string, GameObject> shopSlotsTemp = EquippedSkins.shopSlots.ToDictionary(entry => entry.Key, entry => entry.Value);
 
         foreach (KeyValuePair<string, GameObject> kvp in EquippedSkins.shopSlots)
@@ -59,6 +62,7 @@ public class ShopInitialization : MonoBehaviour
         EquippedSkins.ShopSlotInitialization();
         Skins.instance.Load();
 
+        // Skins tag changes to BoughtSkin if they are saved in the database as purchased
         foreach (string skin in Skins.instance.skinsData.boughtSkins)
         {
             GameObject boughtSkin = GameObject.Find(skin);
@@ -72,6 +76,7 @@ public class ShopInitialization : MonoBehaviour
         {
             GameObject equippedSkin;
 
+            // If the skin loaded from the database is empty, the equipped skin becomes Default by default
             if (kvp.Value == ""  || kvp.Value == null)
             {
                 string nameDefaultSkin = $"Default{char.ToUpper(kvp.Key[0])}{kvp.Key.Substring(1)}";
@@ -83,7 +88,8 @@ public class ShopInitialization : MonoBehaviour
                 equippedSkin = GameObject.Find(kvp.Value);
 
             Material equippedSkinMaterial = equippedSkin.GetComponent<Skin>().skin;
-        
+
+            // Equipped skins change to skins from the database marked as equipped
             if (kvp.Key == "ball")
                 EquippedSkins.ChangeSelectedSkin("ball", equippedSkin, equippedSkinMaterial);
 

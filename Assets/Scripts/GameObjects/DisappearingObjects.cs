@@ -18,6 +18,7 @@ public class DisappearingObjects : MonoBehaviour
 
     private void Update()
     {
+        // Changing the color of the material to red over a specified time, after which the object is destroyed
         if (_isStart)
         {
             _elapsedTime += Time.deltaTime / _disaperingTime;

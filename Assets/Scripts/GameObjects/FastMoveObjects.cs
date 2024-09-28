@@ -25,6 +25,7 @@ public class FastMoveObjects : MonoBehaviour
             _isStart = true;
     }
 
+    // The object moves in a given direction with a given force to a given position using AddForce
     private void FixedUpdate()
     {
         if (_isStart)
