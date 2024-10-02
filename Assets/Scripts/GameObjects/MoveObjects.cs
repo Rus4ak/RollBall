@@ -65,7 +65,7 @@ public class MoveObjects : MonoBehaviour
     // Delay before starting to move
     private IEnumerator WaitTimeForMove()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.1f);
 
         _startMove = true;
 

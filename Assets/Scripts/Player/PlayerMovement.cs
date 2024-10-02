@@ -15,7 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     public static Vector3 lastPosition;
     public static Vector3 spawnPosition;
-    
+
+    public static bool _isStop = false;
     public static bool isDead = false;
 
     public float Speed
@@ -127,22 +128,30 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        if (Input.touchCount > 0)
+        if (!_isStop)
         {
-            Vector3 cameraForward = Camera.main.transform.forward;
-            Vector3 cameraRight = Camera.main.transform.right;
+            if (Input.touchCount > 0)
+            {
+                Vector3 cameraForward = Camera.main.transform.forward;
+                Vector3 cameraRight = Camera.main.transform.right;
 
-            Vector3 movementJoystick = new Vector3(_joystick.Horizontal, 0, _joystick.Vertical);
-            Vector3 movement = movementJoystick.x * cameraRight + movementJoystick.z * cameraForward;
+                Vector3 movementJoystick = new Vector3(_joystick.Horizontal, 0, _joystick.Vertical);
+                Vector3 movement = movementJoystick.x * cameraRight + movementJoystick.z * cameraForward;
 
-            Vector3 rigidbodyVelocity = _rigidbody.velocity;
+                Vector3 rigidbodyVelocity = _rigidbody.velocity;
 
-            rigidbodyVelocity.x = movement.x * Speed;
-            rigidbodyVelocity.z = movement.z * Speed;
+                rigidbodyVelocity.x = movement.x * Speed;
+                rigidbodyVelocity.z = movement.z * Speed;
 
-            Vector3 rigidbodyLerpVelocity = Vector3.Lerp(_rigidbody.velocity, rigidbodyVelocity, Time.fixedDeltaTime * 2f);
+                Vector3 rigidbodyLerpVelocity = Vector3.Lerp(_rigidbody.velocity, rigidbodyVelocity, Time.fixedDeltaTime * 2f);
 
-            _rigidbody.velocity = rigidbodyLerpVelocity;
+                _rigidbody.velocity = rigidbodyLerpVelocity;
+            }
+        }
+        else
+        {
+            if (!_rigidbody.IsSleeping())
+                _rigidbody.Sleep();
         }
     }
 }

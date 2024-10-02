@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class ChoiceLevel : MonoBehaviour
 {
     [SerializeField] private AudioSource _buttonClickSource;
-    [SerializeField] private AudioClip _buttonClickClip;
 
     private int _quality;
     private float _soundVolume;
@@ -24,7 +23,7 @@ public class ChoiceLevel : MonoBehaviour
         if (Time.timeScale == 0)
             Time.timeScale = 1;
 
-        yield return new WaitForSeconds(_buttonClickClip.length);
+        yield return new WaitForSeconds(_buttonClickSource.clip.length);
 
         _quality = Quality.quality;
         _soundVolume = SoundVolume.volume;
