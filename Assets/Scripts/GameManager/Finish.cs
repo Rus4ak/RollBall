@@ -3,18 +3,24 @@ using UnityEngine;
 public class Finish : MonoBehaviour
 {
     [SerializeField] private GameObject _finishMenu;
-    [SerializeField] private int _level;
+    [SerializeField] private int _currentLevel;
     [SerializeField] private GameObject _box;
-    [SerializeField] private int _minCoutCoins;
-    [SerializeField] private int _maxCoutCoins;
+    [SerializeField] private int _minCountCoins;
+    [SerializeField] private int _maxCountCoins;
+
+    [SerializeField] private bool _isDropSkin = false;
 
     private GameObject _joystickUI;
 
-    public static int countCoins;
+    public int lastCompletedLevel;
+
+    public int CurrentLevel { get => _currentLevel; }
+    public int MinCountCoins { get => _minCountCoins; }
+    public int MaxCountCoins { get => _maxCountCoins; }
+    public bool IsDropSkin { get => _isDropSkin; }
 
     private void Start()
     {
-        countCoins = Random.Range(_minCoutCoins, _maxCoutCoins);
         _joystickUI = GameObject.FindGameObjectWithTag("Joystick");
     }
 
@@ -22,11 +28,13 @@ public class Finish : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (LevelsController.lastCompletedLevel < _level)
-                LevelsController.lastCompletedLevel = _level;
+            lastCompletedLevel = LevelsController.lastCompletedLevel;
+
+            if (LevelsController.lastCompletedLevel <= CurrentLevel)
+                LevelsController.lastCompletedLevel = CurrentLevel + 1;
             
-            Progress.instance.progressData.completedLevels = LevelsController.lastCompletedLevel;
-            Progress.instance.Save();
+            Progress.Instance.progressData.completedLevels = LevelsController.lastCompletedLevel;
+            Progress.Instance.Save();
 
             _finishMenu.SetActive(true);
 

@@ -18,6 +18,6 @@ public class FullRotate : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.Rotate(_direction * _rotateSpeed * Time.deltaTime);
+        transform.Rotate(_rotateSpeed * Time.deltaTime * _direction);
     }
 }

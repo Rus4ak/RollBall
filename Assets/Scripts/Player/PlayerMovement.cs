@@ -74,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 position = transform.position;
         position.y -= .5f;
 
+        // Create the particles under the player
         GameObject trailParticle = Instantiate(_trailParticlePrefab);
         trailParticle.transform.position = position;
 

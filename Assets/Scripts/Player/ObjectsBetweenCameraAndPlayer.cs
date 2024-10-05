@@ -14,14 +14,11 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
         Vector3 direction = _sphere.position - transform.position;
 
         // Raycast from the camera to the player
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, direction, out hit, direction.magnitude))
+        if (Physics.Raycast(transform.position, direction, out RaycastHit hit, direction.magnitude))
         {
             if (hit.collider.gameObject != _sphere.gameObject)
             {
-                _renderer = hit.collider.gameObject.GetComponent<Renderer>();
-
-                if (_renderer == null)
+                if (!hit.collider.gameObject.TryGetComponent<Renderer>(out _renderer))
                     return;
 
                 // Copying the material of the object that falls under the raycast
@@ -32,7 +29,7 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
 
                 _color = _transparentMaterial.color;
                 _color.a = .5f;
-                
+
                 _transparentMaterial.color = _color;
 
                 // Saving the default material

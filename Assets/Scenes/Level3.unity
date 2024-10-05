@@ -917,12 +917,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 208297173}
     - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+      propertyPath: _currentLevel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: _maxCoutCoins
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: _minCoutCoins
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+      propertyPath: _maxCountCoins
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+      propertyPath: _minCountCoins
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1840642478873977136, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: m_Name

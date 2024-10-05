@@ -7218,10 +7218,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _finishMenu: {fileID: 1808783336}
-  _level: 13
+  _currentLevel: 13
   _box: {fileID: 532231196}
-  _minCoutCoins: 60
-  _maxCoutCoins: 90
+  _minCountCoins: 25
+  _maxCountCoins: 50
+  _isDropSkin: 0
 --- !u!1001 &2069564889
 PrefabInstance:
   m_ObjectHideFlags: 0

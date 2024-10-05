@@ -12,6 +12,6 @@ public class Balance : MonoBehaviour
 
     public void UpdateBalance()
     {
-        _balanceText.text = Bank.instance.coins.ToString();
+        _balanceText.text = Bank.Instance.Coins.ToString();
     }
 }

@@ -4,14 +4,14 @@ using UnityEngine;
 public class Skin : MonoBehaviour
 {
     [SerializeField] private int _price;
-    [SerializeField] private Material _skin;
+    [SerializeField] private Material _skinMaterial;
 
     private GameObject _shopSlot;
     private Transform _coin;
     private Transform _priceText;
     private bool _isBought;
 
-    public Material skin => _skin;
+    public Material SkinMaterial => _skinMaterial;
 
     private void Awake()
     {
@@ -28,6 +28,7 @@ public class Skin : MonoBehaviour
         if (_isBought == false)
             _isBought = gameObject.CompareTag("EquippedSkin");
 
+        // If the skin is bought, the price tag is turned off
         if (_isBought)
         {
             _coin.gameObject.SetActive(false);
@@ -39,16 +40,17 @@ public class Skin : MonoBehaviour
     {
         if (!_isBought)
         {
-            if (_price <= Bank.instance.coins)
+            if (_price <= Bank.Instance.Coins)
             {
-                Skins.instance.skinsData.boughtSkins.Add(gameObject.name);
+                Skins.Instance.skinsData.boughtSkins.Add(gameObject.name);
                 gameObject.tag = "BoughtSkin";
-                Bank.instance.coins -= _price;
+                Bank.Instance.Coins -= _price;
 
-                Progress.instance.progressData.bank = Bank.instance.coins;
-                Progress.instance.Save();
+                Progress.Instance.progressData.bank = Bank.Instance.Coins;
+                Progress.Instance.Save();
                 
                 CheckIsBought();
+                SkinsList.ChangeTag(gameObject.name);
             }
         }
         else
@@ -56,19 +58,19 @@ public class Skin : MonoBehaviour
             switch (ChoiceCategory.currentCategory)
             {
                 case "BallsCategoryMenu":
-                    EquippedSkins.ChangeSelectedSkin("ball", _shopSlot, _skin);
+                    EquippedSkins.ChangeSelectedSkin("ball", _shopSlot, SkinMaterial);
                     CheckIsBought();
                     break;
 
                 case "BlocksCategoryMenu":
-                    EquippedSkins.ChangeSelectedSkin("block", _shopSlot, _skin);
+                    EquippedSkins.ChangeSelectedSkin("block", _shopSlot, SkinMaterial);
                     break;
 
                 case "BackgroundsCategoryMenu":
-                    EquippedSkins.ChangeSelectedSkin("background", _shopSlot, _skin);
+                    EquippedSkins.ChangeSelectedSkin("background", _shopSlot, SkinMaterial);
                     break;
             }
         }
-        Skins.instance.Save();
+        Skins.Instance.Save();
     }
 }

@@ -1915,7 +1915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 200
-  _skin: {fileID: 2100000, guid: 2f27d64af057fb74188aa1c04e6b16b3, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 2f27d64af057fb74188aa1c04e6b16b3, type: 2}
 --- !u!114 &124346673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2818,7 +2818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 400
-  _skin: {fileID: 2100000, guid: a88b0c9bda201e345864b397b8e5e1de, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: a88b0c9bda201e345864b397b8e5e1de, type: 2}
 --- !u!114 &175903566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4116,7 +4116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 100
-  _skin: {fileID: 2100000, guid: cb894402d8b3fd84f9b55b33292cfa3c, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: cb894402d8b3fd84f9b55b33292cfa3c, type: 2}
 --- !u!114 &311718519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5105,7 +5105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 400
+  m_text: 500
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
@@ -5801,7 +5801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 300
-  _skin: {fileID: 2100000, guid: f4f76ced0b8dd824491297c9e4181864, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: f4f76ced0b8dd824491297c9e4181864, type: 2}
 --- !u!114 &404608008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7161,7 +7161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 100
-  _skin: {fileID: 2100000, guid: 072e458a8d582534b94fefa8e37f4fe4, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 072e458a8d582534b94fefa8e37f4fe4, type: 2}
 --- !u!114 &528649569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8647,7 +8647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 300
-  _skin: {fileID: 2100000, guid: 4ccd850a0ccc0554891d8530fb34890d, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 4ccd850a0ccc0554891d8530fb34890d, type: 2}
 --- !u!114 &572623943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9059,7 +9059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 100
-  _skin: {fileID: 2100000, guid: 62d1c0ebd00ec534ba961f963bce9a79, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 62d1c0ebd00ec534ba961f963bce9a79, type: 2}
 --- !u!1 &599799689
 GameObject:
   m_ObjectHideFlags: 0
@@ -9116,7 +9116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 200
-  _skin: {fileID: 2100000, guid: f69b3f5e5465bfc4eb2cf619be914d88, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: f69b3f5e5465bfc4eb2cf619be914d88, type: 2}
 --- !u!114 &599799692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9788,7 +9788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 100
-  _skin: {fileID: 2100000, guid: 9e11020d9c1b3ca469d193e36d966981, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 9e11020d9c1b3ca469d193e36d966981, type: 2}
 --- !u!114 &638359616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9950,8 +9950,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9e6657246f0c849ad60e353a49b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _price: 400
-  _skin: {fileID: 2100000, guid: 4ee89339d5c6fdf4b85c216f71446afe, type: 2}
+  _price: 500
+  _skinMaterial: {fileID: 2100000, guid: 4ee89339d5c6fdf4b85c216f71446afe, type: 2}
 --- !u!114 &638554367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11209,8 +11209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9e6657246f0c849ad60e353a49b569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _price: 500
-  _skin: {fileID: 2100000, guid: 9f5772603d3d640489d2734b76b2254e, type: 2}
+  _price: 400
+  _skinMaterial: {fileID: 2100000, guid: 9f5772603d3d640489d2734b76b2254e, type: 2}
 --- !u!114 &713650494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11796,7 +11796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 600
-  _skin: {fileID: 2100000, guid: 63d7d0fdc55375b41a7919354a43e9ef, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 63d7d0fdc55375b41a7919354a43e9ef, type: 2}
 --- !u!114 &725961338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12065,7 +12065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 100
-  _skin: {fileID: 2100000, guid: 34fffd3dee6633a4abd8f6c20a850514, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 34fffd3dee6633a4abd8f6c20a850514, type: 2}
 --- !u!1 &732694075
 GameObject:
   m_ObjectHideFlags: 0
@@ -12234,8 +12234,8 @@ RectTransform:
   - {fileID: 124346671}
   - {fileID: 1294750864}
   - {fileID: 404608006}
-  - {fileID: 638554365}
   - {fileID: 713650492}
+  - {fileID: 638554365}
   - {fileID: 725961336}
   - {fileID: 1462375039}
   m_Father: {fileID: 274156082}
@@ -12667,6 +12667,7 @@ GameObject:
   - component: {fileID: 777671900}
   - component: {fileID: 777671899}
   - component: {fileID: 777671902}
+  - component: {fileID: 777671903}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -12766,6 +12767,50 @@ MonoBehaviour:
   - {fileID: 1675643528}
   _ballMaterial: {fileID: 2100000, guid: c00e1808632388f47b889bac7e7241cc, type: 2}
   _floorMaterial: {fileID: 2100000, guid: 69c121d675e696743b47d30280117fe4, type: 2}
+--- !u!114 &777671903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777671898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &778521974
 GameObject:
   m_ObjectHideFlags: 0
@@ -14231,7 +14276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 0
-  _skin: {fileID: 2100000, guid: 47453decec13d984cba2c36044c4b24b, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 47453decec13d984cba2c36044c4b24b, type: 2}
 --- !u!1 &859320983
 GameObject:
   m_ObjectHideFlags: 0
@@ -14556,7 +14601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 100
-  _skin: {fileID: 2100000, guid: 2cccb74921dd298479c4ba2add06fed1, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 2cccb74921dd298479c4ba2add06fed1, type: 2}
 --- !u!114 &880102199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15975,7 +16020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 100
-  _skin: {fileID: 2100000, guid: fae7bbe66c46bff438c54ebd8fc5eb2f, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: fae7bbe66c46bff438c54ebd8fc5eb2f, type: 2}
 --- !u!114 &995692775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16138,7 +16183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 200
-  _skin: {fileID: 2100000, guid: 9e883fc055632554188462b7484fd07f, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 9e883fc055632554188462b7484fd07f, type: 2}
 --- !u!114 &1002285008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17543,7 +17588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 400
-  _skin: {fileID: 2100000, guid: 7159bde6820690e45a3902b78993fead, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 7159bde6820690e45a3902b78993fead, type: 2}
 --- !u!114 &1083762359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18988,7 +19033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 100
-  _skin: {fileID: 2100000, guid: 7b3e7cb4ce10c7041bebfe8bdaf7138e, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 7b3e7cb4ce10c7041bebfe8bdaf7138e, type: 2}
 --- !u!114 &1126256880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19432,7 +19477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 0
-  _skin: {fileID: 2100000, guid: bddd0f6a23c3b744e9f798be9c5a593f, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: bddd0f6a23c3b744e9f798be9c5a593f, type: 2}
 --- !u!114 &1161072998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20249,7 +20294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 0
-  _skin: {fileID: 2100000, guid: 059692a836efc5c4a9eb824b139b4c5e, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 059692a836efc5c4a9eb824b139b4c5e, type: 2}
 --- !u!114 &1225183540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20975,7 +21020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 200
-  _skin: {fileID: 2100000, guid: b858626845d9b2d4eb662c31c8c16f61, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: b858626845d9b2d4eb662c31c8c16f61, type: 2}
 --- !u!114 &1253373432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21556,7 +21601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 300
-  _skin: {fileID: 2100000, guid: 8265f1e5893d7e54e88369e4243ac410, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 8265f1e5893d7e54e88369e4243ac410, type: 2}
 --- !u!114 &1294750866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22617,7 +22662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 100
-  _skin: {fileID: 2100000, guid: 5d802dd925e0ce44d935e2bcf68bacd0, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 5d802dd925e0ce44d935e2bcf68bacd0, type: 2}
 --- !u!114 &1355460904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23214,7 +23259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 100
-  _skin: {fileID: 2100000, guid: f11775b35b6350d40835c605c1b38e76, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: f11775b35b6350d40835c605c1b38e76, type: 2}
 --- !u!114 &1390071786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23511,7 +23556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 300
-  _skin: {fileID: 2100000, guid: 3f6424bf6d3d6fc4eb313caff0db284b, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 3f6424bf6d3d6fc4eb313caff0db284b, type: 2}
 --- !u!114 &1403090883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24537,7 +24582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 600
-  _skin: {fileID: 2100000, guid: 70745affcc297bd499348a9db036225e, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 70745affcc297bd499348a9db036225e, type: 2}
 --- !u!114 &1462375041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26444,7 +26489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 400
-  _skin: {fileID: 2100000, guid: 023f88000059c13458c73e962e150abe, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 023f88000059c13458c73e962e150abe, type: 2}
 --- !u!114 &1584720388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26607,7 +26652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 200
-  _skin: {fileID: 2100000, guid: 831716a42d6620844a09d02793758212, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 831716a42d6620844a09d02793758212, type: 2}
 --- !u!114 &1601641143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27727,6 +27772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1675643529}
   - component: {fileID: 1675643530}
+  - component: {fileID: 1675643531}
   m_Layer: 0
   m_Name: ShopMenu
   m_TagString: Untagged
@@ -27762,6 +27808,118 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb54b4c9e6c89842a59cf951478e01d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1675643531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675643528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d021fb7096c68a443847f6cd4bce6e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skins:
+  - skin: DefaultBall
+    price: 0
+    sprite: {fileID: 21300000, guid: 1475357f35dd5704f8dc1368ec10d9b3, type: 3}
+  - skin: RedBall
+    price: 100
+    sprite: {fileID: 21300000, guid: 651eaa2f2bdfb9446a059bc217dfae2e, type: 3}
+  - skin: BlueBall
+    price: 100
+    sprite: {fileID: 21300000, guid: cbc8bf1f9f6d5fe4b807d49cc0a7b882, type: 3}
+  - skin: GreenBall
+    price: 100
+    sprite: {fileID: 21300000, guid: 924f7b7aaee445941a3e231aa6010d57, type: 3}
+  - skin: PurpleBall
+    price: 100
+    sprite: {fileID: 21300000, guid: 7545a5b3ae7ed0749b8126ff5ed0d8ee, type: 3}
+  - skin: BrownBall
+    price: 100
+    sprite: {fileID: 21300000, guid: a970d5e8b815ec74580b1585f14acbd8, type: 3}
+  - skin: YellowBall
+    price: 100
+    sprite: {fileID: 21300000, guid: 294a4c0717f2199499678a0d81864f80, type: 3}
+  - skin: WoodenBall
+    price: 200
+    sprite: {fileID: 21300000, guid: 91b7b43cc5721d94da7e5b320823d703, type: 3}
+  - skin: StoneBall
+    price: 200
+    sprite: {fileID: 21300000, guid: 4390bd3c4f752c645a9786fe7711951e, type: 3}
+  - skin: RainbowBall
+    price: 300
+    sprite: {fileID: 21300000, guid: 8e4565ff7fb0600439aff132c38eeaa9, type: 3}
+  - skin: ThunderboltBall
+    price: 400
+    sprite: {fileID: 21300000, guid: d5a5a47e5b5152e4285a9fe390f71491, type: 3}
+  - skin: PlushBall
+    price: 400
+    sprite: {fileID: 21300000, guid: 8c545076db7832841a1188efe3b990b5, type: 3}
+  - skin: DefaultBlock
+    price: 0
+    sprite: {fileID: 21300000, guid: 5ddc5b9429c95b84da4f25233fad23c1, type: 3}
+  - skin: RedBlock
+    price: 100
+    sprite: {fileID: 21300000, guid: 1f02489e81713df429935725b6675d2b, type: 3}
+  - skin: BlueBlock
+    price: 100
+    sprite: {fileID: 21300000, guid: dae781b190e9aee438e5770d1c18d960, type: 3}
+  - skin: GreenBlock
+    price: 100
+    sprite: {fileID: 21300000, guid: b74c5db373851f84fb86cdeba9068cfe, type: 3}
+  - skin: PurpleBlock
+    price: 100
+    sprite: {fileID: 21300000, guid: ddacde489340f804093b5aecad0cf35a, type: 3}
+  - skin: BrownBlock
+    price: 100
+    sprite: {fileID: 21300000, guid: 7a626af8511b3934499eceff67a1dcb7, type: 3}
+  - skin: YellowBlock
+    price: 100
+    sprite: {fileID: 21300000, guid: 95f4b40556036e84690e6a861ff0c928, type: 3}
+  - skin: WoodenBlock
+    price: 200
+    sprite: {fileID: 21300000, guid: 93affc55325eb9548bced090439f9de7, type: 3}
+  - skin: StoneBlock
+    price: 200
+    sprite: {fileID: 21300000, guid: 9258492da63e36e4b8da105b263eca6d, type: 3}
+  - skin: BrickBlock
+    price: 200
+    sprite: {fileID: 21300000, guid: 13e746933978bdf44b449d91867775d2, type: 3}
+  - skin: LavaBlock
+    price: 300
+    sprite: {fileID: 21300000, guid: ad089b03f69cdb243b00d79a01d7f8dd, type: 3}
+  - skin: PlushBlock
+    price: 400
+    sprite: {fileID: 21300000, guid: 035ff21fba608ef4fb25d86c76a47641, type: 3}
+  - skin: NeonLinesBlock
+    price: 500
+    sprite: {fileID: 21300000, guid: f47bdfbee9bbfcd45863f6915a4bc84f, type: 3}
+  - skin: DefaultBackground
+    price: 0
+    sprite: {fileID: 21300000, guid: 8c251bee405624043a7aed90d1d66486, type: 3}
+  - skin: Field
+    price: 200
+    sprite: {fileID: 21300000, guid: c8ee18e478ffa3b428337419caef231f, type: 3}
+  - skin: NightLake
+    price: 300
+    sprite: {fileID: 21300000, guid: c51c60404e2b31a43bdc74dc91d633a3, type: 3}
+  - skin: GreenCave
+    price: 300
+    sprite: {fileID: 21300000, guid: 4960ff6e7678afd4f92ec76d0f46135b, type: 3}
+  - skin: DarkSky
+    price: 400
+    sprite: {fileID: 21300000, guid: 4489113be9486f14a864633e45fd7175, type: 3}
+  - skin: CartoonNight
+    price: 500
+    sprite: {fileID: 21300000, guid: ef52952f8b306a242b169818660cc657, type: 3}
+  - skin: Neon
+    price: 600
+    sprite: {fileID: 21300000, guid: 6bc4d52df4aef6744aca2ad1fe99a459, type: 3}
+  - skin: NeonLines
+    price: 600
+    sprite: {fileID: 21300000, guid: 5144acefe3344984887a0200643197ad, type: 3}
 --- !u!1 &1676266960
 GameObject:
   m_ObjectHideFlags: 0
@@ -30405,7 +30563,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 500
+  m_text: 400
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
@@ -30852,7 +31010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 100
-  _skin: {fileID: 2100000, guid: 52391eafb10c70a4aa768b6de5fac0cc, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 52391eafb10c70a4aa768b6de5fac0cc, type: 2}
 --- !u!114 &1865194224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31800,7 +31958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 100
-  _skin: {fileID: 2100000, guid: 9e11020d9c1b3ca469d193e36d966981, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 1c6f3dd94d2dbb34d869c2d983297f92, type: 2}
 --- !u!1 &1948656364
 GameObject:
   m_ObjectHideFlags: 0
@@ -32402,7 +32560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 200
-  _skin: {fileID: 2100000, guid: 8a10768e8a0bc0a4597863bb4e5c3749, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: 8a10768e8a0bc0a4597863bb4e5c3749, type: 2}
 --- !u!114 &1985228610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33090,7 +33248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _price: 500
-  _skin: {fileID: 2100000, guid: a9c31c2ab58fdfe4dbab91e7e2e81c00, type: 2}
+  _skinMaterial: {fileID: 2100000, guid: a9c31c2ab58fdfe4dbab91e7e2e81c00, type: 2}
 --- !u!114 &2019436303
 MonoBehaviour:
   m_ObjectHideFlags: 0

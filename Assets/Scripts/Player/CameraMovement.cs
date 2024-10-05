@@ -30,6 +30,7 @@ public class CameraMovement : MonoBehaviour
     {
         Vector3 cameraOffset = _sphereRigidbody.velocity.normalized * 1.5f;
 
+        // The distance of the camera to the player in Z cannot be less than the specified value
         if (cameraOffset.z <= 5.5f)
             cameraOffset.z = 5.5f;
 

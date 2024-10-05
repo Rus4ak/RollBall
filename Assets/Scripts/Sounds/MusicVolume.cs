@@ -21,7 +21,7 @@ public class MusicVolume : MonoBehaviour
 
         isChanged = true;
 
-        Options.instance.optionsData.musicVolume = volume;
-        Options.instance.Save();
+        Options.Instance.optionsData.musicVolume = volume;
+        Options.Instance.Save();
     }
 }

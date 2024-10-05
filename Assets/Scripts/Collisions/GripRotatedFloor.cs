@@ -12,7 +12,7 @@ public class GripRotatedFloor : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
             // If the player's parent is equal to this GameObject, the player's parent is set to null
-            if (collision.gameObject.transform.parent.parent.gameObject == this.gameObject)
+            if (collision.gameObject.transform.parent.parent.gameObject == gameObject)
                 collision.gameObject.transform.parent.SetParent(null);
     }
 }

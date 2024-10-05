@@ -23,9 +23,9 @@ public class TypeWriterAnimation : MonoBehaviour
 
     private void Update()
     {
-        // Skip the animation
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
+            // Skip the animation
             if (!isAnimationEnd)
             {
                 _text.text += _textTemp;
@@ -49,11 +49,10 @@ public class TypeWriterAnimation : MonoBehaviour
                     _keyboardSound.pitch = UnityEngine.Random.Range(.9f, 1.1f);
                     _keyboardSound.Play();
                 }
-                    //_keyboardSound.Stop();
-
 
                 if (_textTemp.Length > 1)
-                    _textTemp = _textTemp.Substring(1);
+                    _textTemp = _textTemp[1..];
+
                 else if (_textTemp.Length == 1)
                 {
                     _textTemp = null;

@@ -3,16 +3,15 @@ public class Bank
     private static Bank _instance;
 
     // Implementation of the Singleton pattern
-    public static Bank instance
+    public static Bank Instance
     {
         get
         {
-            if (_instance == null)
-                _instance = new Bank();
+            _instance ??= new Bank();
 
             return _instance;
         }
     }
 
-    public int coins { get; set; } = 100000;
+    public int Coins { get; set; } = 100000;
 }

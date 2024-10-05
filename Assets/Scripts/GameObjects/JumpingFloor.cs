@@ -5,9 +5,9 @@ public class JumpingFloor : MonoBehaviour
     [SerializeField] private Rigidbody _playerRigidbody;
     [SerializeField] private float _force;
 
-    // The player is thrown to the side opposite to the top of the object
     private void OnCollisionEnter(Collision collision)
     {
+        // The player is thrown to the side opposite to the top of the object
         if (collision.gameObject.CompareTag("Player"))
         {
             Vector3 objectRotation = transform.rotation.eulerAngles;

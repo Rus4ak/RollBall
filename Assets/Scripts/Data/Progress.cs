@@ -5,19 +5,18 @@ using UnityEngine;
 
 public class Progress
 {
-    private string path = Application.persistentDataPath + "/ProgressData.json";
+    private readonly string _path = Application.persistentDataPath + "/ProgressData.json";
 
     public ProgressData progressData = new ProgressData();
     
     private static Progress _instance;
 
     // Implementation of the Singleton pattern
-    public static Progress instance
+    public static Progress Instance
     {
         get
         {
-            if (_instance == null)
-                _instance = new Progress();
+            _instance ??= new Progress();
 
             return _instance;
         }
@@ -39,19 +38,19 @@ public class Progress
         // Serialize data to bytes
         byte[] data = SerializeToBytes(progressData);
 
-        File.WriteAllBytes(path, data);
+        File.WriteAllBytes(_path, data);
     }
 
     public void Load()
     {
-        if (!File.Exists(path))
+        if (!File.Exists(_path))
             return;
 
         // Deserialize data from bytes
-        byte[] bytes = File.ReadAllBytes(path);
+        byte[] bytes = File.ReadAllBytes(_path);
         progressData = DeserializeFromBytes(bytes);
 
-        Bank.instance.coins = progressData.bank;
+        Bank.Instance.Coins = progressData.bank;
         LevelsController.lastCompletedLevel = progressData.completedLevels;
     }
 

@@ -32,6 +32,8 @@ public class TutorialTip : MonoBehaviour
 
                 // Stopping the player movement
                 PlayerMovement._isStop = true;
+                
+                // Disabling the joystick
                 _joystick.SetActive(false);
 
                 _isTipActive = true;
@@ -48,7 +50,7 @@ public class TutorialTip : MonoBehaviour
             {
                 if (_tipText.isAnimationEnd)
                 {
-                    // Diactivating the tip
+                    // Disabling the tip
                     _tipUI.SetActive(false);
 
                     foreach (GameObject tipObject in _tipObjects)

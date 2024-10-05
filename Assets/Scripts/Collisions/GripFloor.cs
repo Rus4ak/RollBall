@@ -9,10 +9,9 @@ public class GripFloor : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // If the player is standing on a block,
-        // the vector of the block's movement is added to its position.
         if (_isStart)
         {
+            // The position between the current position and the position in the previous frame
             Vector3 tempPos = transform.position - _lastPos;
 
             _player.position += tempPos;

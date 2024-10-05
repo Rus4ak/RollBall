@@ -2061,12 +2061,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1787558472}
     - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+      propertyPath: _currentLevel
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: _maxCoutCoins
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: _minCoutCoins
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+      propertyPath: _maxCountCoins
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+      propertyPath: _minCountCoins
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1840642478873977136, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: m_Name

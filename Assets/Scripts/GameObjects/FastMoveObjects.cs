@@ -25,14 +25,15 @@ public class FastMoveObjects : MonoBehaviour
             _isStart = true;
     }
 
-    // The object moves in a given direction with a given force to a given position using AddForce
     private void FixedUpdate()
     {
+        // The object moves in a given direction with a given force
         if (_isStart)
         {
             _rb.AddForce(_direction * _force);
         }
 
+        // The object stops
         if (IsStop(_endPosition - transform.position))
         {
             _isStart = false;
@@ -42,8 +43,9 @@ public class FastMoveObjects : MonoBehaviour
         }
     }
 
+    // Calculating the position close to the transferred position
     private bool IsStop(Vector3 vector)
     {
-        return Mathf.Min(vector.x, vector.y, vector.z) >= -1 && Mathf.Max(vector.x, vector.y, vector.z) <= 1;
+        return Mathf.Min(vector.x, vector.y, vector.z) >= -1 && Mathf.Max(vector.x, vector.y, vector.z) <= .5f;
     }
 }

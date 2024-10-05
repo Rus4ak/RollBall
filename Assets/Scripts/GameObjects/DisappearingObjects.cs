@@ -18,12 +18,13 @@ public class DisappearingObjects : MonoBehaviour
 
     private void Update()
     {
-        // Changing the color of the material to red over a specified time, after which the object is destroyed
         if (_isStart)
         {
+            // Changing the color of the material to red over a specified time
             _elapsedTime += Time.deltaTime / _disaperingTime;
             _material.color = Color.Lerp(_defaultColor, _color, _elapsedTime);
 
+            // Destroying the object after a certain time has passed
             if (_elapsedTime >= 1f)
                 Destroy(gameObject);
         }

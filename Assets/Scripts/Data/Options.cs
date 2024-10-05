@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class Options
 {
-    private string path = Application.persistentDataPath + "/OptionsData.json";
+    private readonly string _path = Application.persistentDataPath + "/OptionsData.json";
 
     public OptionsData optionsData = new OptionsData();
 
     private static Options _instance;
 
     // Implementation of the Singleton pattern
-    public static Options instance
+    public static Options Instance
     {
         get
         {
-            if (_instance == null)
-                _instance = new Options();
+            _instance ??= new Options();
 
             return _instance;
         }
@@ -36,15 +35,15 @@ public class Options
         if (!Directory.Exists(Application.persistentDataPath))
             Directory.CreateDirectory(Application.persistentDataPath);
 
-        File.WriteAllText(path, JsonUtility.ToJson(optionsData));
+        File.WriteAllText(_path, JsonUtility.ToJson(optionsData));
     }
 
     public void Load()
     {
-        if (!File.Exists(path))
+        if (!File.Exists(_path))
             return;
         
-        optionsData = JsonUtility.FromJson<OptionsData>(File.ReadAllText(path));
+        optionsData = JsonUtility.FromJson<OptionsData>(File.ReadAllText(_path));
 
         Quality.quality = optionsData.quality;
         MusicVolume.volume = optionsData.musicVolume;

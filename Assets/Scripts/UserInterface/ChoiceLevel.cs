@@ -16,6 +16,7 @@ public class ChoiceLevel : MonoBehaviour
         StartCoroutine(PlaySoundAndLoadScene(sceneName));
     }
 
+    // Play the sound of the button click in parallel with the scene change settings
     IEnumerator PlaySoundAndLoadScene(string sceneName)
     {
         _buttonClickSource.Play();
@@ -38,7 +39,7 @@ public class ChoiceLevel : MonoBehaviour
         MusicVolume.volume = _musicVolume;
 
         QualitySettings.SetQualityLevel(_quality, true);
-        Time.timeScale = 1.0f;
+        Time.timeScale = 1;
         AudioListener.pause = false;
     }
 }

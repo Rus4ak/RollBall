@@ -9,14 +9,15 @@ public class GameInitialization : MonoBehaviour
 
     private void Awake()
     {
-        Options.instance.Load();
-        Progress.instance.Load();
+        Options.Instance.Load();
+        Progress.Instance.Load();
     }
 
     // Loading data from the database, after which unnecessary windows are disabled
     private void Start()
     {
         ShopInitialization.LoadData();
+        SkinsList.SkinsDictionaryInitialization();
 
         foreach (GameObject menu in _menus)
             menu.SetActive(false);

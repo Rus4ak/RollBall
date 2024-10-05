@@ -45,8 +45,8 @@ public class Quality : MonoBehaviour
                 break;
         }
 
-        Options.instance.optionsData.quality = quality;
-        Options.instance.Save();
+        Options.Instance.optionsData.quality = quality;
+        Options.Instance.Save();
     }
 
     private void LowQuality()

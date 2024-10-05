@@ -18,17 +18,19 @@ public class EquippedSkins
     {
         if (shopSlots[skinType] == skin)
             return;
-        
+
+        // Returning the equipped skin to the bought skin state
         if (shopSlots[skinType] != null)
         {
-            shopSlots[skinType].tag = "Untagged";
+            shopSlots[skinType].tag = "BoughtSkin";
             shopSlots[skinType].transform.Find("EquippedSkinText").gameObject.SetActive(false);
         }
 
+        // Switching the transferred skin to the equipped skin state
         shopSlots[skinType] = skin;
         shopSlots[skinType].tag = "EquippedSkin";
         shopSlots[skinType].transform.Find("EquippedSkinText").gameObject.SetActive(true);
         skinMaterials[skinType] = skinMaterial;
-        Skins.instance.skinsData.equippedSkins[skinType] = shopSlots[skinType].name;
+        Skins.Instance.skinsData.equippedSkins[skinType] = shopSlots[skinType].name;
     }
 }

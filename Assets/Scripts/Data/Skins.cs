@@ -6,19 +6,18 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class Skins
 {
-    private string path = Application.persistentDataPath + "/SkinsData.json";
+    private readonly string _path = Application.persistentDataPath + "/SkinsData.json";
 
     public SkinsData skinsData = new SkinsData();
 
     private static Skins _instance;
 
     // Implementation of the Singleton pattern
-    public static Skins instance
+    public static Skins Instance
     {
         get
         {
-            if (_instance == null)
-                _instance = new Skins();
+            _instance ??= new Skins();
 
             return _instance;
         }
@@ -45,17 +44,17 @@ public class Skins
         // Serialize data to bytes
         byte[] data = SerializeToBytes(skinsData);
 
-        File.WriteAllBytes(path, data);
+        File.WriteAllBytes(_path, data);
 
     }
 
     public void Load()
     {
-        if (!File.Exists(path))
+        if (!File.Exists(_path))
             return;
 
         // Deserialize data from bytes
-        byte[] bytes = File.ReadAllBytes(path);
+        byte[] bytes = File.ReadAllBytes(_path);
         skinsData = DeserializeFromBytes(bytes);
     }
 
