@@ -62,6 +62,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        if (Quality.quality == 1)
+            return;
+
         // Creating particles under the player at a specified time interval if the player is moving
         if (_rigidbody.velocity.magnitude < .5f)
             return;
