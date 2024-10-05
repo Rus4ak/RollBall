@@ -19,6 +19,8 @@ public class Skin : MonoBehaviour
         _coin = gameObject.transform.Find("Coin");
         _priceText = gameObject.transform.Find("Price");
         _priceText.GetComponent<TextMeshProUGUI>().text = _price.ToString();
+
+        CheckIsBought();
     }
 
     public void CheckIsBought()
