@@ -3,6 +3,7 @@ using UnityEngine;
 public class PauseGame : MonoBehaviour
 {
     [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private AudioSource _ballRollingSound;
 
     private GameObject _joystickUI;
 
@@ -15,6 +16,7 @@ public class PauseGame : MonoBehaviour
     {
         Time.timeScale = 0;
 
+        _ballRollingSound.Stop();
         _pauseMenu.SetActive(true);
         _joystickUI.SetActive(false);
     }
@@ -22,6 +24,7 @@ public class PauseGame : MonoBehaviour
     {
         _pauseMenu.SetActive(false);
         _joystickUI.SetActive(true);
+        _ballRollingSound.Play();
 
         Time.timeScale = 1f;
     }

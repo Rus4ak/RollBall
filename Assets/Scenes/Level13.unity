@@ -768,6 +768,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 925443807192338920, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
   m_PrefabInstance: {fileID: 209936315}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &209936317 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5655766884298035346, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
+  m_PrefabInstance: {fileID: 209936315}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &270622641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7222,6 +7227,7 @@ MonoBehaviour:
   _box: {fileID: 532231196}
   _minCountCoins: 25
   _maxCountCoins: 50
+  _ballRollingSound: {fileID: 209936317}
   _isDropSkin: 0
 --- !u!1001 &2069564889
 PrefabInstance:
@@ -7345,6 +7351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 8991985084910500337, guid: ffb4f2bcc32cb58439ec93ad5d744d4f, type: 3}
+      propertyPath: _ballRollingSound
+      value: 
+      objectReference: {fileID: 209936317}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

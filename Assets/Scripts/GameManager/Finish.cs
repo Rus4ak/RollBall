@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Finish : MonoBehaviour
@@ -12,7 +13,7 @@ public class Finish : MonoBehaviour
 
     private GameObject _joystickUI;
 
-    public int lastCompletedLevel;
+    [NonSerialized] public int lastCompletedLevel;
 
     public int CurrentLevel { get => _currentLevel; }
     public int MinCountCoins { get => _minCountCoins; }
@@ -43,6 +44,7 @@ public class Finish : MonoBehaviour
             
             _box.SetActive(true);
 
+            collision.gameObject.GetComponent<Sounds>().StopRollingSound();
             collision.gameObject.SetActive(false);
         }
     }

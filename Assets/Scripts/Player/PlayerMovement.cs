@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
         else 
             trailParticle.GetComponent<ParticleSystemRenderer>().material = collision.transform.Find("Cube").gameObject.GetComponent<Renderer>().material;
         
-        _lastSpawnTrailParticle = .2f;
+        _lastSpawnTrailParticle = .5f / _rigidbody.velocity.magnitude;
     }
 
     private void OnCollisionExit(Collision collision)

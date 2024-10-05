@@ -3016,6 +3016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 8991985084910500337, guid: ffb4f2bcc32cb58439ec93ad5d744d4f, type: 3}
+      propertyPath: _ballRollingSound
+      value: 
+      objectReference: {fileID: 2052147017}
     - target: {fileID: 9195894038899489001, guid: ffb4f2bcc32cb58439ec93ad5d744d4f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3342,6 +3346,10 @@ PrefabInstance:
       propertyPath: _minCountCoins
       value: 400
       objectReference: {fileID: 0}
+    - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+      propertyPath: _ballRollingSound
+      value: 
+      objectReference: {fileID: 2052147017}
     - target: {fileID: 1840642478873977136, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: m_Name
       value: Finish
@@ -5682,6 +5690,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2052147019}
   m_SourcePrefab: {fileID: 100100000, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
+--- !u!82 &2052147017 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5655766884298035346, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
+  m_PrefabInstance: {fileID: 2052147016}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2052147018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 891740052616768526, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}

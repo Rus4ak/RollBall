@@ -8,9 +8,11 @@ public class Sounds : MonoBehaviour
     [SerializeField] private AudioSource _music;
 
     private Rigidbody _rb;
+    private bool _isSoundRollingStop;
 
     private void Start()
     {
+        _isSoundRollingStop = false;
         _rb = GetComponent<Rigidbody>();
 
         _music.volume = Mathf.Lerp(0, .05f, MusicVolume.volume);
@@ -35,7 +37,8 @@ public class Sounds : MonoBehaviour
         if (_rolling.isPlaying)
             return;
 
-        _rolling.Play();
+        if (!_isSoundRollingStop)
+            _rolling.Play();
     }
 
     private void OnCollisionExit(Collision collision)
@@ -55,5 +58,11 @@ public class Sounds : MonoBehaviour
         {
             _music.volume = Mathf.Lerp(0, .5f, MusicVolume.volume);
         }
+    }
+
+    public void StopRollingSound()
+    {
+        _isSoundRollingStop = true;
+        _rolling.Stop();
     }
 }
