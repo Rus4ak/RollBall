@@ -28,6 +28,7 @@ public class Progress
     {
         public int bank;
         public int completedLevels;
+        public DateTime lastOpenDailyBoxTime;
     }
 
     public void Save()

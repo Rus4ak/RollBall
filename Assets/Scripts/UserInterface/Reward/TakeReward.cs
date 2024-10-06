@@ -11,6 +11,7 @@ public class TakeReward : MonoBehaviour
     [SerializeField] private GameObject _background;
     [SerializeField] private GameObject _coinPicture;
     [SerializeField] private GameObject _skinPicture;
+    [SerializeField] private bool _isDailyBox;
 
     private Finish _finish;
     private int _countRewardCoins;
@@ -19,6 +20,13 @@ public class TakeReward : MonoBehaviour
 
     private void Start()
     {
+        if (_isDailyBox)
+        {
+            _countRewardCoins = Random.Range(0, 100);
+            DropCoins();
+            return;
+        }
+
         _finish = GameObject.FindGameObjectWithTag("Finish").GetComponent<Finish>();
         _countRewardCoins = Random.Range(_finish.MinCountCoins, _finish.MaxCountCoins);
 
@@ -59,11 +67,17 @@ public class TakeReward : MonoBehaviour
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            if (!_finish.IsDropSkin)
-                InstantiateCoins();
-            
             gameObject.SetActive(false);
             _background.SetActive(false);
+
+            if (_isDailyBox)
+            {
+                InstantiateCoins();
+                return;
+            }
+
+            if (!_finish.IsDropSkin)
+                InstantiateCoins();
         }
     }
 
