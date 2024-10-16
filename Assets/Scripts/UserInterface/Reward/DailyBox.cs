@@ -8,6 +8,7 @@ public class DailyBox : MonoBehaviour
     [SerializeField] private GameObject _box;
     [SerializeField] TextMeshProUGUI _timeText;
     [SerializeField] Image _imageBox;
+    [SerializeField] GameObject _adsImage;
 
     private Button _button;
     private DateTime _currentTime;
@@ -36,6 +37,7 @@ public class DailyBox : MonoBehaviour
                 _button.interactable = true;
                 _timeText.gameObject.SetActive(false);
                 _imageBox.color = Color.white;
+                _adsImage.SetActive(true);
             }
 
         if (!_isAvailable)
@@ -46,6 +48,7 @@ public class DailyBox : MonoBehaviour
                 _button.interactable = false;
                 _timeText.gameObject.SetActive(true);
                 _imageBox.color = new Color(1, 1, 1, .5f);
+                _adsImage.SetActive(false);
             }
 
             _timeLeft = TimeSpan.FromHours(24) - (_currentTime - _lastOpenTime);

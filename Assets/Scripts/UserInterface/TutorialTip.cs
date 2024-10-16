@@ -9,6 +9,7 @@ public class TutorialTip : MonoBehaviour
     [SerializeField] private TypeWriterAnimation _tipText;
 
     private GameObject _joystick;
+    private GameObject _pause;
 
     private bool _showTip = true;
     private bool _isTipActive = false;
@@ -16,6 +17,7 @@ public class TutorialTip : MonoBehaviour
     private void Start()
     {
         _joystick = GameObject.FindWithTag("Joystick");
+        _pause = FindAnyObjectByType<PauseGame>().gameObject;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -38,6 +40,9 @@ public class TutorialTip : MonoBehaviour
 
                 _isTipActive = true;
                 _showTip = false;
+
+                // Disabling the pause button
+                _pause.SetActive(false);
             }
         }
     }
@@ -63,6 +68,9 @@ public class TutorialTip : MonoBehaviour
                     _joystick.transform.GetChild(0).GetComponent<FloatingJoystick>().OnPointerUp(new PointerEventData(EventSystem.current));
 
                     _isTipActive = false;
+
+                    // Activating the pause button
+                    _pause.SetActive(true);
                 }
             }
         }

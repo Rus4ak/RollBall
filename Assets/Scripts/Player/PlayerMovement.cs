@@ -30,8 +30,6 @@ public class PlayerMovement : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _joystickUI = GameObject.FindGameObjectWithTag("Joystick");
-  
-        RenderSettings.skybox = EquippedSkins.skinMaterials["background"];
     }
 
     private void Start()

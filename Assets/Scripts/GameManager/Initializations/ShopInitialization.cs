@@ -88,16 +88,17 @@ public class ShopInitialization : MonoBehaviour
                 equippedSkin = GameObject.Find(kvp.Value);
 
             Material equippedSkinMaterial = equippedSkin.GetComponent<Skin>().SkinMaterial;
+            Sprite equippedSkinSprite = equippedSkin.GetComponent<Skin>().SkinImage;
 
             // Equipped skins change to skins from the database marked as equipped
             if (kvp.Key == "ball")
-                EquippedSkins.ChangeSelectedSkin("ball", equippedSkin, equippedSkinMaterial);
+                EquippedSkins.ChangeSelectedSkin("ball", equippedSkin, skinMaterial: equippedSkinMaterial);
 
             else if (kvp.Key == "block")
-                EquippedSkins.ChangeSelectedSkin("block", equippedSkin, equippedSkinMaterial);
+                EquippedSkins.ChangeSelectedSkin("block", equippedSkin, skinMaterial: equippedSkinMaterial);
 
             else if (kvp.Key == "background")
-                EquippedSkins.ChangeSelectedSkin("background", equippedSkin, equippedSkinMaterial);
+                EquippedSkins.ChangeSelectedSkin("background", equippedSkin, skinImage: equippedSkinSprite);
         }
     }
 }

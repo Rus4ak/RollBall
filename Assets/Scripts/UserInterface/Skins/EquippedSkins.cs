@@ -5,6 +5,7 @@ public class EquippedSkins
 {
     public static Dictionary<string, GameObject> shopSlots = new Dictionary<string, GameObject>();
     public static Dictionary<string, Material> skinMaterials = new Dictionary<string, Material>();
+    public static Sprite backgroundImage;
 
 
     public static void ShopSlotInitialization()
@@ -14,7 +15,7 @@ public class EquippedSkins
         shopSlots["background"] = null;
     }
 
-    public static void ChangeSelectedSkin(string skinType, GameObject skin, Material skinMaterial)
+    public static void ChangeSelectedSkin(string skinType, GameObject skin, Material skinMaterial = null, Sprite skinImage = null)
     {
         if (shopSlots[skinType] == skin)
             return;
@@ -30,7 +31,13 @@ public class EquippedSkins
         shopSlots[skinType] = skin;
         shopSlots[skinType].tag = "EquippedSkin";
         shopSlots[skinType].transform.Find("EquippedSkinText").gameObject.SetActive(true);
-        skinMaterials[skinType] = skinMaterial;
+
+        if (skinMaterial != null) 
+            skinMaterials[skinType] = skinMaterial;
+        
+        if (skinImage != null)
+            backgroundImage = skinImage;
+        
         Skins.Instance.skinsData.equippedSkins[skinType] = shopSlots[skinType].name;
     }
 }

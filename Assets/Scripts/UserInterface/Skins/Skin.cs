@@ -5,6 +5,7 @@ public class Skin : MonoBehaviour
 {
     [SerializeField] private int _price;
     [SerializeField] private Material _skinMaterial;
+    [SerializeField] private Sprite _skinImage;
 
     private GameObject _shopSlot;
     private Transform _coin;
@@ -12,6 +13,7 @@ public class Skin : MonoBehaviour
     private bool _isBought;
 
     public Material SkinMaterial => _skinMaterial;
+    public Sprite SkinImage => _skinImage;
 
     private void Awake()
     {
@@ -60,16 +62,16 @@ public class Skin : MonoBehaviour
             switch (ChoiceCategory.currentCategory)
             {
                 case "BallsCategoryMenu":
-                    EquippedSkins.ChangeSelectedSkin("ball", _shopSlot, SkinMaterial);
+                    EquippedSkins.ChangeSelectedSkin("ball", _shopSlot, skinMaterial: SkinMaterial);
                     CheckIsBought();
                     break;
 
                 case "BlocksCategoryMenu":
-                    EquippedSkins.ChangeSelectedSkin("block", _shopSlot, SkinMaterial);
+                    EquippedSkins.ChangeSelectedSkin("block", _shopSlot, skinMaterial: SkinMaterial);
                     break;
 
                 case "BackgroundsCategoryMenu":
-                    EquippedSkins.ChangeSelectedSkin("background", _shopSlot, SkinMaterial);
+                    EquippedSkins.ChangeSelectedSkin("background", _shopSlot, skinImage: SkinImage);
                     break;
             }
         }

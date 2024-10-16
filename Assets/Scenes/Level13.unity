@@ -6539,63 +6539,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _disaperingTime: 1
---- !u!1001 &1956566423
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3326113142894354743, guid: 3d3d6d8b820f94b4593a8551efb7d84a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326113142894354743, guid: 3d3d6d8b820f94b4593a8551efb7d84a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326113142894354743, guid: 3d3d6d8b820f94b4593a8551efb7d84a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326113142894354743, guid: 3d3d6d8b820f94b4593a8551efb7d84a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326113142894354743, guid: 3d3d6d8b820f94b4593a8551efb7d84a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326113142894354743, guid: 3d3d6d8b820f94b4593a8551efb7d84a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326113142894354743, guid: 3d3d6d8b820f94b4593a8551efb7d84a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326113142894354743, guid: 3d3d6d8b820f94b4593a8551efb7d84a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326113142894354743, guid: 3d3d6d8b820f94b4593a8551efb7d84a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3326113142894354743, guid: 3d3d6d8b820f94b4593a8551efb7d84a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7458271922402627826, guid: 3d3d6d8b820f94b4593a8551efb7d84a, type: 3}
-      propertyPath: m_Name
-      value: EquipSkins
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3d3d6d8b820f94b4593a8551efb7d84a, type: 3}
 --- !u!1001 &1963264175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7227,7 +7170,6 @@ MonoBehaviour:
   _box: {fileID: 532231196}
   _minCountCoins: 25
   _maxCountCoins: 50
-  _ballRollingSound: {fileID: 209936317}
   _isDropSkin: 0
 --- !u!1001 &2069564889
 PrefabInstance:
@@ -7374,6 +7316,5 @@ SceneRoots:
   - {fileID: 1671696007}
   - {fileID: 1215768858}
   - {fileID: 6219248084814036317}
-  - {fileID: 1956566423}
   - {fileID: 274007060}
   - {fileID: 532231195}
