@@ -36,8 +36,8 @@ public class CameraMovement : MonoBehaviour
 
         Vector3 pos = _sphere.position - cameraOffset;
 
-        pos.y += 8f;
-        pos.z -= 6.5f;
+        pos.y += 10f;
+        pos.z -= 8f;
 
         pos.y = Mathf.Max(pos.y, _sphere.position.y - 5f);
 

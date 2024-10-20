@@ -22,7 +22,7 @@ public class LevelsController : MonoBehaviour
 {
     [SerializeField] private List<Level> _levels;
 
-    public static int lastCompletedLevel = 15;
+    public static int lastCompletedLevel = 16;
 
     private void Start()
     {

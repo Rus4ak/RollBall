@@ -2929,7 +2929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5947475653763035033, guid: ffb4f2bcc32cb58439ec93ad5d744d4f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 
+      value: Level16
       objectReference: {fileID: 0}
     - target: {fileID: 8350888018021482586, guid: ffb4f2bcc32cb58439ec93ad5d744d4f, type: 3}
       propertyPath: m_StopNaN
