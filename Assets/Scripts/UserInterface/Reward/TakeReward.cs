@@ -34,10 +34,10 @@ public class TakeReward : MonoBehaviour
         if (_finish.IsDropSkin)
         {
             // If the current level has already been completed, instead of a skin, coins are dropped,
-            // with the amount being divided by 6 in comparison to the skin's value
-            if (_finish.CurrentLevel < _finish.lastCompletedLevel)
+            // with the amount being divided by 5 in comparison to the skin's value
+            if (_finish.CurrentLevel < _finish.lastCompletedLevel - 1)
             {
-                _countRewardCoins /= 6;
+                _countRewardCoins /= 5;
                 DropCoins();
             }
 
@@ -49,7 +49,7 @@ public class TakeReward : MonoBehaviour
                 foreach (SkinsDictionary skin in SkinsList.skins)
                     if (skin.price >= _finish.MinCountCoins && skin.price <= _finish.MaxCountCoins && skin.tag != "BoughtSkin" && skin.tag != "EquippedSkin")
                         _availableRewardSkins.Add(skin);
-
+                
                 if (_availableRewardSkins.Count > 0)
                     DropSkin();
 

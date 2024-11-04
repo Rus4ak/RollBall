@@ -2355,11 +2355,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: _maxCountCoins
-      value: 45
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: _minCountCoins
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: _ballRollingSound

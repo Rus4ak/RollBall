@@ -8,6 +8,7 @@ TagManager:
   - BoughtSkin
   - EquippedSkin
   - Joystick
+  - SpeedBlock
   layers:
   - Default
   - TransparentFX

@@ -3287,7 +3287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: _minCountCoins
-      value: 400
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: _ballRollingSound

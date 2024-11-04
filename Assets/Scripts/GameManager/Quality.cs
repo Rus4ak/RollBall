@@ -5,7 +5,7 @@ public class Quality : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown _dropdown;
 
-    public static int quality = 2;
+    public static int quality = 3;
 
     private void Start()
     {

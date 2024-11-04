@@ -7168,8 +7168,8 @@ MonoBehaviour:
   _finishMenu: {fileID: 1808783336}
   _currentLevel: 13
   _box: {fileID: 532231196}
-  _minCountCoins: 25
-  _maxCountCoins: 50
+  _minCountCoins: 50
+  _maxCountCoins: 75
   _isDropSkin: 0
 --- !u!1001 &2069564889
 PrefabInstance:

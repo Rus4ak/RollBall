@@ -1,32 +1,25 @@
 using UnityEngine;
 
-public class SpeedBlock : MonoBehaviour
+public class SpeedUp : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
     private float _defaultSpeed;
-    private GameObject _player;
     private PlayerMovement _playerMovement;
-
+    
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player");
-        _playerMovement = _player.GetComponent<PlayerMovement>();
+        _playerMovement = GetComponent<PlayerMovement>();
+        _defaultSpeed = _playerMovement.Speed;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject == _player)
-        {
+        if (collision.gameObject.CompareTag("SpeedBlock"))
             // Saving the player's movement speed and changing it to the specified speed
-            _defaultSpeed = _playerMovement.Speed;
             _playerMovement.Speed = _speed;
-        }
-    }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject == _player)
+        else
             // Changing the player's movement speed to the default speed
             _playerMovement.Speed = _defaultSpeed;
     }

@@ -146,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
                 rigidbodyVelocity.z = movement.z * Speed;
 
                 Vector3 rigidbodyLerpVelocity = Vector3.Lerp(_rigidbody.velocity, rigidbodyVelocity, Time.fixedDeltaTime * 2f);
-
+                
                 _rigidbody.velocity = rigidbodyLerpVelocity;
             }
         }
