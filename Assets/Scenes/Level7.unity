@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1664105866}
     m_Modifications:
+    - target: {fileID: 1847374258793792912, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 69c121d675e696743b47d30280117fe4, type: 2}
     - target: {fileID: 5222581009888702349, guid: 6d15805487c80e94fb9617b24855de0b, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -425,6 +429,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7075465340969964192, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
+      propertyPath: m_Cameras.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7075465340969964192, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
+      propertyPath: m_Cameras.Array.data[1]
+      value: 
+      objectReference: {fileID: 1167478829}
+    - target: {fileID: 7075465340969964192, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
+      propertyPath: m_Cameras.Array.data[2]
+      value: 
+      objectReference: {fileID: 1718697044}
     - target: {fileID: 7983534049132128915, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -947,7 +963,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1599066388792987184, guid: e3208428afc78ea4797727f5f53c82f9, type: 3}
       propertyPath: _moveTime
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1599066388792987184, guid: e3208428afc78ea4797727f5f53c82f9, type: 3}
       propertyPath: _endPosition.x
@@ -2317,7 +2333,7 @@ MonoBehaviour:
   _directionX: 0
   _directionY: -1
   _directionZ: 0
-  _timeRotate: 5
+  _timeRotate: 6
 --- !u!1 &1839112829
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,7 +2462,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1599066388792987184, guid: e3208428afc78ea4797727f5f53c82f9, type: 3}
       propertyPath: _moveTime
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1599066388792987184, guid: e3208428afc78ea4797727f5f53c82f9, type: 3}
       propertyPath: _endPosition.x
@@ -2619,7 +2635,7 @@ MonoBehaviour:
   _directionX: 0
   _directionY: 1
   _directionZ: 0
-  _timeRotate: 5
+  _timeRotate: 6
 --- !u!1001 &2145116114
 PrefabInstance:
   m_ObjectHideFlags: 0

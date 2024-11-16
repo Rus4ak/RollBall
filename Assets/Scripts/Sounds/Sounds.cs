@@ -15,7 +15,7 @@ public class Sounds : MonoBehaviour
         _isSoundRollingStop = false;
         _rb = GetComponent<Rigidbody>();
 
-        _music.volume = Mathf.Lerp(0, .05f, MusicVolume.volume);
+        _music.volume = Mathf.Lerp(0, .08f, MusicVolume.volume);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -41,23 +41,22 @@ public class Sounds : MonoBehaviour
             _rolling.Play();
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        _rolling.Stop();
-    }
-
     private void Update()
     {
         // Changing the volume of the movement sound depending on the speed of movement
-        float rollingVolume = Mathf.Lerp(0, 1, _rb.velocity.magnitude / 10);
+        float rollingVolume = Mathf.Lerp(0, 1, _rb.velocity.magnitude / 8);
 
         _rolling.volume = Mathf.Lerp(0, rollingVolume, SoundVolume.volume);
         _rolling.pitch = Mathf.Lerp(.25f, .45f, _rb.velocity.magnitude / 15);
 
         if (MusicVolume.isChanged)
         {
-            _music.volume = Mathf.Lerp(0, .5f, MusicVolume.volume);
+            _music.volume = Mathf.Lerp(0, .08f, MusicVolume.volume);
         }
+
+        // If there is nothing under the player, the rolling sound is stopped
+        if (!Physics.Raycast(transform.position, Vector3.down, 7f))
+            _rolling.Stop();
     }
 
     public void StopRollingSound()

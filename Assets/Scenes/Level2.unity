@@ -941,6 +941,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7075465340969964192, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
+      propertyPath: m_Cameras.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7075465340969964192, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
+      propertyPath: m_Cameras.Array.data[0]
+      value: 
+      objectReference: {fileID: 871100963}
+    - target: {fileID: 7075465340969964192, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
+      propertyPath: m_Cameras.Array.data[1]
+      value: 
+      objectReference: {fileID: 587660434}
+    - target: {fileID: 7075465340969964192, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
+      propertyPath: m_Cameras.Array.data[2]
+      value: 
+      objectReference: {fileID: 1515973417}
     - target: {fileID: 7983534049132128915, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -962,6 +978,11 @@ Transform:
 --- !u!82 &871100962 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5655766884298035346, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
+  m_PrefabInstance: {fileID: 871100960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &871100963 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1870746333836078792, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
   m_PrefabInstance: {fileID: 871100960}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &913010245

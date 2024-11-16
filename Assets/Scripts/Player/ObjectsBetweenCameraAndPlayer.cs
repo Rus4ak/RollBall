@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
@@ -8,6 +9,9 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
     private Material _defaultMaterial;
     private Renderer _renderer;
     private Color _color;
+    private Material _shaderGraphMaterial;
+
+    private Dictionary<Renderer, Material> _defaultMaterials = new Dictionary<Renderer, Material>();
 
     private void Update()
     {
@@ -18,9 +22,31 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
         {
             if (hit.collider.gameObject != _sphere.gameObject)
             {
+                if (_defaultMaterials.Count >= 1)
+                {
+                    foreach (KeyValuePair<Renderer, Material> kvp in _defaultMaterials)
+                    {
+                        kvp.Key.material = kvp.Value;
+                    }
+                    
+                    _defaultMaterials.Clear();
+                    _defaultMaterial = null;
+                }
+
                 if (!hit.collider.gameObject.TryGetComponent<Renderer>(out _renderer))
                     return;
 
+                if (_renderer.material.renderQueue == (int)UnityEngine.Rendering.RenderQueue.Transparent)
+                {
+                    _shaderGraphMaterial = _renderer.material;
+                    _shaderGraphMaterial.SetFloat("_Alpha", .5f);
+                    return;
+                }
+
+                // Saving the default material
+                if (_defaultMaterial == null)
+                    _defaultMaterial = _renderer.sharedMaterial;
+                
                 // Copying the material of the object that falls under the raycast
                 _transparentMaterial.CopyPropertiesFromMaterial(_renderer.material);
                 _transparentMaterial.SetFloat("_Surface", 1);
@@ -32,18 +58,31 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
 
                 _transparentMaterial.color = _color;
 
-                // Saving the default material
-                _defaultMaterial = _renderer.material;
                 _renderer.material = _transparentMaterial;
+
+                _defaultMaterials.Add(_renderer, _defaultMaterial);
             }
             else
             {
-                if (_renderer != null)
+                if (_shaderGraphMaterial != null)
+                {
+                    _shaderGraphMaterial.SetFloat("_Alpha", 1);
+                    return;
+                }
+
+                if (_defaultMaterials.Count >= 1)
                 {
                     _color.a = 1f;
                     _transparentMaterial.color = _color;
 
-                    _renderer.material = _defaultMaterial;
+                    foreach (KeyValuePair<Renderer, Material> kvp in _defaultMaterials)
+                    {
+                        kvp.Key.material = kvp.Value;
+                    }
+
+                    _defaultMaterials.Clear();
+                    _defaultMaterial = null;
+                    _renderer = null;
                 }
             }
         }
