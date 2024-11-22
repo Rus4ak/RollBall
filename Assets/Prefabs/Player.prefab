@@ -956,7 +956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1305e5bbe4d11144e80d621ca7eb0cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 11
+  _speed: 12
   _restartMenu: {fileID: 0}
   _joystick: {fileID: 0}
   _trailParticlePrefab: {fileID: 1354007003867627850, guid: 40b8c42593cf94c4cb40d9ad13e89451, type: 3}

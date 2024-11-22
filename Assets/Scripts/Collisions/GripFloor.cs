@@ -5,32 +5,25 @@ public class GripFloor : MonoBehaviour
     [SerializeField] private Transform _player;
 
     private Vector3 _lastPos;
-    private bool _isStart = false;
 
-    private void FixedUpdate()
+    private void OnCollisionStay(Collision collision)
     {
-        if (_isStart)
-        {
-            // The position between the current position and the position in the previous frame
-            Vector3 tempPos = transform.position - _lastPos;
-
-            _player.position += tempPos;
-            _lastPos = transform.position;
-        }
+        if (collision.transform == _player)
+            Move();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            _isStart = true;
-            _lastPos = transform.position;
-        }
+        if (other.transform == _player)
+            Move();
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void Move()
     {
-        if (collision.gameObject.CompareTag("Player"))
-            _isStart = false;
+        if (_lastPos == Vector3.zero)
+            _lastPos = transform.position;
+
+        _player.position += transform.position - _lastPos;
+        _lastPos = transform.position;
     }
 }

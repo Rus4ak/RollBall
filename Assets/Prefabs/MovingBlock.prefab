@@ -408,7 +408,7 @@ MonoBehaviour:
   _startPosition: {x: 0, y: 0, z: 0}
   _endPosition: {x: 0, y: 0, z: 0}
   _moveTime: 0
-  _pauseTime: 0.3
+  _pauseTime: 0.5
   _waitPlayer: 0
 --- !u!65 &4305852815086244849
 BoxCollider:

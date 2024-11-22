@@ -16,8 +16,8 @@ RenderSettings:
   serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogMode: 1
+  m_FogDensity: 0.02
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.3529412, g: 0.3529412, b: 0.3529412, a: 1}
@@ -27,9 +27,9 @@ RenderSettings:
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
-  m_HaloStrength: 0.5
-  m_FlareStrength: 1
-  m_FlareFadeSpeed: 3
+  m_HaloStrength: 0.499
+  m_FlareStrength: 0.162
+  m_FlareFadeSpeed: 0.38
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
@@ -5481,10 +5481,6 @@ PrefabInstance:
     - target: {fileID: 3656293351857905901, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
       propertyPath: m_BlockingMask.m_Bits
       value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 4971682828822753649, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
-      propertyPath: _speed
-      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4971682828822753649, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
       propertyPath: _cameraUI

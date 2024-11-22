@@ -28,16 +28,16 @@ public class CameraMovement : MonoBehaviour
     // The camera moves to the opposite position from the player's movement direction, maintaining a certain distance
     private Vector3 CalculateTargetPosition()
     {
-        Vector3 cameraOffset = _sphereRigidbody.velocity.normalized * 1.5f;
+        Vector3 cameraOffset = _sphereRigidbody.velocity.normalized * 2f;
 
         // The distance of the camera to the player in Z cannot be less than the specified value
-        if (cameraOffset.z <= 5.5f)
-            cameraOffset.z = 5.5f;
+        if (cameraOffset.z <= 7f)
+            cameraOffset.z = 7f;
 
         Vector3 pos = _sphere.position - cameraOffset;
 
-        pos.y += 12f;
-        pos.z -= 8f;
+        pos.y += 10f;
+        pos.z -= 12f;
 
         pos.y = Mathf.Max(pos.y, _sphere.position.y - 5f);
 

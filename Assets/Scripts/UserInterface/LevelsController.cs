@@ -26,7 +26,7 @@ public class LevelsController : MonoBehaviour
 
     private void Start()
     {
-        if (lastCompletedLevel > _levels.Count)
+        if (lastCompletedLevel >= _levels.Count)
             lastCompletedLevel = _levels.Count;
 
         // Activating the buttons for the completed level and the next level

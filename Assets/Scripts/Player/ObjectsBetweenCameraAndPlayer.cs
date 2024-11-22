@@ -20,7 +20,7 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
         // Raycast from the camera to the player
         if (Physics.Raycast(transform.position, direction, out RaycastHit hit, direction.magnitude))
         {
-            if (hit.collider.gameObject != _sphere.gameObject)
+            if (hit.collider.gameObject != _sphere.gameObject && !hit.collider.isTrigger)
             {
                 if (_defaultMaterials.Count >= 1)
                 {

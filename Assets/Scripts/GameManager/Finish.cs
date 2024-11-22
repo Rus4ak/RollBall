@@ -31,8 +31,8 @@ public class Finish : MonoBehaviour
         {
             lastCompletedLevel = LevelsController.lastCompletedLevel;
 
-            if (LevelsController.lastCompletedLevel <= CurrentLevel)
-                LevelsController.lastCompletedLevel = CurrentLevel + 1;
+            if (LevelsController.lastCompletedLevel < CurrentLevel)
+                LevelsController.lastCompletedLevel = CurrentLevel;
             
             Progress.Instance.progressData.completedLevels = LevelsController.lastCompletedLevel;
             Progress.Instance.Save();
