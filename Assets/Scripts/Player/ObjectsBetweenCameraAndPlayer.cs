@@ -34,7 +34,14 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
                 }
 
                 if (!hit.collider.gameObject.TryGetComponent<Renderer>(out _renderer))
-                    return;
+                {
+                    for (int i = 0; i < hit.collider.transform.childCount; i++)
+                        if (hit.collider.transform.GetChild(i).gameObject.TryGetComponent<Renderer>(out _renderer))
+                            break;
+
+                    if (_renderer == null)
+                        return;
+                }
 
                 if (_renderer.material.HasFloat("_Alpha"))
                 {
