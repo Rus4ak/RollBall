@@ -36,7 +36,7 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
                 if (!hit.collider.gameObject.TryGetComponent<Renderer>(out _renderer))
                     return;
 
-                if (_renderer.material.renderQueue == (int)UnityEngine.Rendering.RenderQueue.Transparent)
+                if (_renderer.material.HasFloat("_Alpha"))
                 {
                     _shaderGraphMaterial = _renderer.material;
                     _shaderGraphMaterial.SetFloat("_Alpha", .5f);
