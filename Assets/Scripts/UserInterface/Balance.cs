@@ -5,13 +5,16 @@ public class Balance : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _balanceText;
 
+    static public TextMeshProUGUI balanceText;
+
     private void Start()
     {
+        balanceText = _balanceText;
         UpdateBalance();
     }
 
-    public void UpdateBalance()
+    static public void UpdateBalance()
     {
-        _balanceText.text = Bank.Instance.Coins.ToString();
+        balanceText.text = Bank.Instance.Coins.ToString();
     }
 }
