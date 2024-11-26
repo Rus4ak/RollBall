@@ -23,7 +23,12 @@ public class GripFloor : MonoBehaviour
         if (_lastPos == Vector3.zero)
             _lastPos = transform.position;
 
-        _player.position += transform.position - _lastPos;
+        Vector3 tempPosition = transform.position - _lastPos;
+        
+        if (tempPosition.y > 0)
+            tempPosition.y = 0;
+        
+        _player.position += tempPosition;
         _lastPos = transform.position;
     }
 }

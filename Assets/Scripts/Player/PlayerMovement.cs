@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (spawnPosition == null)
             spawnPosition = CheckPoint.checkPoint;
-
+        
         transform.position = spawnPosition;
     }
 
