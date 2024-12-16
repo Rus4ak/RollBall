@@ -99,7 +99,10 @@ public class TakeReward : MonoBehaviour
         _text.text = _countRewardCoins.ToString();
 
         Bank.Instance.Coins += _countRewardCoins;
-        Balance.UpdateBalance();
+
+        if (Balance.isBalanceInitialized)
+            Balance.UpdateBalance();
+        
         Progress.Instance.progressData.bank = Bank.Instance.Coins;
         Progress.Instance.Save();
     }
