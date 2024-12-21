@@ -15,11 +15,13 @@ public class DailyBox : MonoBehaviour
     private DateTime _lastOpenTime;
     private TimeSpan _timeLeft;
     private bool _isAvailable;
+    private RewardedAds _rewardedAds;
 
     private void Start()
     {
         _button = GetComponent<Button>();
         _lastOpenTime = Progress.Instance.progressData.lastOpenDailyBoxTime;
+        _rewardedAds = GetComponent<RewardedAds>();
 
         // If the database does not contain data on the last time the box was opened, the box becomes available
         if (_lastOpenTime == DateTime.MinValue)
@@ -57,18 +59,22 @@ public class DailyBox : MonoBehaviour
             if (_timeLeft.Hours <= 0)
                 _isAvailable = true;
         }
+
+        if (_rewardedAds.isAdWatched)
+        {
+            _box.SetActive(true);
+            _lastOpenTime = _currentTime;
+            _isAvailable = false;
+            _rewardedAds.isAdWatched = false;
+
+            Progress.Instance.progressData.lastOpenDailyBoxTime = _currentTime;
+            Progress.Instance.Save();
+        }
     }
 
     public void OpenBox()
     {
         if (_isAvailable)
-        {
-            _box.SetActive(true);
-            _lastOpenTime = _currentTime;
-            _isAvailable = false;
-
-            Progress.Instance.progressData.lastOpenDailyBoxTime = _currentTime;
-            Progress.Instance.Save();
-        }
+            _rewardedAds.LoadRewardedAd();
     }
 }
