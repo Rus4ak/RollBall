@@ -1,6 +1,8 @@
 using System.IO;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.Networking;
 
 public class InitializeAds : MonoBehaviour, IUnityAdsInitializationListener
 {
@@ -12,13 +14,32 @@ public class InitializeAds : MonoBehaviour, IUnityAdsInitializationListener
         public string gameId;
     }
 
-    private void Awake()
+    private async void Awake()
     {
-        string configPath = Path.Combine(Application.streamingAssetsPath, "Config.json");
+        string configPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Config.json");
+        string jsonData = null;
 
-        if (File.Exists(configPath))
+        if (configPath.Contains("://") || configPath.Contains(":///"))
         {
-            string jsonData = File.ReadAllText(configPath);
+            UnityWebRequest request = UnityWebRequest.Get(configPath);
+            UnityWebRequestAsyncOperation operation = request.SendWebRequest();
+
+            while (!operation.isDone) 
+                await Task.Yield();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                jsonData = request.downloadHandler.text;
+            }
+        }
+        else
+        {
+            if (System.IO.File.Exists(configPath))
+                jsonData = System.IO.File.ReadAllText(configPath);
+        }
+
+        if (!string.IsNullOrEmpty(jsonData))
+        {
             GameConfig config = JsonUtility.FromJson<GameConfig>(jsonData);
             _gameId = config.gameId;
         }
