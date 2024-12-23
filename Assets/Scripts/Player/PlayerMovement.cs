@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (spawnPosition == null)
             spawnPosition = CheckPoint.checkPoint;
-        
+
         transform.position = spawnPosition;
     }
 
@@ -83,8 +83,9 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.TryGetComponent<Renderer>(out Renderer renderer))
             trailParticle.GetComponent<ParticleSystemRenderer>().material = renderer.material;
 
-        else 
-            trailParticle.GetComponent<ParticleSystemRenderer>().material = collision.transform.Find("Cube").gameObject.GetComponent<Renderer>().material;
+        else if (collision.transform.Find("Cube"))
+            if (collision.transform.Find("Cube").gameObject.TryGetComponent<Renderer>(out Renderer cubeRenderer))
+                trailParticle.GetComponent<ParticleSystemRenderer>().material = cubeRenderer.material;
         
         _lastSpawnTrailParticle = .5f / _rigidbody.velocity.magnitude;
     }

@@ -6,6 +6,7 @@ public class MoveObjects : MonoBehaviour
     [SerializeField] private Vector3 _startPosition;
     [SerializeField] private Vector3 _endPosition;
     [SerializeField] private float _moveTime;
+
     [SerializeField] private float _pauseTime = .5f;
     [SerializeField] private bool _waitPlayer = false;
 
@@ -44,7 +45,10 @@ public class MoveObjects : MonoBehaviour
         if (t >= 1.0f)
         {
             if (_waitPlayer)
+            {
+                _startMove = false;
                 return;
+            }
 
             StartCoroutine(WaitForMove());
         }

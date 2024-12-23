@@ -21,6 +21,7 @@ public class InitializeAds : MonoBehaviour, IUnityAdsInitializationListener
 
         if (configPath.Contains("://") || configPath.Contains(":///"))
         {
+            // Extracting gameID on the Android system
             UnityWebRequest request = UnityWebRequest.Get(configPath);
             UnityWebRequestAsyncOperation operation = request.SendWebRequest();
 
@@ -34,6 +35,7 @@ public class InitializeAds : MonoBehaviour, IUnityAdsInitializationListener
         }
         else
         {
+            // Extracting gameID on other platforms
             if (System.IO.File.Exists(configPath))
                 jsonData = System.IO.File.ReadAllText(configPath);
         }
