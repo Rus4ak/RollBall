@@ -21,7 +21,6 @@ public class InitializeAds : MonoBehaviour, IUnityAdsInitializationListener
 
         if (configPath.Contains("://") || configPath.Contains(":///"))
         {
-            Debug.Log("Android");
             // Extracting gameID on the Android system
             UnityWebRequest request = UnityWebRequest.Get(configPath);
             UnityWebRequestAsyncOperation operation = request.SendWebRequest();
@@ -36,7 +35,6 @@ public class InitializeAds : MonoBehaviour, IUnityAdsInitializationListener
         }
         else
         {
-            Debug.Log("Other");
             // Extracting gameID on other platforms
             if (System.IO.File.Exists(configPath))
                 jsonData = System.IO.File.ReadAllText(configPath);
@@ -49,14 +47,14 @@ public class InitializeAds : MonoBehaviour, IUnityAdsInitializationListener
         }
 
         _isTesting = true;
-        Debug.Log(_gameId);
+        
         if (!Advertisement.isInitialized && Advertisement.isSupported)
         {
             Advertisement.Initialize(_gameId, _isTesting, this);
         }
     }
 
-    public void OnInitializationComplete() { Debug.Log("OnInitializationComplete - Sucessful"); }
+    public void OnInitializationComplete() { }
 
-    public void OnInitializationFailed(UnityAdsInitializationError error, string message) { Debug.Log("OnInitializationFailed - " + message); }
+    public void OnInitializationFailed(UnityAdsInitializationError error, string message) { }
 }

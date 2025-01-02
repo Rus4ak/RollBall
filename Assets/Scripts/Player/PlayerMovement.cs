@@ -150,6 +150,10 @@ public class PlayerMovement : MonoBehaviour
                 
                 _rigidbody.velocity = rigidbodyLerpVelocity;
             }
+            else
+            {
+                _rigidbody.velocity = Vector3.Lerp(_rigidbody.velocity, Vector3.zero, Time.fixedDeltaTime * 2f);
+            }
         }
         else
         {
