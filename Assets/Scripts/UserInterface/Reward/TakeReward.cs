@@ -22,7 +22,7 @@ public class TakeReward : MonoBehaviour
     {
         if (_isDailyBox)
         {
-            _countRewardCoins = Random.Range(0, 100);
+            _countRewardCoins = Random.Range(20, 100);
             DropCoins();
             return;
         }

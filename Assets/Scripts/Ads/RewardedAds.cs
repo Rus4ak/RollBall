@@ -28,23 +28,26 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
 
     public void OnUnityAdsAdLoaded(string placementId)
     {
+        Debug.Log("OnUnityAdsAdLoaded - succesful");
         ShowRewardedAd();
     }
 
-    public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message) { }
+    public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message) { Debug.Log("OnUnityAdsFailedToLoad - " + message); }
 
     public void OnUnityAdsShowClick(string placementId) {}
 
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
+        Debug.Log("OnUnityAdsShowComplete - succesfull");
         if (placementId == _adUnitId && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
         {
+            Debug.Log("OnUnityAdsShowComplete if - succesfull");
             isAdWatched = true;
             _loading.StopLoading();
         }
     }
 
-    public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message) { }
+    public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message) { Debug.Log("OnUnityAdsShowFailure - " + message); }
 
     public void OnUnityAdsShowStart(string placementId) { }
 }
