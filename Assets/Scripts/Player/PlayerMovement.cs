@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rigidbody;
     private GameObject _joystickUI;
     private float _lastSpawnTrailParticle;
+    private bool _isCollision;
 
     public static Vector3 lastPosition;
     public static Vector3 spawnPosition;
@@ -60,6 +61,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        if (_isCollision == false)
+            _isCollision = true;
+
         if (Quality.quality == 1)
             return;
 
@@ -92,6 +96,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
+        _isCollision = false;
+
         if (collision.gameObject.layer == 10)
             return;
 
@@ -152,7 +158,9 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                _rigidbody.velocity = Vector3.Lerp(_rigidbody.velocity, Vector3.zero, Time.fixedDeltaTime * 2f);
+                // Stop the ball when releasing the screen
+                if (_isCollision)
+                    _rigidbody.velocity = Vector3.Lerp(_rigidbody.velocity, Vector3.zero, Time.fixedDeltaTime * 2f);
             }
         }
         else
