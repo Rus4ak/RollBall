@@ -42,6 +42,20 @@ public class FullRotate : MonoBehaviour
                 _startRotate = false;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (_waitPlayer)
+            if (other.gameObject.CompareTag("Player"))
+                StartCoroutine(WaitTimeForRotate());
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (_waitPlayer)
+            if (other.gameObject.CompareTag("Player"))
+                _startRotate = false;
+    }
+
     // Delay before starting to move
     private IEnumerator WaitTimeForRotate()
     {

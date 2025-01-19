@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rigidbody;
     private GameObject _joystickUI;
     private float _lastSpawnTrailParticle;
-    private bool _isCollision;
+
+    [NonSerialized] public bool isCollision;
 
     public static Vector3 lastPosition;
     public static Vector3 spawnPosition;
@@ -44,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-
+        
         if (isDead)
         {
             _restartMenu.SetActive(true);
@@ -61,8 +63,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (_isCollision == false)
-            _isCollision = true;
+        if (isCollision == false)
+            isCollision = true;
 
         if (Quality.quality == 1)
             return;
@@ -93,10 +95,10 @@ public class PlayerMovement : MonoBehaviour
         
         _lastSpawnTrailParticle = .5f / _rigidbody.velocity.magnitude;
     }
-
+    
     private void OnCollisionExit(Collision collision)
     {
-        _isCollision = false;
+        isCollision = false;
 
         if (collision.gameObject.layer == 10)
             return;
@@ -128,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
 
         lastPosition = lastPositionTemp;
         spawnPosition = position;
-        
+
         _restartMenu.SetActive(false);
         _joystickUI.SetActive(true);
 
@@ -159,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 // Stop the ball when releasing the screen
-                if (_isCollision)
+                if (isCollision)
                     _rigidbody.velocity = Vector3.Lerp(_rigidbody.velocity, Vector3.zero, Time.fixedDeltaTime * 2f);
             }
         }

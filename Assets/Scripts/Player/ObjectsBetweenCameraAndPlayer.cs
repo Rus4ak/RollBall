@@ -84,7 +84,8 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
 
                     foreach (KeyValuePair<Renderer, Material> kvp in _defaultMaterials)
                     {
-                        kvp.Key.material = kvp.Value;
+                        if (kvp.Key != null)
+                            kvp.Key.material = kvp.Value;
                     }
 
                     _defaultMaterials.Clear();
