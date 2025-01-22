@@ -3921,6 +3921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonClickSource: {fileID: 5220759274772370578}
+  _loadingMenu: {fileID: 5717951339088256636, guid: da00f3783db9dca45a5cdf5f062b4f96, type: 3}
 --- !u!1 &3791841199395449218
 GameObject:
   m_ObjectHideFlags: 0
@@ -4518,7 +4519,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4998492518864176174
 CanvasRenderer:
@@ -7288,6 +7289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonClickSource: {fileID: 5220759274772370578}
+  _loadingMenu: {fileID: 5717951339088256636, guid: da00f3783db9dca45a5cdf5f062b4f96, type: 3}
 --- !u!1 &8323282837639401284
 GameObject:
   m_ObjectHideFlags: 0
@@ -8314,6 +8316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonClickSource: {fileID: 5220759274772370578}
+  _loadingMenu: {fileID: 5717951339088256636, guid: da00f3783db9dca45a5cdf5f062b4f96, type: 3}
 --- !u!1 &8790394093490957694
 GameObject:
   m_ObjectHideFlags: 0

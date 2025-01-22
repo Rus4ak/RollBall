@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChoiceLevel : MonoBehaviour
 {
     [SerializeField] private AudioSource _buttonClickSource;
+    [SerializeField] private GameObject _loadingMenu;
 
     private int _quality;
     private float _soundVolume;
@@ -13,6 +14,7 @@ public class ChoiceLevel : MonoBehaviour
 
     public void SceneLoad(string sceneName)
     {
+        Instantiate(_loadingMenu);
         StartCoroutine(PlaySoundAndLoadScene(sceneName));
     }
 
@@ -30,7 +32,7 @@ public class ChoiceLevel : MonoBehaviour
         _soundVolume = SoundVolume.volume;
         _musicVolume = MusicVolume.volume;
         
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadSceneAsync(sceneName);
 
         CheckPoint.checkPoint = new Vector3(0, 1f, 0);
         PlayerMovement.spawnPosition = new Vector3(0, 1f, 0);
