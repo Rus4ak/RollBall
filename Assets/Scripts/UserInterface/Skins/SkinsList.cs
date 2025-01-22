@@ -25,12 +25,16 @@ public class SkinsDictionary
 public class SkinsList : MonoBehaviour
 {
     [SerializeField] private List<SkinsDictionary> _skins;
+    [SerializeField] private ChoiceCategory _choiceCategory;
+
+    private static ChoiceCategory _choiceCategoryInstance;
 
     public static List<SkinsDictionary> skins;
 
     private void Awake()
     {
         skins ??= _skins;
+        _choiceCategoryInstance = _choiceCategory;
     }
 
     public static void SkinsDictionaryInitialization()
@@ -49,6 +53,7 @@ public class SkinsList : MonoBehaviour
                 skin.isTagChanged = false;
             }
         }
+        _choiceCategoryInstance.ActivateCategoryMenu("BallsCategoryMenu");
     }
 
     public static void ChangeTag(string skinName)

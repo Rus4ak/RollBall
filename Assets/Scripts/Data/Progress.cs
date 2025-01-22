@@ -27,7 +27,8 @@ public class Progress
     public class ProgressData
     {
         public int bank;
-        public int completedLevels;
+        public int completedNormalLevels;
+        public int completedMiniGamesLevels;
         public DateTime lastOpenDailyBoxTime;
     }
 
@@ -52,7 +53,8 @@ public class Progress
         progressData = DeserializeFromBytes(bytes);
 
         Bank.Instance.Coins = progressData.bank;
-        LevelsController.lastCompletedLevel = progressData.completedLevels;
+        LevelsController.lastCompletedNormalLevel = progressData.completedNormalLevels;
+        LevelsController.lastCompletedMiniGamesLevel = progressData.completedMiniGamesLevels;
     }
 
     private byte[] SerializeToBytes(ProgressData data)

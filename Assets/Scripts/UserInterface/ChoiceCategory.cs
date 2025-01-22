@@ -9,17 +9,16 @@ public class ChoiceCategory : MonoBehaviour
 
     public static string currentCategory;
 
-    private void Start()
+    private void Awake()
     {
         currentCategory = "BallsCategoryMenu";
-        ActivateCategoryMenu(GameObject.Find(currentCategory));
     }
 
-    public void ActivateCategoryMenu(GameObject choicedCategoryMenu)
+    public void ActivateCategoryMenu(string choicedCategoryMenu)
     {
         foreach (GameObject categoryMenu in _categoriesMenu)
         {
-            if (categoryMenu == choicedCategoryMenu)
+            if (categoryMenu.name == choicedCategoryMenu)
             {
                 categoryMenu.SetActive(true);
                 currentCategory = categoryMenu.name;

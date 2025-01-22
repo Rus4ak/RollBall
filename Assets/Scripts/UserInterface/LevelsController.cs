@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -20,22 +21,48 @@ public class Level
 
 public class LevelsController : MonoBehaviour
 {
-    [SerializeField] private List<Level> _levels;
+    [SerializeField] private List<Level> _normalLevels;
+    [SerializeField] private List<Level> _miniGamesLevels;
 
-    public static int lastCompletedLevel = 22;
+    public static int lastCompletedNormalLevel = 0;
+    public static int lastCompletedMiniGamesLevel = 0;
 
-    private void Start()
+    private void Awake()
     {
-        if (lastCompletedLevel >= _levels.Count)
-            lastCompletedLevel = _levels.Count;
+        InitializeNormalLevels();
+        InitializeMiniGamesLevels();
+    }
+
+    private void InitializeNormalLevels()
+    {
+        if (lastCompletedNormalLevel >= _normalLevels.Count)
+            lastCompletedNormalLevel = _normalLevels.Count;
 
         // Activating the buttons for the completed level and the next level
-        for (int i = 0; i < lastCompletedLevel + 1; i++)
+        for (int i = 0; i < lastCompletedNormalLevel + 1; i++)
         {
-            if (i >= _levels.Count)
+            if (i >= _normalLevels.Count)
                 return;
 
-            Level level = _levels[i];
+            Level level = _normalLevels[i];
+            level.button.interactable = true;
+            level.text.gameObject.SetActive(true);
+            level.locked.gameObject.SetActive(false);
+        }
+    }
+
+    private void InitializeMiniGamesLevels()
+    {
+        if (lastCompletedMiniGamesLevel >= _miniGamesLevels.Count)
+            lastCompletedMiniGamesLevel = _miniGamesLevels.Count;
+
+        // Activating the buttons for the completed level and the next level
+        for (int i = 0; i < lastCompletedMiniGamesLevel + 1; i++)
+        {
+            if (i >= _miniGamesLevels.Count)
+                return;
+
+            Level level = _miniGamesLevels[i];
             level.button.interactable = true;
             level.text.gameObject.SetActive(true);
             level.locked.gameObject.SetActive(false);

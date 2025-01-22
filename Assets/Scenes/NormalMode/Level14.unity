@@ -3378,6 +3378,26 @@ PrefabInstance:
       propertyPath: _box
       value: 
       objectReference: {fileID: 1267538710}
+    - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+      propertyPath: _finishMenu
+      value: 
+      objectReference: {fileID: 1038091684}
+    - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+      propertyPath: _currentLevel
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+      propertyPath: _isNormalMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+      propertyPath: _maxCountCoins
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+      propertyPath: _minCountCoins
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 1840642478873977136, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
       propertyPath: m_Name
       value: Finish
@@ -3426,43 +3446,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -7328572504403261256, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1840642478873977136, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 513205438}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
 --- !u!4 &513205436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6343302188391582796, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
   m_PrefabInstance: {fileID: 513205435}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &513205437 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1840642478873977136, guid: 13ab9833d7af83d42874a7b85de7c8b6, type: 3}
-  m_PrefabInstance: {fileID: 513205435}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &513205438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513205437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d19d6ffccb8e64cbe8ffbeb57a1461, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _finishMenu: {fileID: 1038091684}
-  _currentLevel: 17
-  _box: {fileID: 1267538710}
-  _minCountCoins: 65
-  _maxCountCoins: 90
-  _isDropSkin: 0
 --- !u!1001 &527711372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5956,7 +5949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5947475653763035033, guid: ffb4f2bcc32cb58439ec93ad5d744d4f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level18
+      value: Level15
       objectReference: {fileID: 0}
     - target: {fileID: 8841134814445448727, guid: ffb4f2bcc32cb58439ec93ad5d744d4f, type: 3}
       propertyPath: m_Name

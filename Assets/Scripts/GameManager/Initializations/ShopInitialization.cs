@@ -71,11 +71,11 @@ public class ShopInitialization : MonoBehaviour
         }
 
         Dictionary<string, string> equippedSkinName = Skins.Instance.skinsData.equippedSkins.ToDictionary(entry => entry.Key, entry => entry.Value);
-
+        
         foreach (KeyValuePair<string, string> kvp in equippedSkinName)
         {
             GameObject equippedSkin;
-
+            
             // If the skin loaded from the database is empty, the equipped skin becomes Default by default
             if (kvp.Value == ""  || kvp.Value == null)
             {
@@ -83,10 +83,10 @@ public class ShopInitialization : MonoBehaviour
                 Skins.Instance.skinsData.equippedSkins[kvp.Key] = nameDefaultSkin;
                 equippedSkin = GameObject.Find(nameDefaultSkin);
             }
-             
+
             else
                 equippedSkin = GameObject.Find(kvp.Value);
-
+            
             Material equippedSkinMaterial = equippedSkin.GetComponent<Skin>().SkinMaterial;
             Sprite equippedSkinSprite = equippedSkin.GetComponent<Skin>().SkinImage;
 

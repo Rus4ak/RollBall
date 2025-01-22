@@ -35,7 +35,7 @@ public class TakeReward : MonoBehaviour
         {
             // If the current level has already been completed, instead of a skin, coins are dropped,
             // with the amount being divided by 5 in comparison to the skin's value
-            if (_finish.CurrentLevel <= _finish.lastCompletedLevel && _finish.CurrentLevel != 0 )
+            if (_finish.CurrentLevel <= _finish.lastCompletedMiniGamesLevel && _finish.CurrentLevel != 0 )
             {
                 _countRewardCoins /= 5;
                 DropCoins();
