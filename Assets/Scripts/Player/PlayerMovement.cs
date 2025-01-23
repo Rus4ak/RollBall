@@ -33,6 +33,9 @@ public class PlayerMovement : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _joystickUI = GameObject.FindGameObjectWithTag("Joystick");
+
+        if (_restartMenu.activeInHierarchy)
+            _restartMenu.SetActive(false);
     }
 
     private void Start()

@@ -29,10 +29,17 @@ public class DisappearingObjects : MonoBehaviour
 
             // Destroying the object after a certain time has passed
             if (_elapsedTime >= 1f)
-                if (gameObject.transform.parent != null && gameObject.transform.parent.name != "Map")
+            {
+                if (gameObject.transform.parent != null && 
+                    gameObject.transform.parent.name != "Map" &&
+                    gameObject.transform.parent.TryGetComponent<Collider>(out _))
+                {
                     Destroy(gameObject.transform.parent.gameObject);
+                }
+
                 else
                     Destroy(gameObject);
+            }
         }
     }
 
