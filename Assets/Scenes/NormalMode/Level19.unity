@@ -666,7 +666,7 @@ MonoBehaviour:
   _directionX: 0
   _directionY: -1
   _directionZ: 0
-  _timeRotate: 2.5
+  _timeRotate: 3
   _waitPlayer: 1
   _pauseTime: 0.1
 --- !u!114 &170568727
@@ -3523,7 +3523,7 @@ MonoBehaviour:
   _directionX: 0
   _directionY: 1
   _directionZ: 0
-  _timeRotate: 2.5
+  _timeRotate: 3
   _waitPlayer: 1
   _pauseTime: 0.1
 --- !u!114 &981641796
@@ -3712,7 +3712,7 @@ MonoBehaviour:
   _directionX: 0
   _directionY: 1
   _directionZ: 0
-  _timeRotate: 2.5
+  _timeRotate: 3
   _waitPlayer: 1
   _pauseTime: 0.1
 --- !u!114 &1014477125
@@ -4656,7 +4656,7 @@ MonoBehaviour:
   _directionX: 0
   _directionY: 1
   _directionZ: 0
-  _timeRotate: 2.5
+  _timeRotate: 3
   _waitPlayer: 1
   _pauseTime: 0.1
 --- !u!114 &1271695444
@@ -6112,7 +6112,7 @@ MonoBehaviour:
   _directionX: 0
   _directionY: -1
   _directionZ: 0
-  _timeRotate: 2.5
+  _timeRotate: 3
   _waitPlayer: 1
   _pauseTime: 0.1
 --- !u!114 &1704450239

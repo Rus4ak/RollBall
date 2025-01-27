@@ -16,9 +16,9 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
     private void Update()
     {
         Vector3 direction = _sphere.position - transform.position;
-
+        
         // Raycast from the camera to the player
-        if (Physics.Raycast(transform.position, direction, out RaycastHit hit, direction.magnitude))
+        if (Physics.SphereCast(transform.position, .5f, direction, out RaycastHit hit, direction.magnitude))
         {
             if (hit.collider.gameObject != _sphere.gameObject && !hit.collider.isTrigger)
             {
@@ -28,7 +28,7 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
                     {
                         kvp.Key.material = kvp.Value;
                     }
-                    
+
                     _defaultMaterials.Clear();
                     _defaultMaterial = null;
                 }
@@ -74,6 +74,7 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
                 if (_shaderGraphMaterial != null)
                 {
                     _shaderGraphMaterial.SetFloat("_Alpha", 1);
+                    _shaderGraphMaterial = null;
                     return;
                 }
 

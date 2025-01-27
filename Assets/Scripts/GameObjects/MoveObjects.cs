@@ -33,6 +33,13 @@ public class MoveObjects : MonoBehaviour
                 StartCoroutine(WaitTimeForMove());
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (_waitPlayer)
+            if (other.gameObject.CompareTag("Player"))
+                StartCoroutine(WaitTimeForMove());
+    }
+
     private void MoveObject()
     {
         // Movement of an object from point to point in a specified amount of time

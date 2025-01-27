@@ -3,7 +3,9 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private Transform _sphere;
-    [SerializeField] private float smoothTime = 0.5f;
+
+    [SerializeField] private float _smoothTime = 0.5f;
+    [SerializeField] private float _distanceBetweenPlayer = 1f;
 
     private Rigidbody _sphereRigidbody;
 
@@ -19,7 +21,7 @@ public class CameraMovement : MonoBehaviour
         Vector3 targetPosition = CalculateTargetPosition();
 
         // Smooth movement of the camera from the current position to the new one
-        Vector3 newPosition = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, smoothTime);
+        Vector3 newPosition = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, _smoothTime);
 
         transform.position = newPosition;
         transform.LookAt(_sphere);
@@ -31,13 +33,13 @@ public class CameraMovement : MonoBehaviour
         Vector3 cameraOffset = _sphereRigidbody.velocity.normalized * 2f;
 
         // The distance of the camera to the player in Z cannot be less than the specified value
-        if (cameraOffset.z <= 7f)
-            cameraOffset.z = 7f;
+        if (cameraOffset.z <= 7f * _distanceBetweenPlayer)
+            cameraOffset.z = 7f * _distanceBetweenPlayer;
 
         Vector3 pos = _sphere.position - cameraOffset;
 
-        pos.y += 10f;
-        pos.z -= 12f;
+        pos.y += 10f * _distanceBetweenPlayer;
+        pos.z -= 12f * _distanceBetweenPlayer;
 
         pos.y = Mathf.Max(pos.y, _sphere.position.y - 5f);
 
