@@ -100,8 +100,8 @@ public class TakeReward : MonoBehaviour
 
         Bank.Instance.Coins += _countRewardCoins;
 
-        if (Balance.isBalanceInitialized)
-            Balance.UpdateBalance();
+        if (Balance.Instance.isBalanceInitialized)
+            Balance.Instance.UpdateBalance();
         
         Progress.Instance.progressData.bank = Bank.Instance.Coins;
         Progress.Instance.Save();

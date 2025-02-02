@@ -1,9 +1,13 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Quality : MonoBehaviour
 {
-    [SerializeField] private TMP_Dropdown _dropdown;
+    [SerializeField] private List<GameObject> _qualityButtons;
+
+    private string _currentQuality = "High";
 
     public static int quality = 3;
 
@@ -12,58 +16,67 @@ public class Quality : MonoBehaviour
         switch (quality)
         {
             case 1:
-                _dropdown.value = 2;
+                LowQuality();
                 break;
 
             case 2:
-                _dropdown.value = 1;
+                MediumQuality();
                 break;
 
             case 3:
-                _dropdown.value = 0;
-                break;
-        }
-    }
-
-    public void OnClick()
-    {
-        int index = _dropdown.value;
-        quality = index;
-        
-        switch (index)
-        {
-            case 0:
                 HighQuality();
                 break;
-            
-            case 1:
-                MediumQuality(); 
-                break;
-
-            case 2:
-                LowQuality();
-                break;
         }
+        ChangeButtonsColor();
+    }
 
+    public void LowQuality()
+    {
+        QualitySettings.SetQualityLevel(1, true);
+        quality = 1;
+        _currentQuality = "Low";
+        SaveData();
+        ChangeButtonsColor();
+    }
+
+    public void MediumQuality()
+    {
+        QualitySettings.SetQualityLevel(3, true);
+        quality = 2;
+        _currentQuality = "Medium";
+        SaveData();
+        ChangeButtonsColor();
+    }
+
+    public void HighQuality()
+    {
+        QualitySettings.SetQualityLevel(5, true);
+        quality = 3;
+        _currentQuality = "High";
+        SaveData();
+        ChangeButtonsColor();
+    }
+
+    private void SaveData()
+    {
         Options.Instance.optionsData.quality = quality;
         Options.Instance.Save();
     }
 
-    private void LowQuality()
+    private void ChangeButtonsColor()
     {
-        QualitySettings.SetQualityLevel(1, true);
-        quality = 1;
-    }
-
-    private void MediumQuality()
-    {
-        QualitySettings.SetQualityLevel(3, true);
-        quality = 2;
-    }
-
-    private void HighQuality()
-    {
-        QualitySettings.SetQualityLevel(5, true);
-        quality = 3;
+        foreach (GameObject qualityButton in _qualityButtons)
+        {
+            if (qualityButton.name == _currentQuality)
+            {
+                qualityButton.GetComponent<Image>().color = Color.white;
+                qualityButton.GetComponentInChildren<TextMeshProUGUI>().color = new Color(.75f, .75f, .75f, .85f);
+            }
+            else
+            {
+                qualityButton.GetComponent<Image>().color = new Color(1, 1, 1, .58f);
+                qualityButton.GetComponentInChildren<TextMeshProUGUI>().color = new Color(.75f, .75f, .75f, .5f);
+            }
+        }
     }
 }

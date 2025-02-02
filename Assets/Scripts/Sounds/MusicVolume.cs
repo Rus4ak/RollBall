@@ -6,7 +6,6 @@ public class MusicVolume : MonoBehaviour
     private Slider _slider;
 
     public static float volume = .25f;
-    public static bool isChanged = false;
 
     private void Start()
     {
@@ -18,8 +17,6 @@ public class MusicVolume : MonoBehaviour
     public void OnValueChanged()
     {
         volume = _slider.value;
-
-        isChanged = true;
 
         Options.Instance.optionsData.musicVolume = volume;
         Options.Instance.Save();

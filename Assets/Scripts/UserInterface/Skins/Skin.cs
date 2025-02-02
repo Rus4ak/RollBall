@@ -6,6 +6,8 @@ public class Skin : MonoBehaviour
     [SerializeField] private int _price;
     [SerializeField] private Material _skinMaterial;
     [SerializeField] private Sprite _skinImage;
+    [SerializeField] private GameObject _confirmPanel;
+    [SerializeField] private AudioSource _errorBuySound;
 
     private GameObject _shopSlot;
     private Transform _coin;
@@ -44,18 +46,9 @@ public class Skin : MonoBehaviour
     {
         if (!_isBought)
         {
-            if (_price <= Bank.Instance.Coins)
-            {
-                Skins.Instance.skinsData.boughtSkins.Add(gameObject.name);
-                gameObject.tag = "BoughtSkin";
-                Bank.Instance.Coins -= _price;
-
-                Progress.Instance.progressData.bank = Bank.Instance.Coins;
-                Progress.Instance.Save();
-                
-                CheckIsBought();
-                SkinsList.ChangeTag(gameObject.name);
-            }
+            _coin.gameObject.SetActive(false);
+            _priceText.gameObject.SetActive(false);
+            Instantiate(_confirmPanel, transform);
         }
         else
         {
@@ -76,5 +69,38 @@ public class Skin : MonoBehaviour
             }
         }
         Skins.Instance.Save();
+    }
+
+    public void BuySkin()
+    {
+        if (_price <= Bank.Instance.Coins)
+        {
+            Skins.Instance.skinsData.boughtSkins.Add(gameObject.name);
+            gameObject.tag = "BoughtSkin";
+            Bank.Instance.Coins -= _price;
+
+            Progress.Instance.progressData.bank = Bank.Instance.Coins;
+            Progress.Instance.Save();
+
+            CheckIsBought();
+            SkinsList.ChangeTag(gameObject.name);
+
+            Balance.Instance.UpdateBalance();
+
+            Destroy(BuySkinConfirmPanel.Instance.gameObject);
+        }
+        else
+        {
+            Balance.Instance.GetComponent<Animation>().Play();
+            
+            if (!_errorBuySound.isPlaying)
+                _errorBuySound.Play();
+        }
+    }
+
+    public void CancelBuySkin()
+    {
+        _coin.gameObject.SetActive(true);
+        _priceText.gameObject.SetActive(true);
     }
 }

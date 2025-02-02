@@ -853,6 +853,7 @@ GameObject:
   - component: {fileID: 268828489}
   - component: {fileID: 268828488}
   - component: {fileID: 268828487}
+  - component: {fileID: 268828490}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -913,9 +914,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Finish!
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -979,7 +980,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &268828489
@@ -990,6 +991,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268828485}
   m_CullTransparentMesh: 1
+--- !u!114 &268828490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268828485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7eb01fd5addcb9e47832fca94f8f3a4f
+    m_TableEntryReference:
+      m_KeyId: 7954939355136
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 268828488}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &289033879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2022,6 +2063,7 @@ GameObject:
   - component: {fileID: 534736223}
   - component: {fileID: 534736222}
   - component: {fileID: 534736221}
+  - component: {fileID: 534736224}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2082,9 +2124,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Some of the blocks start moving after the ball touches them.
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2148,7 +2190,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &534736223
@@ -2159,6 +2201,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534736219}
   m_CullTransparentMesh: 1
+--- !u!114 &534736224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534736219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7eb01fd5addcb9e47832fca94f8f3a4f
+    m_TableEntryReference:
+      m_KeyId: 6217889325056
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 534736222}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &535384774
 GameObject:
   m_ObjectHideFlags: 0
@@ -3092,6 +3174,7 @@ GameObject:
   - component: {fileID: 702948218}
   - component: {fileID: 702948217}
   - component: {fileID: 702948216}
+  - component: {fileID: 702948219}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3152,9 +3235,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jumping block - The ball jumps when touches it.
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3218,7 +3301,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &702948218
@@ -3229,6 +3312,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702948214}
   m_CullTransparentMesh: 1
+--- !u!114 &702948219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702948214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7eb01fd5addcb9e47832fca94f8f3a4f
+    m_TableEntryReference:
+      m_KeyId: 6836402364416
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 702948217}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &772242210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3389,6 +3512,7 @@ GameObject:
   - component: {fileID: 778488057}
   - component: {fileID: 778488056}
   - component: {fileID: 778488055}
+  - component: {fileID: 778488058}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3449,10 +3573,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Disappearing block - When the ball touches it, the block starts to darken,
-    turns red, and eventually disappears.
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3516,7 +3639,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &778488057
@@ -3527,6 +3650,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778488053}
   m_CullTransparentMesh: 1
+--- !u!114 &778488058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778488053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7eb01fd5addcb9e47832fca94f8f3a4f
+    m_TableEntryReference:
+      m_KeyId: 5378663620608
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 778488056}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &779854970
 GameObject:
   m_ObjectHideFlags: 0
@@ -3539,6 +3702,7 @@ GameObject:
   - component: {fileID: 779854974}
   - component: {fileID: 779854973}
   - component: {fileID: 779854972}
+  - component: {fileID: 779854975}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3599,10 +3763,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Levitation block - The ball starts to rise slowly for a while when touches
-    it.
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3666,7 +3829,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &779854974
@@ -3677,6 +3840,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779854970}
   m_CullTransparentMesh: 1
+--- !u!114 &779854975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779854970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7eb01fd5addcb9e47832fca94f8f3a4f
+    m_TableEntryReference:
+      m_KeyId: 7278804967424
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 779854973}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &843827489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5091,6 +5294,7 @@ GameObject:
   - component: {fileID: 1096322303}
   - component: {fileID: 1096322302}
   - component: {fileID: 1096322301}
+  - component: {fileID: 1096322304}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5151,9 +5355,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ghost block - The ball passes through this block.
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5217,7 +5421,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1096322303
@@ -5228,6 +5432,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096322299}
   m_CullTransparentMesh: 1
+--- !u!114 &1096322304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096322299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7eb01fd5addcb9e47832fca94f8f3a4f
+    m_TableEntryReference:
+      m_KeyId: 7610922541056
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1096322302}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1127713874
 GameObject:
   m_ObjectHideFlags: 0
@@ -5471,6 +5715,7 @@ GameObject:
   - component: {fileID: 1239297636}
   - component: {fileID: 1239297635}
   - component: {fileID: 1239297634}
+  - component: {fileID: 1239297637}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5531,9 +5776,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Some of the blocks fall down if the ball touches it.
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5597,7 +5842,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1239297636
@@ -5608,6 +5853,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239297632}
   m_CullTransparentMesh: 1
+--- !u!114 &1239297637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239297632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7eb01fd5addcb9e47832fca94f8f3a4f
+    m_TableEntryReference:
+      m_KeyId: 7189361434624
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1239297635}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &1242763841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6642,6 +6927,7 @@ GameObject:
   - component: {fileID: 1398077212}
   - component: {fileID: 1398077211}
   - component: {fileID: 1398077210}
+  - component: {fileID: 1398077213}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -6702,9 +6988,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Some of the circles rotate to the side the ball is standing.
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6768,7 +7054,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1398077212
@@ -6779,6 +7065,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398077208}
   m_CullTransparentMesh: 1
+--- !u!114 &1398077213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398077208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7eb01fd5addcb9e47832fca94f8f3a4f
+    m_TableEntryReference:
+      m_KeyId: 5688329084928
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1398077211}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &1410727724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7356,6 +7682,7 @@ GameObject:
   - component: {fileID: 1544503714}
   - component: {fileID: 1544503713}
   - component: {fileID: 1544503712}
+  - component: {fileID: 1544503715}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -7416,9 +7743,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Some of the blocks shrink or expand when the ball touches them.
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7482,7 +7809,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1544503714
@@ -7493,6 +7820,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544503710}
   m_CullTransparentMesh: 1
+--- !u!114 &1544503715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544503710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7eb01fd5addcb9e47832fca94f8f3a4f
+    m_TableEntryReference:
+      m_KeyId: 7859502161920
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1544503713}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1544620927
 GameObject:
   m_ObjectHideFlags: 0
@@ -10309,6 +10676,7 @@ GameObject:
   - component: {fileID: 2126807884}
   - component: {fileID: 2126807883}
   - component: {fileID: 2126807885}
+  - component: {fileID: 2126807886}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -10355,10 +10723,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CheckPoint block - When the ball touches this block, its position is saved
-    and after death, the new game starts from this position.
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
   m_sharedMaterial: {fileID: 8201252325663322596, guid: c5f6a984c460eb748a05a8cde7fad5fa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -10422,7 +10789,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2126807884
@@ -10447,6 +10814,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0.05
   _keyboardSound: {fileID: 1544620929}
+--- !u!114 &2126807886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126807881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7eb01fd5addcb9e47832fca94f8f3a4f
+    m_TableEntryReference:
+      m_KeyId: 5009749417984
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2126807883}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &2139548252
 PrefabInstance:
   m_ObjectHideFlags: 0

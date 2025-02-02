@@ -1,0 +1,188 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: StringTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: StringTable
+  m_TableCollectionNameGuidString: 7eb01fd5addcb9e47832fca94f8f3a4f
+  m_Entries:
+  - m_Id: 3712145006592
+    m_Key: CheckPoint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5009749417984
+    m_Key: CheckPointBlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1580587130880
+    m_Key: ChooseGameMode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2474397507584
+    m_Key: ConfirmPanel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5378663620608
+    m_Key: DisappearingBlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 686730616832
+    m_Key: Equipped
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7189361434624
+    m_Key: FallingBlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7954939355136
+    m_Key: Finish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7610922541056
+    m_Key: GhostBlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256568758272
+    m_Key: High
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6836402364416
+    m_Key: JumpingBlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3983239651328
+    m_Key: LastPosition
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4374178144256
+    m_Key: LevelCompleted
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2266095788032
+    m_Key: Levels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7278804967424
+    m_Key: LevitationBlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1356544188416
+    m_Key: Low
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2349759569920
+    m_Key: MainMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1303008092160
+    m_Key: "Medium\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1906371305472
+    m_Key: MiniGames
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6217889325056
+    m_Key: MovingWithPlayerBlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1054608826368
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4523654750208
+    m_Key: NextLevel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2712151629824
+    m_Key: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1847097401344
+    m_Key: Normal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 554211581952
+    m_Key: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 92699729920
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1118165114880
+    m_Key: Quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4749811621888
+    m_Key: Quess
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1403528781824
+    m_Key: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7859502161920
+    m_Key: ReductionBlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3577021308928
+    m_Key: RestartMethod
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5688329084928
+    m_Key: RotatingCylinder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 930302238720
+    m_Key: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4249892528128
+    m_Key: TapToOpen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2006480953344
+    m_Key: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2666484047872
+    m_Key: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81044918607872
+    m_Key: Tip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 264311328317440
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 275441010450432
+    m_Key: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 275493422473216
+    m_Key: Ukrainian
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1429845642326573080
+  references:
+    version: 2
+    RefIds:
+    - rid: 1429845642326573080
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1738433058963

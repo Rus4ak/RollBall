@@ -5,8 +5,22 @@ public class Balance : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _balanceText;
 
-    static public bool isBalanceInitialized = false;
-    static public TextMeshProUGUI balanceText;
+    public bool isBalanceInitialized = false;
+    public TextMeshProUGUI balanceText;
+
+    public static Balance Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -15,7 +29,7 @@ public class Balance : MonoBehaviour
         UpdateBalance();
     }
 
-    static public void UpdateBalance()
+    public void UpdateBalance()
     {
         balanceText.text = Bank.Instance.Coins.ToString();
     }

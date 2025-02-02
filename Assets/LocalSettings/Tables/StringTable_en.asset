@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 7eb01fd5addcb9e47832fca94f8f3a4f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 92699729920
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 554211581952
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 686730616832
+    m_Localized: Equipped
+    m_Metadata:
+      m_Items: []
+  - m_Id: 930302238720
+    m_Localized: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1054608826368
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1118165114880
+    m_Localized: Quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1256568758272
+    m_Localized: High
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1303008092160
+    m_Localized: Medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1356544188416
+    m_Localized: Low
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1403528781824
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1580587130880
+    m_Localized: Choose the game mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1847097401344
+    m_Localized: Normal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1906371305472
+    m_Localized: Mini Games
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2006480953344
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2266095788032
+    m_Localized: Levels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2349759569920
+    m_Localized: Main menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2474397507584
+    m_Localized: Are you sure?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2666484047872
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2712151629824
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3577021308928
+    m_Localized: Choose a restart method
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3712145006592
+    m_Localized: CheckPoint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3983239651328
+    m_Localized: Last position
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4249892528128
+    m_Localized: Tap to open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4374178144256
+    m_Localized: level completed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4523654750208
+    m_Localized: Next level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4749811621888
+    m_Localized: Quess
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5009749417984
+    m_Localized: CheckPoint block - When the ball touches this block, its position
+      is saved and after death, the new game starts from this position.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5378663620608
+    m_Localized: Disappearing block - When the ball touches it, the block starts
+      to darken, turns red, and eventually disappears.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5688329084928
+    m_Localized: Some of the circles tilt to the side the ball is standing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6217889325056
+    m_Localized: Some of the blocks start moving after the ball touches them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6836402364416
+    m_Localized: Jumping block - The ball jumps when touches it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7189361434624
+    m_Localized: Some of the blocks fall down if the ball touches it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7278804967424
+    m_Localized: Levitation block - The ball starts to rise slowly for a while when
+      touches it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7610922541056
+    m_Localized: Ghost block - The ball passes through this block.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7859502161920
+    m_Localized: Some of the blocks shrink or expand when the ball touches them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7954939355136
+    m_Localized: Finish!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81044918607872
+    m_Localized: Invisible Blocks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 264311328317440
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 275441010450432
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 275493422473216
+    m_Localized: Ukrainian
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

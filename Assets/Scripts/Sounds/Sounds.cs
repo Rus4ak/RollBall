@@ -49,7 +49,7 @@ public class Sounds : MonoBehaviour
         _rolling.volume = Mathf.Lerp(0, rollingVolume, SoundVolume.volume);
         _rolling.pitch = Mathf.Lerp(.25f, .45f, _rb.velocity.magnitude / 15);
 
-        if (MusicVolume.isChanged)
+        if (_music.volume != MusicVolume.volume)
         {
             _music.volume = Mathf.Lerp(0, .08f, MusicVolume.volume);
         }

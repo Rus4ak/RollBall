@@ -13,7 +13,7 @@ public class ButtonClickVolume : MonoBehaviour
 
     private void Update()
     {
-        if (SoundVolume.isChanged)
+        if (_audio.volume != SoundVolume.volume)
         {
             _audio.volume = SoundVolume.volume;
         }

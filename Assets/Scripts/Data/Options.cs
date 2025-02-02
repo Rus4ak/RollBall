@@ -25,9 +25,10 @@ public class Options
     [Serializable]
     public class OptionsData
     {
-        public int quality;
-        public float musicVolume;
-        public float soundVolume;
+        public int quality = 3;
+        public float musicVolume = .25f;
+        public float soundVolume = .25f;
+        public int localeID;
     }
 
     public void Save()
@@ -48,5 +49,6 @@ public class Options
         Quality.quality = optionsData.quality;
         MusicVolume.volume = optionsData.musicVolume;
         SoundVolume.volume = optionsData.soundVolume;
+        LocaleSelector.localeID = optionsData.localeID;
     }
 }

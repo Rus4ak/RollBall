@@ -1532,11 +1532,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4016727771706060198, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4016727771706060198, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4016727771706060198, guid: ad50926415cf1f54097a986ec2de7d05, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11315,6 +11315,7 @@ GameObject:
   - component: {fileID: 2040268897}
   - component: {fileID: 2040268899}
   - component: {fileID: 2040268898}
+  - component: {fileID: 2040268900}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -11338,8 +11339,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 15}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.3, y: 16.71}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: -0.3, y: 17.3}
+  m_SizeDelta: {x: 11, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2040268898
 MonoBehaviour:
@@ -11361,17 +11362,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quess
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: db4036e8ae65d2e4db5592f05aa2abda, type: 2}
-  m_sharedMaterial: {fileID: -4267627005829356953, guid: db4036e8ae65d2e4db5592f05aa2abda, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
+  m_sharedMaterial: {fileID: -4388707271685382437, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 3355443455
+  m_fontColor: {r: 1, g: 0, b: 0, a: 0.78431374}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -11388,12 +11389,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46
-  m_fontSizeBase: 46
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 26
+  m_fontSizeMax: 38
   m_fontStyle: 2
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -11453,7 +11454,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4267627005829356953, guid: db4036e8ae65d2e4db5592f05aa2abda, type: 2}
+  - {fileID: -4388707271685382437, guid: d4edd0424a96ada4ab09414b2b39b744, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11475,6 +11476,46 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2040268900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040268896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7eb01fd5addcb9e47832fca94f8f3a4f
+    m_TableEntryReference:
+      m_KeyId: 4749811621888
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2040268898}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &2091532206
 PrefabInstance:
   m_ObjectHideFlags: 0

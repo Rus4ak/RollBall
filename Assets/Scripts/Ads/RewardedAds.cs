@@ -18,9 +18,17 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
 
     public void LoadRewardedAd()
     {
-        _loading.StartLoading();
-        Advertisement.Load(_adUnitId, this);
+        if (Advertisement.isInitialized)
+        {
+            ShowRewardedAd();
+        }
+        else
+        {
+            _loading.StartLoading();
+            Advertisement.Load(_adUnitId, this);
+        }
     }
+
     public void ShowRewardedAd()
     {
         Advertisement.Show(_adUnitId, this);
@@ -28,7 +36,8 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
 
     public void OnUnityAdsAdLoaded(string placementId)
     {
-        ShowRewardedAd();
+        if (_loading.isLoading)
+            ShowRewardedAd();
     }
 
     public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message) { }
