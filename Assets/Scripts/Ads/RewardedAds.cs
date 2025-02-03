@@ -18,15 +18,8 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
 
     public void LoadRewardedAd()
     {
-        if (Advertisement.isInitialized)
-        {
-            ShowRewardedAd();
-        }
-        else
-        {
-            _loading.StartLoading();
-            Advertisement.Load(_adUnitId, this);
-        }
+        _loading.StartLoading();
+        Advertisement.Load(_adUnitId, this);
     }
 
     public void ShowRewardedAd()

@@ -9,6 +9,7 @@ TagManager:
   - EquippedSkin
   - Joystick
   - SpeedBlock
+  - IARManager
   layers:
   - Default
   - TransparentFX

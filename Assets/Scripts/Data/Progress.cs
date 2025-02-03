@@ -30,6 +30,7 @@ public class Progress
         public int completedNormalLevels;
         public int completedMiniGamesLevels;
         public DateTime lastOpenDailyBoxTime;
+        public bool isShownReview = false;
     }
 
     public void Save()
@@ -55,6 +56,7 @@ public class Progress
         Bank.Instance.Coins = progressData.bank;
         LevelsController.lastCompletedNormalLevel = progressData.completedNormalLevels;
         LevelsController.lastCompletedMiniGamesLevel = progressData.completedMiniGamesLevels;
+        IARManager.isShownReview = progressData.isShownReview;
     }
 
     private byte[] SerializeToBytes(ProgressData data)

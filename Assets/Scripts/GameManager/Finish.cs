@@ -19,6 +19,7 @@ public class Finish : MonoBehaviour
     [SerializeField] private bool _isMiniGamesMode;
 
     private GameObject _joystickUI;
+    private IARManager _IARManager;
 
     [NonSerialized] public int lastCompletedNormalLevel;
     [NonSerialized] public int lastCompletedMiniGamesLevel;
@@ -31,6 +32,15 @@ public class Finish : MonoBehaviour
     private void Start()
     {
         _joystickUI = GameObject.FindGameObjectWithTag("Joystick");
+
+        try
+        {
+            _IARManager = GameObject.FindGameObjectWithTag("IARManager").GetComponent<IARManager>();
+        }
+        catch
+        {
+            _IARManager = null;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -60,6 +70,9 @@ public class Finish : MonoBehaviour
 
     private void FinishNormalMode()
     {
+        if (_IARManager != null && _currentLevel >= 5 && !IARManager.isShownReview)
+            _IARManager.ShowReview();
+
         lastCompletedNormalLevel = LevelsController.lastCompletedNormalLevel;
 
         if (LevelsController.lastCompletedNormalLevel < CurrentLevel)
