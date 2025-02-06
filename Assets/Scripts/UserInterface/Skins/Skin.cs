@@ -14,6 +14,8 @@ public class Skin : MonoBehaviour
     private Transform _priceText;
     private bool _isBought;
 
+    private bool _isShownConfirmPanel = false;
+
     public Material SkinMaterial => _skinMaterial;
     public Sprite SkinImage => _skinImage;
 
@@ -46,9 +48,13 @@ public class Skin : MonoBehaviour
     {
         if (!_isBought)
         {
-            _coin.gameObject.SetActive(false);
-            _priceText.gameObject.SetActive(false);
-            Instantiate(_confirmPanel, transform);
+            if (!_isShownConfirmPanel)
+            {
+                _coin.gameObject.SetActive(false);
+                _priceText.gameObject.SetActive(false);
+                Instantiate(_confirmPanel, transform);
+                _isShownConfirmPanel = true;
+            }
         }
         else
         {
@@ -67,8 +73,8 @@ public class Skin : MonoBehaviour
                     EquippedSkins.ChangeSelectedSkin("background", _shopSlot, skinImage: SkinImage);
                     break;
             }
+            Skins.Instance.Save();
         }
-        Skins.Instance.Save();
     }
 
     public void BuySkin()
@@ -96,11 +102,15 @@ public class Skin : MonoBehaviour
             if (!_errorBuySound.isPlaying)
                 _errorBuySound.Play();
         }
+
+        _isShownConfirmPanel = false;
+        Skins.Instance.Save();
     }
 
     public void CancelBuySkin()
     {
         _coin.gameObject.SetActive(true);
         _priceText.gameObject.SetActive(true);
+        _isShownConfirmPanel = false;
     }
 }
