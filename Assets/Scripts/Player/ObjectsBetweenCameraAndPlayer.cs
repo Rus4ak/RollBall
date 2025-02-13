@@ -26,6 +26,9 @@ public class ObjectsBetweenCameraAndPlayer : MonoBehaviour
                 {
                     foreach (KeyValuePair<Renderer, Material> kvp in _defaultMaterials)
                     {
+                        if (kvp.Key == null)
+                            continue;
+
                         kvp.Key.material = kvp.Value;
                     }
 

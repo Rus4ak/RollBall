@@ -18,8 +18,16 @@ public class Finish : MonoBehaviour
     [SerializeField] private bool _isNormalMode;
     [SerializeField] private bool _isMiniGamesMode;
 
+    [Header("Stars")]
+    [SerializeField] private float _timeTwoStars;
+    [SerializeField] private float _timeThreeStars;
+
     private GameObject _joystickUI;
     private IARManager _IARManager;
+
+    private int _countStars = 1;
+
+    public static float passingTime = 0;
 
     [NonSerialized] public int lastCompletedNormalLevel;
     [NonSerialized] public int lastCompletedMiniGamesLevel;
@@ -28,6 +36,10 @@ public class Finish : MonoBehaviour
     public int MinCountCoins { get => _minCountCoins; }
     public int MaxCountCoins { get => _maxCountCoins; }
     public bool IsDropSkin { get => _isDropSkin; }
+    public float TimeTwoStars { get => _timeTwoStars; }
+    public float TimeThreeStars { get => _timeThreeStars; }
+    public int CountStars {  get => _countStars; }
+    public GameObject Box {  get => _box; }
 
     private void Start()
     {
@@ -43,12 +55,20 @@ public class Finish : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        passingTime += Time.deltaTime;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             if (_isNormalMode)
+            {
+                RewardStars();
                 FinishNormalMode();
+            }
 
             else if (_isMiniGamesMode)
                 FinishMiniGamesMode();
@@ -61,8 +81,6 @@ public class Finish : MonoBehaviour
             if (_joystickUI)
                 _joystickUI.SetActive(false);
 
-            _box.SetActive(true);
-
             collision.gameObject.GetComponent<Sounds>().StopRollingSound();
             collision.gameObject.SetActive(false);
         }
@@ -70,13 +88,26 @@ public class Finish : MonoBehaviour
 
     private void FinishNormalMode()
     {
-        if (_IARManager != null && _currentLevel >= 5 && !IARManager.isShownReview)
+        if (_IARManager != null && CurrentLevel >= 5 && !IARManager.isShownReview)
             _IARManager.ShowReview();
 
         lastCompletedNormalLevel = LevelsController.lastCompletedNormalLevel;
 
         if (LevelsController.lastCompletedNormalLevel < CurrentLevel)
             LevelsController.lastCompletedNormalLevel = CurrentLevel;
+
+        if (CurrentLevel != 0)
+        {
+            if (LevelsController.countStarsNormalMode[CurrentLevel] < _countStars)
+                LevelsController.countStarsNormalMode[CurrentLevel] = _countStars;
+
+            if (Progress.Instance.progressData.countStarsNormalMode[CurrentLevel] < _countStars)
+                Progress.Instance.progressData.countStarsNormalMode[CurrentLevel] = _countStars;
+        }
+        else
+        {
+            _box.SetActive(true);
+        }
 
         Progress.Instance.progressData.completedNormalLevels = LevelsController.lastCompletedNormalLevel;
         Progress.Instance.Save();
@@ -91,5 +122,16 @@ public class Finish : MonoBehaviour
 
         Progress.Instance.progressData.completedMiniGamesLevels = LevelsController.lastCompletedMiniGamesLevel;
         Progress.Instance.Save();
+
+        _box.SetActive(true);
+    }
+
+    private void RewardStars()
+    {
+        if (_timeTwoStars >= passingTime)
+            _countStars++;
+
+        if (_timeThreeStars >= passingTime)
+            _countStars++;
     }
 }

@@ -34,6 +34,7 @@ public class ChoiceLevel : MonoBehaviour
         
         SceneManager.LoadSceneAsync(sceneName);
 
+        Finish.passingTime = 0;
         CheckPoint.checkPoint = new Vector3(0, 1f, 0);
         PlayerMovement.spawnPosition = new Vector3(0, 1f, 0);
         Quality.quality = _quality;

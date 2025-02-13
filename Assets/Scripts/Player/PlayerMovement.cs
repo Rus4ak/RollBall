@@ -33,9 +33,6 @@ public class PlayerMovement : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _joystickUI = GameObject.FindGameObjectWithTag("Joystick");
-
-        if (_restartMenu.activeInHierarchy)
-            _restartMenu.SetActive(false);
     }
 
     private void Start()
@@ -44,6 +41,9 @@ public class PlayerMovement : MonoBehaviour
             spawnPosition = CheckPoint.checkPoint;
 
         transform.position = spawnPosition;
+
+        if (_restartMenu.activeInHierarchy)
+            _restartMenu.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -125,14 +125,16 @@ public class PlayerMovement : MonoBehaviour
     public void Respawn(Vector3 position)
     {
         Time.timeScale = 1;
-        
+
+        float passingTime = Finish.passingTime;
         Vector3 lastPositionTemp = lastPosition;
         Scene currentScene = SceneManager.GetActiveScene();
         
         SceneManager.LoadScene(currentScene.name);
-
+        
         lastPosition = lastPositionTemp;
         spawnPosition = position;
+        Finish.passingTime = passingTime;
 
         _restartMenu.SetActive(false);
         _joystickUI.SetActive(true);

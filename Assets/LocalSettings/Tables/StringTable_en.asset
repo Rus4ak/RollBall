@@ -181,6 +181,26 @@ MonoBehaviour:
     m_Localized: Ukrainian
     m_Metadata:
       m_Items: []
+  - m_Id: 4000467261956096
+    m_Localized: 'Passage time:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4000601911697408
+    m_Localized: sec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4007026314551296
+    m_Localized: 'Best time:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4064201376374784
+    m_Localized: Complete the level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4064295911792640
+    m_Localized: Complete the level in
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

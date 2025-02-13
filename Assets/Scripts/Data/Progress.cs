@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
@@ -29,6 +30,8 @@ public class Progress
         public int bank;
         public int completedNormalLevels;
         public int completedMiniGamesLevels;
+        public Dictionary<int, int> countStarsNormalMode = new Dictionary<int, int>();
+        public Dictionary<int, int> bestPassedTime = new Dictionary<int, int>();
         public DateTime lastOpenDailyBoxTime;
         public bool isShownReview = false;
     }
@@ -56,6 +59,13 @@ public class Progress
         Bank.Instance.Coins = progressData.bank;
         LevelsController.lastCompletedNormalLevel = progressData.completedNormalLevels;
         LevelsController.lastCompletedMiniGamesLevel = progressData.completedMiniGamesLevels;
+
+        if (progressData.countStarsNormalMode != null)
+            LevelsController.countStarsNormalMode = progressData.countStarsNormalMode;
+        
+        if (progressData.bestPassedTime != null)
+            BestPassedTime.Instance.BestTime = progressData.bestPassedTime;
+        
         IARManager.isShownReview = progressData.isShownReview;
     }
 

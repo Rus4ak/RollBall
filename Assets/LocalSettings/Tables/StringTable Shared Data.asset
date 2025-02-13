@@ -175,6 +175,26 @@ MonoBehaviour:
     m_Key: Ukrainian
     m_Metadata:
       m_Items: []
+  - m_Id: 4000467261956096
+    m_Key: PassageTime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4000601911697408
+    m_Key: sec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4007026314551296
+    m_Key: BestTime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4064201376374784
+    m_Key: CompleteLevel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4064295911792640
+    m_Key: CompleteLevelIn
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
