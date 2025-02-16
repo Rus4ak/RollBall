@@ -81,6 +81,7 @@ public class Finish : MonoBehaviour
             if (_joystickUI)
                 _joystickUI.SetActive(false);
 
+            LevitationBlockSound.isStop = true;
             collision.gameObject.GetComponent<Sounds>().StopRollingSound();
             collision.gameObject.SetActive(false);
         }

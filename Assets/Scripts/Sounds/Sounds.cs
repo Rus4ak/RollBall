@@ -55,7 +55,7 @@ public class Sounds : MonoBehaviour
         }
 
         // If there is nothing under the player, the rolling sound is stopped
-        if (!Physics.Raycast(transform.position, Vector3.down, 7f))
+        if (!Physics.Raycast(transform.position, Vector3.down, 1f))
             _rolling.Stop();
     }
 

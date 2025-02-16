@@ -10,6 +10,7 @@ TagManager:
   - Joystick
   - SpeedBlock
   - IARManager
+  - Ice
   layers:
   - Default
   - TransparentFX

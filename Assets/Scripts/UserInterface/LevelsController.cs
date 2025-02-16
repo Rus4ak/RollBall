@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -31,15 +30,6 @@ public class LevelsController : MonoBehaviour
     public static int lastCompletedNormalLevel = 0;
     public static int lastCompletedMiniGamesLevel = 0;
     public static Dictionary<int, int> countStarsNormalMode = new Dictionary<int, int>();
-
-    //private void Awake()
-    //{
-    //    InitializeNormalLevels();
-    //    InitializeMiniGamesLevels();
-
-    //    if (_isSaveData)
-    //        Progress.Instance.Save();
-    //}
 
     private void Start()
     {

@@ -195,6 +195,10 @@ MonoBehaviour:
     m_Key: CompleteLevelIn
     m_Metadata:
       m_Items: []
+  - m_Id: 5375630771593216
+    m_Key: Freezing
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

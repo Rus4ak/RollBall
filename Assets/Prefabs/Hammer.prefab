@@ -167,6 +167,7 @@ MonoBehaviour:
   _startPosition: {x: 0, y: 0, z: 60}
   _endPosition: {x: 0, y: 0, z: -60}
   _moveTime: 2
+  _waitPlayer: 0
 --- !u!1 &4977438700353749148
 GameObject:
   m_ObjectHideFlags: 0

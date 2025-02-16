@@ -16,6 +16,7 @@ public class PauseGame : MonoBehaviour
     {
         Time.timeScale = 0;
 
+        LevitationBlockSound.isStop = true;
         _ballRollingSound.Stop();
         _pauseMenu.SetActive(true);
         _joystickUI.SetActive(false);
@@ -25,6 +26,7 @@ public class PauseGame : MonoBehaviour
         _pauseMenu.SetActive(false);
         _joystickUI.SetActive(true);
         _ballRollingSound.Play();
+        LevitationBlockSound.isStop = false;
 
         Time.timeScale = 1f;
     }

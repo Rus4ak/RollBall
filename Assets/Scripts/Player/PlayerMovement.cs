@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     private GameObject _joystickUI;
     private float _lastSpawnTrailParticle;
 
+    private bool _isSlice = false;
+    private bool _isStopBall = true;
+
     [NonSerialized] public bool isCollision;
 
     public static Vector3 lastPosition;
@@ -66,6 +69,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        if (collision.transform.CompareTag("Ice"))
+        {
+            _isSlice = true;
+            _isStopBall = false;
+        }
+
         if (isCollision == false)
             isCollision = true;
 
@@ -101,6 +110,12 @@ public class PlayerMovement : MonoBehaviour
     
     private void OnCollisionExit(Collision collision)
     {
+        if (collision.transform.CompareTag("Ice"))
+        {
+            _isSlice = false;
+            _isStopBall = true;
+        }
+
         isCollision = false;
 
         if (collision.gameObject.layer == 10)
@@ -153,21 +168,32 @@ public class PlayerMovement : MonoBehaviour
 
                 Vector3 movementJoystick = new Vector3(_joystick.Horizontal, 0, _joystick.Vertical);
                 Vector3 movement = movementJoystick.x * cameraRight + movementJoystick.z * cameraForward;
-
+                
                 Vector3 rigidbodyVelocity = _rigidbody.velocity;
 
-                rigidbodyVelocity.x = movement.x * Speed;
-                rigidbodyVelocity.z = movement.z * Speed;
+                if (_isSlice)
+                {
+                    Vector3 targetVelocity = movement * Speed;
+
+                    rigidbodyVelocity.x = Mathf.Lerp(rigidbodyVelocity.x, targetVelocity.x, Time.fixedDeltaTime * 10f);
+                    rigidbodyVelocity.z = Mathf.Lerp(rigidbodyVelocity.z, targetVelocity.z, Time.fixedDeltaTime * 10f);
+                }
+                else
+                {
+                    rigidbodyVelocity.x = movement.x * Speed;
+                    rigidbodyVelocity.z = movement.z * Speed;
+                }
 
                 Vector3 rigidbodyLerpVelocity = Vector3.Lerp(_rigidbody.velocity, rigidbodyVelocity, Time.fixedDeltaTime * 2f);
-                
+
                 _rigidbody.velocity = rigidbodyLerpVelocity;
             }
             else
             {
                 // Stop the ball when releasing the screen
                 if (isCollision)
-                    _rigidbody.velocity = Vector3.Lerp(_rigidbody.velocity, Vector3.zero, Time.fixedDeltaTime * 2f);
+                    if (_isStopBall)
+                        _rigidbody.velocity = Vector3.Lerp(_rigidbody.velocity, Vector3.zero, Time.fixedDeltaTime * 2f);
             }
         }
         else
