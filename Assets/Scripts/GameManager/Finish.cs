@@ -99,6 +99,11 @@ public class Finish : MonoBehaviour
 
         if (CurrentLevel != 0)
         {
+            if (!LevelsController.countStarsNormalMode.TryGetValue(CurrentLevel, out _))
+            {
+                LevelsController.countStarsNormalMode[CurrentLevel] = _countStars;
+            }
+
             if (LevelsController.countStarsNormalMode[CurrentLevel] < _countStars)
                 LevelsController.countStarsNormalMode[CurrentLevel] = _countStars;
 

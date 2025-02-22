@@ -46,7 +46,7 @@ public class InitializeAds : MonoBehaviour, IUnityAdsInitializationListener
             _gameId = config.gameId;
         }
 
-        _isTesting = true;
+        _isTesting = false;
         
         if (!Advertisement.isInitialized && Advertisement.isSupported)
         {

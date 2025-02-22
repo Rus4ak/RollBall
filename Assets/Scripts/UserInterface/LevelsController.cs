@@ -39,6 +39,14 @@ public class LevelsController : MonoBehaviour
         if (_isSaveData)
             Progress.Instance.Save();
 
+        if (countStarsNormalMode.Count > _normalLevels.Count)
+        {
+            if (countStarsNormalMode.TryGetValue(0, out _))
+            {
+                countStarsNormalMode.Remove(0);
+            }
+        }
+
         if (countStarsNormalMode.Count < _normalLevels.Count)
         {
             for (int i = countStarsNormalMode.Count; i < _normalLevels.Count; i++)
