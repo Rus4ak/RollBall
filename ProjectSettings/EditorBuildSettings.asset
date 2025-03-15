@@ -24,9 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/NormalMode/Level4.unity
     guid: 4209d789adb24c74c8df022e4c66d111
   - enabled: 1
-    path: Assets/Scenes/MiniGames/MiniGamesLevel1.unity
-    guid: 0748e667d4ff55049b8b916bd978641f
-  - enabled: 1
     path: Assets/Scenes/NormalMode/Level5.unity
     guid: 66b529da9f16ce8469226cfc6e9e72ba
   - enabled: 1
@@ -39,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/NormalMode/Level8.unity
     guid: 312e9d92bac38e94ab25544eb5bc96a6
   - enabled: 1
-    path: Assets/Scenes/MiniGames/MiniGamesLevel2.unity
+    path: Assets/Scenes/MiniGames/Invisible/InvisibleLevel1.unity
     guid: df165ae2ebdca1043ae6d7a1fbbe2887
   - enabled: 1
     path: Assets/Scenes/NormalMode/Level9.unity
@@ -54,7 +51,7 @@ EditorBuildSettings:
     path: Assets/Scenes/NormalMode/Level12.unity
     guid: 9d0c06ba8dfc10f45bb2284bbecb00d9
   - enabled: 1
-    path: Assets/Scenes/MiniGames/MiniGamesLevel4.unity
+    path: Assets/Scenes/MiniGames/Fly/FlyLevel5.unity
     guid: 1f41c4129c0ba9042af1196dedc199a9
   - enabled: 1
     path: Assets/Scenes/NormalMode/Level13.unity
@@ -69,7 +66,7 @@ EditorBuildSettings:
     path: Assets/Scenes/NormalMode/Level16.unity
     guid: 939395b299d58444a9588e6c801d7614
   - enabled: 1
-    path: Assets/Scenes/MiniGames/MiniGamesLevel6.unity
+    path: Assets/Scenes/MiniGames/SpeedUp/SpeedUpLevel5.unity
     guid: e2df32712bdba754897df0d293915d0d
   - enabled: 1
     path: Assets/Scenes/NormalMode/Level17.unity
@@ -81,14 +78,101 @@ EditorBuildSettings:
     path: Assets/Scenes/NormalMode/Level19.unity
     guid: cef24a4fc67015e4b85472730afe0aec
   - enabled: 1
-    path: Assets/Scenes/MiniGames/MiniGamesLevel3.unity
+    path: Assets/Scenes/MiniGames/Quess/QuessLevel3.unity
     guid: 6728d1e5580dc874f9953a207e99e816
   - enabled: 1
-    path: Assets/Scenes/MiniGames/MiniGamesLevel5.unity
+    path: Assets/Scenes/MiniGames/Platform/PlatformLevel3.unity
     guid: 4ca4a160851682848a0f38cdd8aba5d3
   - enabled: 1
-    path: Assets/Scenes/MiniGames/MiniGamesLevel7.unity
+    path: Assets/Scenes/MiniGames/Freezing/FreezingLevel5.unity
     guid: 46332be274d000943a889358c6f9ea65
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Jump/JumpLevel5.unity
+    guid: 6891aa2b9e71428418e748fa91fc6bfb
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Invisible/InvisibleLevel2.unity
+    guid: 368389b89045a2142b6f746fe2708950
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Invisible/InvisibleLevel3.unity
+    guid: 7f476578107c7e446b5a35ce110b8e2e
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Invisible/InvisibleLevel4.unity
+    guid: 1e77610f4bc72ea4f800a2baed9b01e5
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Invisible/InvisibleLevel5.unity
+    guid: aa36a89ece2aea04ea4cfce5cf66cb97
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Quess/QuessLevel1.unity
+    guid: 773fefad1b7f2ea4da0665c74c7eaf2a
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Quess/QuessLevel2.unity
+    guid: 8ebd4a1c27889264b8a312eb392eb65b
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Quess/QuessLevel4.unity
+    guid: 1c352a8e81eb11e42bed89f13c32dbe9
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Quess/QuessLevel5.unity
+    guid: a745818e0b7e368428d9b5caef6652b8
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Fly/FlyLevel1.unity
+    guid: a2456eefb1af7484780da662cd8f16f0
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Fly/FlyLevel2.unity
+    guid: f047e678944fa6348b7a7f6fecbaf25e
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Fly/FlyLevel3.unity
+    guid: 1e9bdafa164377c4ebce0d185bb693a3
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Fly/FlyLevel4.unity
+    guid: b3fb9df6e3de897418d356610e42fbca
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Platform/PlatformLevel1.unity
+    guid: 0f8ea491b803b034cbbd64fc2681e11c
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Platform/PlatformLevel2.unity
+    guid: ba7ba7d0f9171af4392624aa2e1a2e79
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Platform/PlatformLevel4.unity
+    guid: 5c044f972b2fecc429e741119c1c01d5
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Platform/PlatformLevel5.unity
+    guid: 466ed881557404a4faf5ca77ace936b8
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/SpeedUp/SpeedUpLevel1.unity
+    guid: b6f353d7f3ceaf34ba17f73ea9a79139
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/SpeedUp/SpeedUpLevel2.unity
+    guid: 2c9b33430333ae44fba1e2f4a8b3748a
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/SpeedUp/SpeedUpLevel3.unity
+    guid: e11a1609f9dac8f49a972d49f52ee949
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/SpeedUp/SpeedUpLevel4.unity
+    guid: b68a05518412f934986f2842540f559a
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Freezing/FreezingLevel1.unity
+    guid: c0844c7b7e04e204e872349734eb5ad0
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Freezing/FreezingLevel2.unity
+    guid: 3144ac3bc95fbbd4fac36867c19d765f
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Freezing/FreezingLevel3.unity
+    guid: 3a55f3e5676e529418390bd8a71e89a1
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Freezing/FreezingLevel4.unity
+    guid: 3ebf213f6b4571140a38f868e8ccc3fa
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Jump/JumpLevel1.unity
+    guid: 8d4edf5a706431d47bcf3226a38ffe32
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Jump/JumpLevel2.unity
+    guid: bf8d8b60dbafda8439a9579dda1cac7c
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Jump/JumpLevel3.unity
+    guid: bc4f045c38dd09d4c8eeafaadcba3dcc
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Jump/JumpLevel4.unity
+    guid: 826e1eb5d4661ad4ca9507753eb11878
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 1fb265398f0a68f4da90686a7a844719, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 1f28c21dfe5c21040b7797dc2fa92ef3, type: 2}

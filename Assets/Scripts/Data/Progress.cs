@@ -29,7 +29,13 @@ public class Progress
     {
         public int bank;
         public int completedNormalLevels;
-        public int completedMiniGamesLevels;
+        public int completedInvisibleLevels;
+        public int completedQuessLevels;
+        public int completedFlyLevels;
+        public int completedPlatformLevels;
+        public int completedSpeedUpLevels;
+        public int completedFreezingLevels;
+        public int completedJumpLevels;
         public Dictionary<int, int> countStarsNormalMode = new Dictionary<int, int>();
         public Dictionary<int, int> bestPassedTime = new Dictionary<int, int>();
         public DateTime lastOpenDailyBoxTime;
@@ -58,7 +64,13 @@ public class Progress
 
         Bank.Instance.Coins = progressData.bank;
         LevelsController.lastCompletedNormalLevel = progressData.completedNormalLevels;
-        LevelsController.lastCompletedMiniGamesLevel = progressData.completedMiniGamesLevels;
+        LevelsController.lastCompletedInvisibleLevel = progressData.completedInvisibleLevels;
+        LevelsController.lastCompletedQuessLevel = progressData.completedQuessLevels;
+        LevelsController.lastCompletedFlyLevel = progressData.completedFlyLevels;
+        LevelsController.lastCompletedPlatformLevel = progressData.completedPlatformLevels;
+        LevelsController.lastCompletedSpeedUpLevel = progressData.completedSpeedUpLevels;
+        LevelsController.lastCompletedFreezingLevel = progressData.completedFreezingLevels;
+        LevelsController.lastCompletedJumpLevel = progressData.completedJumpLevels;
 
         if (progressData.countStarsNormalMode != null)
             LevelsController.countStarsNormalMode = progressData.countStarsNormalMode;

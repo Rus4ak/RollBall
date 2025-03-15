@@ -15,8 +15,14 @@ public class Finish : MonoBehaviour
     [SerializeField] private bool _isDropSkin = false;
 
     [Header("GameMode")]
-    [SerializeField] private bool _isNormalMode;
-    [SerializeField] private bool _isMiniGamesMode;
+    public bool isNormalMode;
+    public bool isInvisibleMode;
+    public bool isQuessMode;
+    public bool isFlyMode;
+    public bool isPlatformMode;
+    public bool isSpeedUpMode;
+    public bool isFreezingMode;
+    public bool isJumpMode;
 
     [Header("Stars")]
     [SerializeField] private float _timeTwoStars;
@@ -30,7 +36,13 @@ public class Finish : MonoBehaviour
     public static float passingTime = 0;
 
     [NonSerialized] public int lastCompletedNormalLevel;
-    [NonSerialized] public int lastCompletedMiniGamesLevel;
+    [NonSerialized] public int lastCompletedInvisibleLevel;
+    [NonSerialized] public int lastCompletedQuessLevel;
+    [NonSerialized] public int lastCompletedFlyLevel;
+    [NonSerialized] public int lastCompletedPlatformLevel;
+    [NonSerialized] public int lastCompletedSpeedUpLevel;
+    [NonSerialized] public int lastCompletedFreezingLevel;
+    [NonSerialized] public int lastCompletedJumpLevel;
 
     public int CurrentLevel { get => _currentLevel; }
     public int MinCountCoins { get => _minCountCoins; }
@@ -64,14 +76,32 @@ public class Finish : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (_isNormalMode)
+            if (isNormalMode)
             {
                 RewardStars();
                 FinishNormalMode();
             }
 
-            else if (_isMiniGamesMode)
-                FinishMiniGamesMode();
+            else if (isInvisibleMode)
+                FinishInvisibleMode();
+
+            else if (isQuessMode)
+                FinishQuessMode();
+
+            else if (isFlyMode)
+                FinishFlyMode();
+
+            else if (isPlatformMode)
+                FinishPlatformMode();
+
+            else if (isSpeedUpMode)
+                FinishSpeedUpMode();
+
+            else if (isFreezingMode)
+                FinishFreezingMode();
+
+            else if (isJumpMode)
+                FinishJumpMode();
 
             else
                 throw new Exception("None of the game modes are connected to the finish");
@@ -119,14 +149,92 @@ public class Finish : MonoBehaviour
         Progress.Instance.Save();
     }
 
-    private void FinishMiniGamesMode()
+    private void FinishInvisibleMode()
     {
-        lastCompletedMiniGamesLevel = LevelsController.lastCompletedMiniGamesLevel;
+        lastCompletedInvisibleLevel = LevelsController.lastCompletedInvisibleLevel;
 
-        if (LevelsController.lastCompletedMiniGamesLevel < CurrentLevel)
-            LevelsController.lastCompletedMiniGamesLevel = CurrentLevel;
+        if (LevelsController.lastCompletedInvisibleLevel < CurrentLevel)
+            LevelsController.lastCompletedInvisibleLevel = CurrentLevel;
 
-        Progress.Instance.progressData.completedMiniGamesLevels = LevelsController.lastCompletedMiniGamesLevel;
+        Progress.Instance.progressData.completedInvisibleLevels = LevelsController.lastCompletedInvisibleLevel;
+        Progress.Instance.Save();
+
+        _box.SetActive(true);
+    }
+
+    private void FinishQuessMode()
+    {
+        lastCompletedQuessLevel = LevelsController.lastCompletedQuessLevel;
+
+        if (LevelsController.lastCompletedQuessLevel < CurrentLevel)
+            LevelsController.lastCompletedQuessLevel = CurrentLevel;
+
+        Progress.Instance.progressData.completedQuessLevels = LevelsController.lastCompletedQuessLevel;
+        Progress.Instance.Save();
+
+        _box.SetActive(true);
+    }
+
+    private void FinishFlyMode()
+    {
+        lastCompletedFlyLevel = LevelsController.lastCompletedFlyLevel;
+
+        if (LevelsController.lastCompletedFlyLevel < CurrentLevel)
+            LevelsController.lastCompletedFlyLevel = CurrentLevel;
+
+        Progress.Instance.progressData.completedFlyLevels = LevelsController.lastCompletedFlyLevel;
+        Progress.Instance.Save();
+
+        _box.SetActive(true);
+    }
+
+    private void FinishPlatformMode()
+    {
+        lastCompletedPlatformLevel = LevelsController.lastCompletedPlatformLevel;
+
+        if (LevelsController.lastCompletedPlatformLevel < CurrentLevel)
+            LevelsController.lastCompletedPlatformLevel = CurrentLevel;
+
+        Progress.Instance.progressData.completedPlatformLevels = LevelsController.lastCompletedPlatformLevel;
+        Progress.Instance.Save();
+
+        _box.SetActive(true);
+    }
+
+    private void FinishSpeedUpMode()
+    {
+        lastCompletedSpeedUpLevel = LevelsController.lastCompletedSpeedUpLevel;
+
+        if (LevelsController.lastCompletedSpeedUpLevel < CurrentLevel)
+            LevelsController.lastCompletedSpeedUpLevel = CurrentLevel;
+
+        Progress.Instance.progressData.completedSpeedUpLevels = LevelsController.lastCompletedSpeedUpLevel;
+        Progress.Instance.Save();
+
+        _box.SetActive(true);
+    }
+
+    private void FinishFreezingMode()
+    {
+        lastCompletedFreezingLevel = LevelsController.lastCompletedFreezingLevel;
+
+        if (LevelsController.lastCompletedFreezingLevel < CurrentLevel)
+            LevelsController.lastCompletedFreezingLevel = CurrentLevel;
+
+        Progress.Instance.progressData.completedFreezingLevels = LevelsController.lastCompletedFreezingLevel;
+        Progress.Instance.Save();
+
+        _box.SetActive(true);
+    }
+
+    private void FinishJumpMode()
+    {
+        lastCompletedJumpLevel = LevelsController.lastCompletedJumpLevel;
+
+        if (LevelsController.lastCompletedJumpLevel < CurrentLevel)
+            LevelsController.lastCompletedJumpLevel = CurrentLevel;
+
+        Progress.Instance.progressData.completedJumpLevels = LevelsController.lastCompletedJumpLevel;
         Progress.Instance.Save();
 
         _box.SetActive(true);

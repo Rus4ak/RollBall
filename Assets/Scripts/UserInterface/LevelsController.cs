@@ -23,18 +23,37 @@ public class Level
 public class LevelsController : MonoBehaviour
 {
     [SerializeField] private List<Level> _normalLevels;
-    [SerializeField] private List<Level> _miniGamesLevels;
+    [SerializeField] private List<Level> _invisibleLevels;
+    [SerializeField] private List<Level> _quessLevels;
+    [SerializeField] private List<Level> _flyLevels;
+    [SerializeField] private List<Level> _platformLevels;
+    [SerializeField] private List<Level> _speedUpLevels;
+    [SerializeField] private List<Level> _freezingLevels;
+    [SerializeField] private List<Level> _jumpLevels;
 
     private bool _isSaveData = false;
 
     public static int lastCompletedNormalLevel = 0;
-    public static int lastCompletedMiniGamesLevel = 0;
+    public static int lastCompletedInvisibleLevel = 0;
+    public static int lastCompletedQuessLevel = 0;
+    public static int lastCompletedFlyLevel = 0;
+    public static int lastCompletedPlatformLevel = 0;
+    public static int lastCompletedSpeedUpLevel = 0;
+    public static int lastCompletedFreezingLevel = 0;
+    public static int lastCompletedJumpLevel = 0;
+
     public static Dictionary<int, int> countStarsNormalMode = new Dictionary<int, int>();
 
     private void Start()
     {
         InitializeNormalLevels();
-        InitializeMiniGamesLevels();
+        InitializeMiniGameLevels(lastCompletedInvisibleLevel, _invisibleLevels);
+        InitializeMiniGameLevels(lastCompletedQuessLevel, _quessLevels);
+        InitializeMiniGameLevels(lastCompletedFlyLevel, _flyLevels);
+        InitializeMiniGameLevels(lastCompletedPlatformLevel, _platformLevels);
+        InitializeMiniGameLevels(lastCompletedSpeedUpLevel, _speedUpLevels);
+        InitializeMiniGameLevels(lastCompletedFreezingLevel, _freezingLevels);
+        InitializeMiniGameLevels(lastCompletedJumpLevel, _jumpLevels);
 
         if (_isSaveData)
             Progress.Instance.Save();
@@ -106,18 +125,18 @@ public class LevelsController : MonoBehaviour
         }
     }
 
-    private void InitializeMiniGamesLevels()
+    private void InitializeMiniGameLevels(int lastCompletedLevel, List<Level> levels)
     {
-        if (lastCompletedMiniGamesLevel >= _miniGamesLevels.Count)
-            lastCompletedMiniGamesLevel = _miniGamesLevels.Count;
+        if (lastCompletedLevel >= levels.Count)
+            lastCompletedLevel = levels.Count;
 
         // Activating the buttons for the completed level and the next level
-        for (int i = 0; i < lastCompletedMiniGamesLevel + 1; i++)
+        for (int i = 0; i < lastCompletedLevel + 1; i++)
         {
-            if (i >= _miniGamesLevels.Count)
+            if (i >= levels.Count)
                 return;
 
-            Level level = _miniGamesLevels[i];
+            Level level = levels[i];
             level.button.interactable = true;
             level.text.gameObject.SetActive(true);
             level.locked.gameObject.SetActive(false);

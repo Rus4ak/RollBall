@@ -205,6 +205,26 @@ MonoBehaviour:
     m_Localized: Freezing
     m_Metadata:
       m_Items: []
+  - m_Id: 14155371947335680
+    m_Localized: Invisible
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14155470597365760
+    m_Localized: Fly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14155538314403840
+    m_Localized: Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14155695030378496
+    m_Localized: Jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14156007392780288
+    m_Localized: Speed-up
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

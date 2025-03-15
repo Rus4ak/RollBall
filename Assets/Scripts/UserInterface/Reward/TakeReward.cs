@@ -35,7 +35,13 @@ public class TakeReward : MonoBehaviour
         {
             // If the current level has already been completed, instead of a skin, coins are dropped,
             // with the amount being divided by 5 in comparison to the skin's value
-            if (_finish.CurrentLevel <= _finish.lastCompletedMiniGamesLevel && _finish.CurrentLevel != 0 )
+            if ((_finish.isInvisibleMode && _finish.CurrentLevel <= _finish.lastCompletedInvisibleLevel) ||
+                (_finish.isQuessMode && _finish.CurrentLevel <= _finish.lastCompletedQuessLevel) ||
+                (_finish.isFlyMode && _finish.CurrentLevel <= _finish.lastCompletedFlyLevel) ||
+                (_finish.isPlatformMode && _finish.CurrentLevel <= _finish.lastCompletedPlatformLevel) ||
+                (_finish.isSpeedUpMode && _finish.CurrentLevel <= _finish.lastCompletedSpeedUpLevel) ||
+                (_finish.isFreezingMode && _finish.CurrentLevel <= _finish.lastCompletedFreezingLevel) ||
+                (_finish.isJumpMode && _finish.CurrentLevel <= _finish.lastCompletedJumpLevel))
             {
                 _countRewardCoins /= 5;
                 DropCoins();
@@ -49,7 +55,7 @@ public class TakeReward : MonoBehaviour
                 foreach (SkinsDictionary skin in SkinsList.skins)
                     if (skin.price >= _finish.MinCountCoins && skin.price <= _finish.MaxCountCoins && skin.tag != "BoughtSkin" && skin.tag != "EquippedSkin")
                         _availableRewardSkins.Add(skin);
-                
+
                 if (_availableRewardSkins.Count > 0)
                     DropSkin();
 

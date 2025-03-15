@@ -199,6 +199,26 @@ MonoBehaviour:
     m_Key: Freezing
     m_Metadata:
       m_Items: []
+  - m_Id: 14155371947335680
+    m_Key: Invisible
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14155470597365760
+    m_Key: Fly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14155538314403840
+    m_Key: Platform
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14155695030378496
+    m_Key: Jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14156007392780288
+    m_Key: SpeedUp
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
