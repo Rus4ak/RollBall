@@ -286,8 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be2e4462d0974242b5f3491052bf739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _directionX: 1
-  _directionY: 0
+  _directionX: 0
+  _directionY: 1
   _directionZ: 0
   _timeRotate: 5
   _waitPlayer: 0
@@ -1450,8 +1450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be2e4462d0974242b5f3491052bf739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _directionX: -1
-  _directionY: 0
+  _directionX: 0
+  _directionY: -1
   _directionZ: 0
   _timeRotate: 5
   _waitPlayer: 0
@@ -3121,8 +3121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be2e4462d0974242b5f3491052bf739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _directionX: 1
-  _directionY: 0
+  _directionX: 0
+  _directionY: 1
   _directionZ: 0
   _timeRotate: 5
   _waitPlayer: 0

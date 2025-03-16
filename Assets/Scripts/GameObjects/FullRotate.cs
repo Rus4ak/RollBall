@@ -27,9 +27,6 @@ public class FullRotate : MonoBehaviour
         if (_startRotate)
         {
             transform.Rotate(_rotateSpeed * Time.deltaTime * _direction);
-            //Quaternion rotation = transform.rotation;
-            //rotation.eulerAngles += _direction * _rotateSpeed * Time.fixedDeltaTime;
-            //transform.rotation = rotation;
         }
     }
 
