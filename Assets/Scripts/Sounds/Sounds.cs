@@ -20,6 +20,9 @@ public class Sounds : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (PlayerMovement.isDead)
+            return;
+
         // Playback of the hit sound depending on the force of the hit
         if (collision.contacts[0].impulse.magnitude > 2f)
         {
@@ -57,6 +60,12 @@ public class Sounds : MonoBehaviour
         // If there is nothing under the player, the rolling sound is stopped
         if (!Physics.Raycast(transform.position, Vector3.down, 1f))
             _rolling.Stop();
+
+        if (PlayerMovement.isDead)
+        {
+            StopRollingSound();
+            _hit.Stop();
+        }
     }
 
     public void StopRollingSound()

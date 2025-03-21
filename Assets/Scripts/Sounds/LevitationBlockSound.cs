@@ -19,6 +19,13 @@ public class LevitationBlockSound : MonoBehaviour
 
     private void Update()
     {
+        if (PlayerMovement.isDead)
+        {
+            if (_audioSource.isPlaying) 
+                _audioSource.Stop();
+            isStop = true;
+        }
+
         if (isChange)
         {
             if (_audioSource.volume != SoundVolume.volume * .6f)
@@ -33,5 +40,11 @@ public class LevitationBlockSound : MonoBehaviour
             isChange = false;
             _audioSource.Stop();
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+            _audioSource.Play();
     }
 }
