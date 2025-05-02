@@ -11,6 +11,8 @@ TagManager:
   - SpeedBlock
   - IARManager
   - Ice
+  - Dead
+  - Water
   layers:
   - Default
   - TransparentFX

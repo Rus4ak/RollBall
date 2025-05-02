@@ -10244,14 +10244,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _points:
   - position: {x: -5, y: 18, z: 19}
-    moveTime: 0
+    moveTime: 15
   - position: {x: -5, y: 40, z: 19}
     moveTime: 5
   - position: {x: -5, y: 40, z: 60}
     moveTime: 5
   - position: {x: -5, y: 0, z: 60}
     moveTime: 15
-  _waitPlayer: 1
+  _waitPlayer: 0
 --- !u!1001 &1943809618
 PrefabInstance:
   m_ObjectHideFlags: 0

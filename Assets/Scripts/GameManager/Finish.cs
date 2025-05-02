@@ -23,6 +23,7 @@ public class Finish : MonoBehaviour
     public bool isSpeedUpMode;
     public bool isFreezingMode;
     public bool isJumpMode;
+    public bool isRunnerMode;
 
     [Header("Stars")]
     [SerializeField] private float _timeTwoStars;
@@ -43,6 +44,7 @@ public class Finish : MonoBehaviour
     [NonSerialized] public int lastCompletedSpeedUpLevel;
     [NonSerialized] public int lastCompletedFreezingLevel;
     [NonSerialized] public int lastCompletedJumpLevel;
+    [NonSerialized] public int lastCompletedRunnerLevel;
 
     public int CurrentLevel { get => _currentLevel; }
     public int MinCountCoins { get => _minCountCoins; }
@@ -102,6 +104,9 @@ public class Finish : MonoBehaviour
 
             else if (isJumpMode)
                 FinishJumpMode();
+
+            else if (isRunnerMode)
+                FinishRunnerMode();
 
             else
                 throw new Exception("None of the game modes are connected to the finish");
@@ -235,6 +240,19 @@ public class Finish : MonoBehaviour
             LevelsController.lastCompletedJumpLevel = CurrentLevel;
 
         Progress.Instance.progressData.completedJumpLevels = LevelsController.lastCompletedJumpLevel;
+        Progress.Instance.Save();
+
+        _box.SetActive(true);
+    }
+
+    private void FinishRunnerMode()
+    {
+        lastCompletedRunnerLevel = LevelsController.lastCompletedRunnerLevel;
+
+        if (LevelsController.lastCompletedRunnerLevel < CurrentLevel)
+            LevelsController.lastCompletedRunnerLevel = CurrentLevel;
+
+        Progress.Instance.progressData.completedRunnerLevels = LevelsController.lastCompletedRunnerLevel;
         Progress.Instance.Save();
 
         _box.SetActive(true);

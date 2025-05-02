@@ -30,6 +30,7 @@ public class LevelsController : MonoBehaviour
     [SerializeField] private List<Level> _speedUpLevels;
     [SerializeField] private List<Level> _freezingLevels;
     [SerializeField] private List<Level> _jumpLevels;
+    [SerializeField] private List<Level> _runnerLevels;
 
     private bool _isSaveData = false;
 
@@ -41,6 +42,7 @@ public class LevelsController : MonoBehaviour
     public static int lastCompletedSpeedUpLevel = 0;
     public static int lastCompletedFreezingLevel = 0;
     public static int lastCompletedJumpLevel = 0;
+    public static int lastCompletedRunnerLevel = 0;
 
     public static Dictionary<int, int> countStarsNormalMode = new Dictionary<int, int>();
 
@@ -54,6 +56,7 @@ public class LevelsController : MonoBehaviour
         InitializeMiniGameLevels(lastCompletedSpeedUpLevel, _speedUpLevels);
         InitializeMiniGameLevels(lastCompletedFreezingLevel, _freezingLevels);
         InitializeMiniGameLevels(lastCompletedJumpLevel, _jumpLevels);
+        InitializeMiniGameLevels(lastCompletedRunnerLevel, _runnerLevels);
 
         if (_isSaveData)
             Progress.Instance.Save();

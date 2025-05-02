@@ -17,6 +17,8 @@ public class TakeReward : MonoBehaviour
     private int _countRewardCoins;
     private List<SkinsDictionary> _availableRewardSkins;
     private SkinsDictionary _rewardSkin;
+    
+    private bool _isSkipped = false;
 
     private void Start()
     {
@@ -41,7 +43,8 @@ public class TakeReward : MonoBehaviour
                 (_finish.isPlatformMode && _finish.CurrentLevel <= _finish.lastCompletedPlatformLevel) ||
                 (_finish.isSpeedUpMode && _finish.CurrentLevel <= _finish.lastCompletedSpeedUpLevel) ||
                 (_finish.isFreezingMode && _finish.CurrentLevel <= _finish.lastCompletedFreezingLevel) ||
-                (_finish.isJumpMode && _finish.CurrentLevel <= _finish.lastCompletedJumpLevel))
+                (_finish.isJumpMode && _finish.CurrentLevel <= _finish.lastCompletedJumpLevel) ||
+                (_finish.isRunnerMode && _finish.CurrentLevel <= _finish.lastCompletedRunnerLevel))
             {
                 _countRewardCoins /= 5;
                 DropCoins();
@@ -67,24 +70,32 @@ public class TakeReward : MonoBehaviour
         {
             DropCoins();
         }
+
+        Invoke("SkipReward", .5f);
     }
 
     private void Update()
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            gameObject.SetActive(false);
-            _background.SetActive(false);
-
-            if (_isDailyBox)
+        if (_isSkipped)
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
-                InstantiateCoins();
-                return;
-            }
+                gameObject.SetActive(false);
+                _background.SetActive(false);
 
-            if (!_finish.IsDropSkin)
-                InstantiateCoins();
-        }
+                if (_isDailyBox)
+                {
+                    InstantiateCoins();
+                    return;
+                }
+
+                if (!_finish.IsDropSkin)
+                    InstantiateCoins();
+            }
+    }
+
+    private void SkipReward()
+    {
+        _isSkipped = true;
     }
 
     private void DropSkin()

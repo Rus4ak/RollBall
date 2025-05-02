@@ -36,6 +36,7 @@ public class Progress
         public int completedSpeedUpLevels;
         public int completedFreezingLevels;
         public int completedJumpLevels;
+        public int completedRunnerLevels;
         public Dictionary<int, int> countStarsNormalMode = new Dictionary<int, int>();
         public Dictionary<int, int> bestPassedTime = new Dictionary<int, int>();
         public DateTime lastOpenDailyBoxTime;
@@ -71,6 +72,7 @@ public class Progress
         LevelsController.lastCompletedSpeedUpLevel = progressData.completedSpeedUpLevels;
         LevelsController.lastCompletedFreezingLevel = progressData.completedFreezingLevels;
         LevelsController.lastCompletedJumpLevel = progressData.completedJumpLevels;
+        LevelsController.lastCompletedRunnerLevel = progressData.completedRunnerLevels;
 
         if (progressData.countStarsNormalMode != null)
             LevelsController.countStarsNormalMode = progressData.countStarsNormalMode;

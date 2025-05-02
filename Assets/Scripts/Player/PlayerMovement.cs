@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rigidbody;
     private GameObject _joystickUI;
     private float _lastSpawnTrailParticle;
+    private Finish _finish;
 
     private bool _isSlice = false;
     private bool _isStopBall = true;
@@ -34,8 +35,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        _finish = GameObject.FindWithTag("Finish").GetComponent<Finish>();
         _rigidbody = GetComponent<Rigidbody>();
-        _joystickUI = GameObject.FindGameObjectWithTag("Joystick");
+
+        if (_finish.isRunnerMode)
+        {
+            _isStopBall = false;
+        }
+        else
+        {
+            _joystickUI = GameObject.FindGameObjectWithTag("Joystick");
+        }
     }
 
     private void Start()
@@ -51,12 +61,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
+        if (!_finish.isRunnerMode)
+            Move();
         
         if (isDead)
         {
             _restartMenu.SetActive(true);
-            _joystickUI.SetActive(false);
+            if (!_finish.isRunnerMode)
+                _joystickUI.SetActive(false);
 
             Time.timeScale = 0;
         }
@@ -152,7 +164,8 @@ public class PlayerMovement : MonoBehaviour
         Finish.passingTime = passingTime;
 
         _restartMenu.SetActive(false);
-        _joystickUI.SetActive(true);
+        if (!_finish.isRunnerMode)
+            _joystickUI.SetActive(true);
 
         isDead = false;
     }
