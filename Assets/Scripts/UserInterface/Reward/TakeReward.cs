@@ -26,6 +26,7 @@ public class TakeReward : MonoBehaviour
         {
             _countRewardCoins = Random.Range(20, 100);
             DropCoins();
+            Invoke("SkipReward", .5f);
             return;
         }
 
