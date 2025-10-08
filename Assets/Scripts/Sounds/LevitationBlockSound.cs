@@ -1,11 +1,12 @@
+using System;
 using UnityEngine;
 
 public class LevitationBlockSound : MonoBehaviour
 {
     private AudioSource _audioSource;
 
-    public float volume;
-    public bool isChange;
+    [NonSerialized] public float volume;
+    [NonSerialized] public bool isChange;
 
     public static bool isStop = false;
 

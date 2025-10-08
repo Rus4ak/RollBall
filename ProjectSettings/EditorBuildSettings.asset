@@ -188,6 +188,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniGames/Runner/RunnerLevel5.unity
     guid: e80394f1b27579b4da33a45aeab10b16
+  - enabled: 1
+    path: Assets/Scenes/NormalMode/Level20.unity
+    guid: 2a9d5ec13fba61d47a816bf3d9ccb2ee
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Runner/RunnerLevel6.unity
+    guid: 2f5806da524d3324ca2522a7249fd172
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Invisible/InvisibleLevel6.unity
+    guid: d57e661e7bdf55f4c85028768732c067
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Quess/QuessLevel6.unity
+    guid: 2ff795aa43fb40249afdf1d973732c23
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/Freezing/FreezingLevel6.unity
+    guid: 03a4428be525285439c97a23e63401f8
+  - enabled: 1
+    path: Assets/Scenes/NormalMode/Level21.unity
+    guid: eaf0645359d0cf5439d853dfc6816241
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 1fb265398f0a68f4da90686a7a844719, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 1f28c21dfe5c21040b7797dc2fa92ef3, type: 2}
